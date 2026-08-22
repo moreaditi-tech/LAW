@@ -39,7 +39,7 @@ export default function DisclaimerModal() {
             The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner.
           </p>
           <p>
-            By accessing this website, <strong className="text-white">www.primelawbharat.com</strong>, you acknowledge and confirm that you are seeking information relating to Prime Law Bharat of your own accord and that there has been no form of solicitation, advertisement, or inducement by Prime Law Bharat or its members.
+            By accessing this website, <strong className="text-white">www.primelawbharat.com</strong>, you acknowledge and confirm that you are seeking information relating to Prime Law <span className="tiranga-gradient font-semibold">Bharat</span> of your own accord and that there has been no form of solicitation, advertisement, or inducement by Prime Law <span className="tiranga-gradient font-semibold">Bharat</span> or its members.
           </p>
           <p>
             The content of this website is for informational purposes only and should not be interpreted as soliciting or advertisement. No material or information provided on this website should be construed as legal advice.

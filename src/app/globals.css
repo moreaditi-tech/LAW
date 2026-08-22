@@ -43,6 +43,17 @@
 @layer components {
 
   /* ═══════════════════════════════════════════
+     BHARAT TIRANGA GRADIENT (Indian Flag Colors)
+     ═══════════════════════════════════════════ */
+  .tiranga-gradient {
+    background: linear-gradient(90deg, #FF671F 0%, #FFFFFF 52%, #046A38 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.4));
+  }
+
+  /* ═══════════════════════════════════════════
      HOMEPAGE — FULL-PAGE SNAP SCROLL SYSTEM
      (Khaitan & Co one-page-scroll recreation)
      ═══════════════════════════════════════════ */

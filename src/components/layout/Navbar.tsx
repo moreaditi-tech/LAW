@@ -89,7 +89,7 @@ export default function Navbar() {
             />
           </div>
           <span className="text-white font-heading text-xl md:text-2xl font-bold tracking-wide transition-colors group-hover:text-white/90">
-            Prime Law Bharat
+            Prime Law <span className="tiranga-gradient">Bharat</span>
           </span>
         </Link>
 

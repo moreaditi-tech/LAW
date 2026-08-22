@@ -172,7 +172,9 @@ export default function HomePage() {
             </div>
 
             <p className="hero-label section-label">Advocates & Legal Consultants</p>
-            <h1 className="hero-title section-title overflow-hidden">PRIME LAW BHARAT</h1>
+            <h1 className="hero-title section-title overflow-hidden">
+              PRIME LAW <span className="tiranga-gradient">BHARAT</span>
+            </h1>
             <p className="hero-sub section-desc">{FIRM.tagline}</p>
             <div className="hero-sub w-20 h-[2px] bg-[#8B2232] mb-6" />
             <p className="hero-sub text-xs sm:text-sm uppercase tracking-[0.25em] text-white/70 mb-10 font-body">

@@ -43,7 +43,7 @@ export default function PageTransition() {
             transition={{ duration: 0.7 }}
           >
             <span className="font-heading text-sm tracking-[0.35em] uppercase text-white/80">
-              Prime Law Bharat
+              Prime Law <span className="tiranga-gradient">Bharat</span>
             </span>
             <span className="block h-[2px] w-32 overflow-hidden bg-white/15">
               <motion.span
