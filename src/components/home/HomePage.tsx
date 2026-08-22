@@ -10,6 +10,7 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 import { FIRM, ABOUT, PRACTICE_AREAS, COMMITMENTS } from '@/lib/constants';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import InfiniteMarquee from '@/components/ui/InfiniteMarquee';
+import EmblemSymbol from '@/components/ui/EmblemSymbol';
 import { emitSiteScroll } from '@/lib/scroll';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -150,26 +151,19 @@ export default function HomePage() {
       <section id="hero" className="snap-section relative flex items-center justify-start overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero/hero-law-office.jpg"
-            alt=""
+            src="/images/background.png"
+            alt="Prime Law Bharat Courtroom"
             fill
             priority
             className="hero-bg-img object-cover scale-105"
           />
         </div>
-        <div className="section-overlay bg-[#0F1B2D]/75" />
+        <div className="section-overlay bg-[#0F1B2D]/60" />
 
-        {/* Right-Side Atmospheric Justice Scale Logo Watermark */}
+        {/* Right-Side Transparent Law Emblem Logo (No circle, No text, 25-30% smaller) */}
         <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 pointer-events-none select-none z-10 hidden md:block">
-          <div className="relative w-[300px] h-[300px] lg:w-[380px] lg:h-[380px] xl:w-[440px] xl:h-[440px] opacity-[0.12] mix-blend-screen transition-all duration-1000">
-            <Image
-              src="/images/logo/logo.jpeg"
-              alt=""
-              fill
-              className="object-contain rounded-full filter grayscale contrast-125 brightness-110"
-              priority
-              unoptimized
-            />
+          <div className="relative transition-all duration-700 hover:scale-105">
+            <EmblemSymbol size={240} className="w-[190px] h-[190px] lg:w-[230px] lg:h-[230px] xl:w-[260px] xl:h-[260px] drop-shadow-[0_8px_30px_rgba(0,0,0,0.7)]" />
           </div>
         </div>
         <div className="section-content">
