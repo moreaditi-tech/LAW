@@ -82,10 +82,10 @@ export default function Navbar() {
           <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full p-[2px] bg-gradient-to-br from-[#F9E29D] via-[#D4AF37] to-[#8B2232] shadow-[0_2px_16px_rgba(212,175,55,0.35)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_4px_24px_rgba(212,175,55,0.5)] flex-shrink-0">
             <div className="w-full h-full rounded-full overflow-hidden bg-[#0F1B2D] border border-white/20 relative flex items-center justify-center">
               <Image
-                src="/images/logo/logo.jpeg"
+                src="/images/logo/logo-1.png"
                 alt="Prime Law Bharat Official Logo"
                 fill
-                className="object-cover rounded-full filter contrast-[1.14] brightness-[1.08] saturate-[1.2]"
+                className="object-cover rounded-full filter contrast-[1.12] brightness-[1.06] saturate-[1.18]"
                 priority
                 unoptimized
               />

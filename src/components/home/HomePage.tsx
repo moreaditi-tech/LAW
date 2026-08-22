@@ -10,7 +10,6 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 import { FIRM, ABOUT, PRACTICE_AREAS, COMMITMENTS } from '@/lib/constants';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import InfiniteMarquee from '@/components/ui/InfiniteMarquee';
-import EmblemSymbol from '@/components/ui/EmblemSymbol';
 import { emitSiteScroll } from '@/lib/scroll';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -155,15 +154,24 @@ export default function HomePage() {
             alt="Prime Law Bharat Courtroom"
             fill
             priority
+            unoptimized
             className="hero-bg-img object-cover scale-105"
           />
         </div>
         <div className="section-overlay bg-[#0F1B2D]/60" />
 
-        {/* Right-Side Transparent Law Emblem Logo (No circle, No text, 25-30% smaller) */}
+        {/* Right-Side Transparent Law Emblem (logo-1-removebg.png) */}
         <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 pointer-events-none select-none z-10 hidden md:block">
           <div className="relative transition-all duration-700 hover:scale-105">
-            <EmblemSymbol size={240} className="w-[190px] h-[190px] lg:w-[230px] lg:h-[230px] xl:w-[260px] xl:h-[260px] drop-shadow-[0_8px_30px_rgba(0,0,0,0.7)]" />
+            <Image
+              src="/images/logo/logo-1-removebg.png"
+              alt="Prime Law Bharat Legal Emblem"
+              width={260}
+              height={260}
+              className="w-[190px] h-[190px] lg:w-[230px] lg:h-[230px] xl:w-[260px] xl:h-[260px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]"
+              priority
+              unoptimized
+            />
           </div>
         </div>
         <div className="section-content">
