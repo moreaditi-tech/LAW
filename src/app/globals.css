@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply font-body text-white bg-[#0F1B2D];
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  ::selection {
+    background: rgba(139, 34, 50, 0.3);
+    color: #fff;
+  }
+}
+
+@layer components {
+
+  /* ═══════════════════════════════════════════
+     HOMEPAGE — FULL-PAGE SNAP SCROLL SYSTEM
+     (Khaitan & Co one-page-scroll recreation)
+     ═══════════════════════════════════════════ */
+
+  .snap-container {
+    height: 100vh;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Dark overlay on background images */
+  .section-overlay {
+    @apply absolute inset-0;
+    background: rgba(15, 27, 45, 0.75);
+  }
+
+  /* Section content wrapper */
+  .section-content {
+    @apply relative z-10 w-full;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+  @media (min-width: 768px) {
+    .section-content { padding: 5rem 4rem; }
+  }
+  @media (min-width: 1024px) {
+    .section-content { padding: 5rem 5rem; }
+  }
+
+  /* ═══════════════════════════════════════════
+     SECTION TYPOGRAPHY (Khaitan editorial)
+     ═══════════════════════════════════════════ */
+
+  .section-label {
+    @apply text-xs uppercase tracking-[0.35em] font-body font-semibold mb-5;
+    color: #8B2232;
+    letter-spacing: 0.35em;
+  }
+
+  .section-title {
+    @apply font-heading font-bold text-white leading-[1.08] mb-6;
+    font-size: clamp(2.25rem, 5vw, 4.5rem);
+    letter-spacing: -0.02em;
+  }
+
+  .section-desc {
+    @apply font-body text-white/75 leading-relaxed mb-10;
+    font-size: clamp(0.95rem, 1.5vw, 1.25rem);
+    max-width: 42rem;
+  }
+
+  /* ═══════════════════════════════════════════
+     CTA BUTTONS (Khaitan style)
+     ═══════════════════════════════════════════ */
+
+  .btn-khaitan {
+    @apply inline-flex items-center gap-3 font-body font-medium tracking-wide transition-all duration-300;
+    padding: 0.875rem 2rem;
+    font-size: 0.875rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-khaitan::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+  }
+  .btn-khaitan:hover {
+    color: #0F1B2D;
+    border-color: #fff;
+  }
+  .btn-khaitan:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .btn-khaitan-accent {
+    @apply inline-flex items-center gap-3 font-body font-medium tracking-wide transition-all duration-300;
+    padding: 0.875rem 2rem;
+    font-size: 0.875rem;
+    background: #8B2232;
+    color: #fff;
+    border: 1px solid #8B2232;
+  }
+  .btn-khaitan-accent:hover {
+    background: #a52a3a;
+    border-color: #a52a3a;
+  }
+
+  /* Arrow icon inside CTA buttons */
+  .btn-arrow {
+    @apply transition-transform duration-300;
+  }
+  .btn-khaitan:hover .btn-arrow,
+  .btn-khaitan-accent:hover .btn-arrow {
+    transform: translateX(4px);
+  }
+
+  /* ═══════════════════════════════════════════
+     SCROLL INDICATOR (Khaitan bouncing arrow)
+     ═══════════════════════════════════════════ */
+
+  @keyframes scroll-bounce {
+    0%, 100% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(10px); opacity: 1; }
+  }
+
+  .scroll-indicator {
+    @apply absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2;
+  }
+  .scroll-indicator svg {
+    animation: scroll-bounce 2.5s ease-in-out infinite;
+  }
+
+  /* ═══════════════════════════════════════════
+     FADE-IN ANIMATIONS (scroll-triggered)
+     ═══════════════════════════════════════════ */
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-up-delay-1 { transition-delay: 0.1s; }
+  .fade-up-delay-2 { transition-delay: 0.2s; }
+  .fade-up-delay-3 { transition-delay: 0.3s; }
+  .fade-up-delay-4 { transition-delay: 0.4s; }
+  .fade-up-delay-5 { transition-delay: 0.5s; }
+
+  /* ═══════════════════════════════════════════
+     BAR COUNCIL DISCLAIMER MODAL
+     ═══════════════════════════════════════════ */
+
+  .disclaimer-overlay {
+    @apply fixed inset-0 z-[100] flex items-center justify-center;
+    background: rgba(15, 27, 45, 0.92);
+    backdrop-filter: blur(8px);
+  }
+
+  .disclaimer-box {
+    @apply font-body;
+    background: #0F1B2D;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    max-width: 40rem;
+    width: 90%;
+    padding: 2.5rem 2rem;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  @media (min-width: 768px) {
+    .disclaimer-box { padding: 3rem 2.5rem; }
+  }
+
+  /* ═══════════════════════════════════════════
+     INNER PAGE HERO SECTIONS
+     ═══════════════════════════════════════════ */
+
+  .page-hero {
+    @apply relative w-full flex items-center justify-center;
+    min-height: 65vh;
+    padding-top: 6rem;
+  }
+  .page-hero-overlay {
+    @apply absolute inset-0;
+    background: linear-gradient(
+      to top,
+      #0F1B2D 0%,
+      rgba(15, 27, 45, 0.6) 50%,
+      rgba(15, 27, 45, 0.75) 100%
+    );
+  }
+
+  /* ═══════════════════════════════════════════
+     UTILITY: Commitment / feature cards
+     ═══════════════════════════════════════════ */
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+  }
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(139, 34, 50, 0.4);
+  }
+}
