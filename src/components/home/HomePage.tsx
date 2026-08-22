@@ -158,6 +158,20 @@ export default function HomePage() {
           />
         </div>
         <div className="section-overlay bg-[#0F1B2D]/75" />
+
+        {/* Right-Side Atmospheric Justice Scale Logo Watermark */}
+        <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 pointer-events-none select-none z-10 hidden md:block">
+          <div className="relative w-[300px] h-[300px] lg:w-[380px] lg:h-[380px] xl:w-[440px] xl:h-[440px] opacity-[0.12] mix-blend-screen transition-all duration-1000">
+            <Image
+              src="/images/logo/logo.jpeg"
+              alt=""
+              fill
+              className="object-contain rounded-full filter grayscale contrast-125 brightness-110"
+              priority
+              unoptimized
+            />
+          </div>
+        </div>
         <div className="section-content">
           <div className="flex flex-col items-start pt-6 sm:pt-0">
             <p className="hero-label section-label">Advocates & Legal Consultants</p>

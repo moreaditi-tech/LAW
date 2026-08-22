@@ -97,8 +97,8 @@ export default function Navbar() {
             <span className="text-white font-heading text-lg sm:text-2xl md:text-[26px] font-bold tracking-tight leading-tight transition-colors group-hover:text-white/95">
               PRIME LAW <span className="tiranga-gradient">BHARAT</span>
             </span>
-            <span className="font-body text-[9px] sm:text-[10px] uppercase tracking-[0.28em] text-white/60 font-medium">
-              Advocates & Legal Consultants
+            <span className="font-body text-[9px] sm:text-[10px] uppercase tracking-[0.24em] text-white/70 font-medium">
+              Integrity &bull; Diligence &bull; Accessibility
             </span>
           </div>
         </Link>
