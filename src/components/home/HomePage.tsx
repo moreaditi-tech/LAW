@@ -69,8 +69,7 @@ export default function HomePage() {
 
       heroTl
         .from('.hero-bg-img', { scale: 1.18, duration: 2.2 }, 0)
-        .from('.hero-logo', { opacity: 0, y: 24, duration: 0.7 }, 0.25)
-        .from('.hero-label', { opacity: 0, y: 16, duration: 0.55 }, 0.4);
+        .from('.hero-label', { opacity: 0, y: 20, duration: 0.6 }, 0.2);
 
       if (heroTitle.chars?.length) {
         heroTl.from(heroTitle.chars, { y: 80, opacity: 0, stagger: 0.018, duration: 0.7 }, 0.45);
@@ -160,23 +159,7 @@ export default function HomePage() {
         </div>
         <div className="section-overlay bg-[#0F1B2D]/75" />
         <div className="section-content">
-          <div className="flex flex-col items-start">
-            {/* Enhanced Original Logo Emblem */}
-            <div className="hero-logo mb-6 relative group">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full p-[2px] bg-gradient-to-br from-[#F9E29D] via-[#D4AF37] to-[#8B2232] shadow-[0_4px_24px_rgba(0,0,0,0.5),0_0_20px_rgba(212,175,55,0.25)] transition-transform duration-500 group-hover:scale-105">
-                <div className="w-full h-full rounded-full overflow-hidden bg-[#0F1B2D] p-1 border border-white/20 relative">
-                  <Image
-                    src="/images/logo/logo.jpeg"
-                    alt="Prime Law Bharat Logo"
-                    fill
-                    className="object-cover rounded-full filter contrast-[1.1] brightness-[1.05] saturate-[1.15]"
-                    priority
-                    unoptimized
-                  />
-                </div>
-              </div>
-            </div>
-
+          <div className="flex flex-col items-start pt-6 sm:pt-0">
             <p className="hero-label section-label">Advocates & Legal Consultants</p>
             <h1 className="hero-title section-title overflow-hidden">
               PRIME LAW <span className="tiranga-gradient">BHARAT</span>

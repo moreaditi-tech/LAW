@@ -78,14 +78,14 @@ export default function Navbar() {
       >
         {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-3.5 z-50 group">
-          <div className="relative w-10 h-10 rounded-full p-[1.5px] bg-gradient-to-br from-[#F9E29D] via-[#D4AF37] to-[#8B2232] transition-transform duration-300 group-hover:scale-105 shadow-md flex-shrink-0">
+          <div className="relative w-11 h-11 rounded-full p-[1.5px] bg-gradient-to-br from-[#F9E29D] via-[#D4AF37] to-[#8B2232] transition-transform duration-300 group-hover:scale-105 shadow-lg flex-shrink-0">
             <div className="w-full h-full rounded-full overflow-hidden bg-[#0F1B2D] border border-white/20 relative">
               <Image
                 src="/images/logo/logo.jpeg"
                 alt="Prime Law Bharat Logo"
-                width={40}
-                height={40}
-                className="w-full h-full object-cover rounded-full filter contrast-[1.1] brightness-[1.05] saturate-[1.15]"
+                width={44}
+                height={44}
+                className="w-full h-full object-cover rounded-full filter contrast-[1.12] brightness-[1.06] saturate-[1.18]"
                 priority
                 unoptimized
               />
