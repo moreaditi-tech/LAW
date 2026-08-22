@@ -171,7 +171,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     shortDescription:
       "Full lifecycle business legal structuring — from incorporation to dispute resolution.",
     fullDescription: `A business is only as strong as the legal structure holding it together. Founders and companies often discover the cost of weak documentation only when a dispute, an investor exit, or a regulatory audit puts it to the test. Our corporate practice covers the full lifecycle of a business — from incorporation and structuring, to drafting and negotiating shareholder agreements, joint venture agreements, and commercial contracts, to advising on statutory compliance under the Companies Act. We represent clients in shareholder and boardroom disputes, oppression and mismanagement petitions before the NCLT, and commercial litigation arising from breach of contract or business disagreements. We also assist with due diligence, MOUs for business collaborations, and vendor or subcontractor agreements. For businesses facing distress, we also advise on insolvency and restructuring matters, protecting promoter interests and creditor rights alike, depending on which side of the table you sit on.`,
-    image: "https://images.unsplash.com/photo-1507679799987-c73b4e551f24?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80",
   },
   {
     id: "commercial-contracts",
@@ -259,7 +259,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     shortDescription:
       "Writ petitions, constitutional matters, SLPs, and appeals before the highest forums.",
     fullDescription: `For writ petitions, constitutional matters, and appeals against lower court or tribunal orders, we represent clients before the High Court and Supreme Court of India — bringing the same preparation and care to the highest forums as we do at the trial stage.`,
-    image: "https://images.unsplash.com/photo-1564429238961-bf8f8be8c8a9?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80",
   },
 ];
 
