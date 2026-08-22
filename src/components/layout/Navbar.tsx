@@ -77,23 +77,30 @@ export default function Navbar() {
         }`}
       >
         {/* Brand Logo & Name */}
-        <Link href="/" className="flex items-center gap-3.5 z-50 group">
-          <div className="relative w-11 h-11 rounded-full p-[1.5px] bg-gradient-to-br from-[#F9E29D] via-[#D4AF37] to-[#8B2232] transition-transform duration-300 group-hover:scale-105 shadow-lg flex-shrink-0">
-            <div className="w-full h-full rounded-full overflow-hidden bg-[#0F1B2D] border border-white/20 relative">
+        <Link href="/" className="flex items-center gap-3.5 sm:gap-4 z-50 group">
+          {/* Prominent Gold-Framed Official Emblem */}
+          <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full p-[2px] bg-gradient-to-br from-[#F9E29D] via-[#D4AF37] to-[#8B2232] shadow-[0_2px_16px_rgba(212,175,55,0.35)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_4px_24px_rgba(212,175,55,0.5)] flex-shrink-0">
+            <div className="w-full h-full rounded-full overflow-hidden bg-[#0F1B2D] border border-white/20 relative flex items-center justify-center">
               <Image
                 src="/images/logo/logo.jpeg"
-                alt="Prime Law Bharat Logo"
-                width={44}
-                height={44}
-                className="w-full h-full object-cover rounded-full filter contrast-[1.12] brightness-[1.06] saturate-[1.18]"
+                alt="Prime Law Bharat Official Logo"
+                fill
+                className="object-cover rounded-full filter contrast-[1.14] brightness-[1.08] saturate-[1.2]"
                 priority
                 unoptimized
               />
             </div>
           </div>
-          <span className="text-white font-heading text-xl md:text-2xl font-bold tracking-wide transition-colors group-hover:text-white/90">
-            Prime Law <span className="tiranga-gradient">Bharat</span>
-          </span>
+
+          {/* Two-tier Luxury Law Firm Typography Lockup */}
+          <div className="flex flex-col">
+            <span className="text-white font-heading text-lg sm:text-2xl md:text-[26px] font-bold tracking-tight leading-tight transition-colors group-hover:text-white/95">
+              PRIME LAW <span className="tiranga-gradient">BHARAT</span>
+            </span>
+            <span className="font-body text-[9px] sm:text-[10px] uppercase tracking-[0.28em] text-white/60 font-medium">
+              Advocates & Legal Consultants
+            </span>
+          </div>
         </Link>
 
         {/* Right Navigation Controls (Search + Hamburger) */}
