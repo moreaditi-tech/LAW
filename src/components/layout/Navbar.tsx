@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { NAV_LINKS, FIRM, PRACTICE_AREAS } from '@/lib/constants';
 import SearchModal from '@/components/layout/SearchModal';
+import PrimeLogo from '@/components/ui/PrimeLogo';
 import type { ScrollPayload } from '@/lib/scroll';
 
 export default function Navbar() {
@@ -78,16 +79,7 @@ export default function Navbar() {
       >
         {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-3.5 z-50 group">
-          <div className="relative w-9 h-9 rounded-full overflow-hidden border border-white/30 bg-white/10 flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
-            <Image
-              src="/images/logo/logo.jpeg"
-              alt="Prime Law Bharat Logo"
-              width={36}
-              height={36}
-              className="w-full h-full object-cover"
-              priority
-            />
-          </div>
+          <PrimeLogo size={40} className="transition-transform duration-300 group-hover:scale-105" />
           <span className="text-white font-heading text-xl md:text-2xl font-bold tracking-wide transition-colors group-hover:text-white/90">
             Prime Law <span className="tiranga-gradient">Bharat</span>
           </span>

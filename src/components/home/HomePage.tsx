@@ -10,6 +10,7 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 import { FIRM, ABOUT, PRACTICE_AREAS, COMMITMENTS } from '@/lib/constants';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import InfiniteMarquee from '@/components/ui/InfiniteMarquee';
+import PrimeLogo from '@/components/ui/PrimeLogo';
 import { emitSiteScroll } from '@/lib/scroll';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -161,15 +162,7 @@ export default function HomePage() {
         <div className="section-overlay bg-[#0F1B2D]/75" />
         <div className="section-content">
           <div className="flex flex-col items-start">
-            <div className="hero-logo mb-6 rounded-full overflow-hidden border border-white/40 w-16 h-16 relative bg-white/10 backdrop-blur-sm p-1">
-              <Image
-                src="/images/logo/logo.jpeg"
-                alt="Prime Law Bharat Logo"
-                fill
-                className="object-cover rounded-full"
-                priority
-              />
-            </div>
+            <PrimeLogo size={68} className="hero-logo mb-6" />
 
             <p className="hero-label section-label">Advocates & Legal Consultants</p>
             <h1 className="hero-title section-title overflow-hidden">
