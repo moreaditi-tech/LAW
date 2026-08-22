@@ -11,7 +11,6 @@ import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import InfiniteMarquee from '@/components/ui/InfiniteMarquee';
 import { emitSiteScroll } from '@/lib/scroll';
 
-gsap.registerPlugin(ScrollTrigger);
 
 const SECTIONS = [
   { id: 'hero', label: 'Prime Law Bharat' },
@@ -60,18 +59,20 @@ export default function HomePage() {
     const container = containerRef.current;
     if (!container) return;
 
+    gsap.registerPlugin(ScrollTrigger);
+
     const ctx = gsap.context(() => {
+      ScrollTrigger.defaults({ scroller: container });
+
       const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
       heroTl
         .from('.hero-bg-img', { scale: 1.18, duration: 2.2 }, 0)
         .from('.hero-label', { opacity: 0, y: 20, duration: 0.6 }, 0.2)
-        .from('.hero-title', { opacity: 0, y: 40, duration: 0.8 }, 0.4);
-
-      heroTl
-        .from('.hero-sub', { opacity: 0, y: 18, duration: 0.6 }, 0.9)
-        .from('.hero-cta', { opacity: 0, y: 12, duration: 0.5 }, 1.05)
-        .from('.scroll-indicator', { opacity: 0, duration: 0.6 }, 1.2);
+        .from('.hero-title', { opacity: 0, y: 40, duration: 0.8 }, 0.4)
+        .from('.hero-sub', { opacity: 0, y: 18, duration: 0.6 }, 0.7)
+        .from('.hero-cta', { opacity: 0, y: 12, duration: 0.5 }, 0.85)
+        .from('.scroll-indicator', { opacity: 0, duration: 0.6 }, 1.0);
 
       gsap.to('.hero-bg-img', {
         scale: 1.08,
@@ -88,12 +89,12 @@ export default function HomePage() {
         gsap.from(el, {
           y: 48,
           opacity: 0,
-          duration: 0.9,
-          delay: i * 0.04,
+          duration: 0.8,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: el,
-            start: 'top 82%',
+            start: 'top 88%',
+            toggleActions: 'play none none none',
           },
         });
       });
@@ -102,14 +103,17 @@ export default function HomePage() {
         gsap.from(el, {
           clipPath: 'inset(18% 18% 18% 18%)',
           scale: 1.12,
-          duration: 1.2,
+          duration: 1.0,
           ease: 'power3.out',
           scrollTrigger: {
             trigger: el,
-            start: 'top 80%',
+            start: 'top 85%',
+            toggleActions: 'play none none none',
           },
         });
       });
+
+      ScrollTrigger.refresh();
     }, container);
 
     return () => ctx.revert();
