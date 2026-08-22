@@ -4,6 +4,8 @@ import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import DisclaimerModal from '@/components/layout/DisclaimerModal';
+import CustomCursor from '@/components/ui/CustomCursor';
+import BackToTop from '@/components/ui/BackToTop';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -30,11 +32,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${playfair.variable} ${inter.variable} font-body antialiased bg-[#0F1B2D] text-white flex flex-col min-h-screen selection:bg-[#8B2232]/40 selection:text-white`}>
+        <CustomCursor />
         <DisclaimerModal />
         <Navbar />
         <main className="flex-grow">
           {children}
         </main>
+        <BackToTop />
         <Footer />
       </body>
     </html>
