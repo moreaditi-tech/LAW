@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import SplitType from 'split-type';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { FIRM, ABOUT, PRACTICE_AREAS, COMMITMENTS } from '@/lib/constants';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
@@ -62,18 +61,12 @@ export default function HomePage() {
     if (!container) return;
 
     const ctx = gsap.context(() => {
-      ScrollTrigger.defaults({ scroller: container });
-
-      const heroTitle = new SplitType('.hero-title', { types: 'chars,words' });
       const heroTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
       heroTl
         .from('.hero-bg-img', { scale: 1.18, duration: 2.2 }, 0)
-        .from('.hero-label', { opacity: 0, y: 20, duration: 0.6 }, 0.2);
-
-      if (heroTitle.chars?.length) {
-        heroTl.from(heroTitle.chars, { y: 80, opacity: 0, stagger: 0.018, duration: 0.7 }, 0.45);
-      }
+        .from('.hero-label', { opacity: 0, y: 20, duration: 0.6 }, 0.2)
+        .from('.hero-title', { opacity: 0, y: 40, duration: 0.8 }, 0.4);
 
       heroTl
         .from('.hero-sub', { opacity: 0, y: 18, duration: 0.6 }, 0.9)
@@ -150,15 +143,15 @@ export default function HomePage() {
       <section id="hero" className="snap-section relative flex items-center justify-start overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/background.png"
-            alt="Prime Law Bharat Courtroom"
+            src="/images/hero/hero-law-office.jpg"
+            alt="Prime Law Bharat Legal Chambers"
             fill
             priority
             unoptimized
             className="hero-bg-img object-cover scale-105"
           />
         </div>
-        <div className="section-overlay bg-[#0F1B2D]/60" />
+        <div className="section-overlay bg-[#0F1B2D]/75" />
 
         {/* Right-Side Transparent Law Emblem (logo-1-removebg.png) */}
         <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 pointer-events-none select-none z-10 hidden md:block">
