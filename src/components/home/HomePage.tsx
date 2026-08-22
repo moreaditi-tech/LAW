@@ -38,16 +38,23 @@ export default function HomePage() {
     const container = containerRef.current;
     if (!container) return;
 
+    let ticking = false;
     const handleScroll = () => {
-      emitSiteScroll(container);
-      const scrollPosition = container.scrollTop + window.innerHeight / 2;
-      SECTIONS.forEach((s, index) => {
-        const el = document.getElementById(s.id);
-        if (!el) return;
-        if (scrollPosition >= el.offsetTop && scrollPosition < el.offsetTop + el.offsetHeight) {
-          setActiveSection(index);
-        }
-      });
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          emitSiteScroll(container);
+          const scrollPosition = container.scrollTop + window.innerHeight / 2;
+          for (let i = 0; i < SECTIONS.length; i++) {
+            const el = document.getElementById(SECTIONS[i].id);
+            if (el && scrollPosition >= el.offsetTop && scrollPosition < el.offsetTop + el.offsetHeight) {
+              setActiveSection(i);
+              break;
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     container.addEventListener('scroll', handleScroll, { passive: true });
