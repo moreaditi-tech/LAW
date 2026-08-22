@@ -13,7 +13,7 @@ export default function PracticeAreaCard({ area }: PracticeAreaCardProps) {
 
   return (
     <div 
-      className="bg-white/5 border border-white/10 rounded-sm overflow-hidden flex flex-col group hover:border-[#8B2232]/60 hover:bg-white/[0.08] transition-all duration-300 cursor-pointer shadow-subtle hover:shadow-elevated"
+      className="relative bg-white/5 border border-white/10 rounded-sm overflow-hidden flex flex-col group hover:border-[#8B2232]/60 hover:bg-white/[0.08] transition-all duration-500 cursor-pointer shadow-subtle hover:shadow-elevated hover:-translate-y-1"
       onClick={() => setExpanded(!expanded)}
     >
       <div className="relative h-52 w-full overflow-hidden">
@@ -22,7 +22,7 @@ export default function PracticeAreaCard({ area }: PracticeAreaCardProps) {
             src={area.image} 
             alt={area.title}
             fill
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (

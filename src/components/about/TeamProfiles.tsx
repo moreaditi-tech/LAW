@@ -13,7 +13,7 @@ export default function TeamProfiles() {
           {TEAM.map((member, index) => (
             <div 
               key={index} 
-              className="bg-white/5 border border-white/10 rounded-sm p-8 md:p-10 flex flex-col justify-between hover:border-[#8B2232]/50 transition-all duration-300"
+              className="bg-white/5 border border-white/10 rounded-sm p-8 md:p-10 flex flex-col justify-between hover:border-[#8B2232]/50 hover:-translate-y-1 transition-all duration-500"
             >
               <div>
                 <div className="mb-6">

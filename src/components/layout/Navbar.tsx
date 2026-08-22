@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -8,25 +8,42 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { NAV_LINKS, FIRM, PRACTICE_AREAS } from '@/lib/constants';
 import SearchModal from '@/components/layout/SearchModal';
+import type { ScrollPayload } from '@/lib/scroll';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastY = useRef(0);
   const pathname = usePathname();
 
-  // Handle scroll state for header background
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 40) {
-        setScrolled(true);
+    const handleScroll = (e: Event) => {
+      let y = 0;
+      if (e.type === 'plb-scroll') {
+        y = (e as CustomEvent<ScrollPayload>).detail?.y ?? 0;
+      } else if (document.querySelector('.snap-container')) {
+        return;
       } else {
-        setScrolled(false);
+        y = window.scrollY;
       }
+      setScrolled(y > 40);
+      if (isOpen) {
+        setHidden(false);
+        lastY.current = y;
+        return;
+      }
+      setHidden(y > lastY.current && y > 90);
+      lastY.current = y;
     };
+    window.addEventListener('plb-scroll', handleScroll as EventListener);
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener('plb-scroll', handleScroll as EventListener);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isOpen]);
 
   // Close menu when route changes
   useEffect(() => {
@@ -52,9 +69,11 @@ export default function Navbar() {
       {/* Header Bar */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 px-6 py-5 md:px-12 flex justify-between items-center transition-all duration-500 ${
+          hidden && !isOpen ? '-translate-y-full' : 'translate-y-0'
+        } ${
           scrolled
             ? 'bg-[#0F1B2D]/95 backdrop-blur-md border-b border-white/10 shadow-lg py-4'
-            : 'bg-gradient-to-b from-[#0F1B2D]/90 via-[#0F1B2D]/40 to-transparent'
+            : 'bg-transparent'
         }`}
       >
         {/* Brand Logo & Name */}

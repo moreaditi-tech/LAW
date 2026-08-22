@@ -2,10 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary: #0f1b2d;
+  --color-secondary: #222222;
+  --color-accent: #8b2232;
+  --color-white: #ffffff;
+  --color-light: #f8f8f8;
+  --color-gray: #999999;
+  --container: 1440px;
+  --grid-gap: 32px;
+  --section-pad: 120px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+}
+
 @layer base {
   html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  html.has-custom-cursor,
+  html.has-custom-cursor body,
+  html.has-custom-cursor a,
+  html.has-custom-cursor button {
+    cursor: none;
   }
   body {
     @apply font-body text-white bg-[#0F1B2D];
@@ -239,4 +259,28 @@
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(139, 34, 50, 0.4);
   }
+
+  .hero-title .char,
+  .hero-title .word {
+    display: inline-block;
+    will-change: transform, opacity;
+  }
+
+  .img-clip {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+
+  .marquee-track {
+    animation: marquee-scroll 42s linear infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }

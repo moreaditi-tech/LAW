@@ -4,18 +4,30 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { GALLERY_IMAGES } from '@/lib/constants';
 
-export default function GalleryGrid() {
+interface GalleryGridProps {
+  filter?: 'all' | 'cabin' | 'conference' | 'workstation';
+}
+
+export default function GalleryGrid({ filter = 'all' }: GalleryGridProps) {
   const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
+
+  const filteredImages = GALLERY_IMAGES.filter((img) => {
+    if (filter === 'all') return true;
+    if (filter === 'cabin') return img.src.includes('executive cabin');
+    if (filter === 'conference') return img.src.includes('conference-room');
+    if (filter === 'workstation') return img.src.includes('workstation') || img.src.includes('corridor') || img.src.includes('gallery');
+    return true;
+  });
 
   const handleNext = () => {
     if (selectedIdx !== null) {
-      setSelectedIdx((selectedIdx + 1) % GALLERY_IMAGES.length);
+      setSelectedIdx((selectedIdx + 1) % filteredImages.length);
     }
   };
 
   const handlePrev = () => {
     if (selectedIdx !== null) {
-      setSelectedIdx((selectedIdx - 1 + GALLERY_IMAGES.length) % GALLERY_IMAGES.length);
+      setSelectedIdx((selectedIdx - 1 + filteredImages.length) % filteredImages.length);
     }
   };
 
@@ -34,11 +46,12 @@ export default function GalleryGrid() {
   return (
     <>
       <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-        {GALLERY_IMAGES.map((image, index) => (
+        {filteredImages.map((image, index) => (
           <div 
             key={index} 
             className="break-inside-avoid group cursor-pointer overflow-hidden rounded-sm border border-white/10 hover:border-[#8B2232]/50 transition-all duration-300 shadow-subtle hover:shadow-elevated relative bg-white/5"
             onClick={() => setSelectedIdx(index)}
+            data-cursor="view"
           >
             <div className="relative aspect-[4/3] w-full overflow-hidden">
               <Image 
@@ -59,7 +72,7 @@ export default function GalleryGrid() {
       </div>
 
       {/* Lightbox */}
-      {selectedIdx !== null && (
+      {selectedIdx !== null && filteredImages[selectedIdx] && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center bg-[#0F1B2D]/95 p-4 md:p-10 backdrop-blur-md"
           onClick={() => setSelectedIdx(null)}
@@ -104,8 +117,8 @@ export default function GalleryGrid() {
             {/* Image Container */}
             <div className="relative w-full h-[65vh] sm:h-[75vh]">
               <Image 
-                src={encodeURI(GALLERY_IMAGES[selectedIdx].src)} 
-                alt={GALLERY_IMAGES[selectedIdx].alt}
+                src={encodeURI(filteredImages[selectedIdx].src)} 
+                alt={filteredImages[selectedIdx].alt}
                 fill
                 className="object-contain"
                 priority
@@ -113,7 +126,7 @@ export default function GalleryGrid() {
             </div>
             
             <p className="text-white/90 font-heading text-lg mt-4 text-center">
-              {GALLERY_IMAGES[selectedIdx].alt}
+              {filteredImages[selectedIdx].alt}
             </p>
           </div>
         </div>

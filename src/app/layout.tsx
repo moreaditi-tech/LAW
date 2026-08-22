@@ -1,11 +1,15 @@
 import type { Metadata } from 'next';
 import { Playfair_Display, Inter } from 'next/font/google';
+import 'lenis/dist/lenis.css';
 import './globals.css';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import DisclaimerModal from '@/components/layout/DisclaimerModal';
 import CustomCursor from '@/components/ui/CustomCursor';
 import BackToTop from '@/components/ui/BackToTop';
+import SmoothScroll from '@/components/animations/SmoothScroll';
+import PageTransition from '@/components/animations/PageTransition';
+import ScrollProgress from '@/components/animations/ScrollProgress';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -33,6 +37,9 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${playfair.variable} ${inter.variable} font-body antialiased bg-[#0F1B2D] text-white flex flex-col min-h-screen selection:bg-[#8B2232]/40 selection:text-white`}>
         <CustomCursor />
+        <PageTransition />
+        <ScrollProgress />
+        <SmoothScroll />
         <DisclaimerModal />
         <Navbar />
         <main className="flex-grow">

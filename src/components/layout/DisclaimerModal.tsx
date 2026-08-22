@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 
 export default function DisclaimerModal() {
   const [isOpen, setIsOpen] = useState(false);
-  const [accepted, setAccepted] = useState(true);
+  const [accepted, setAccepted] = useState(false);
 
   useEffect(() => {
     // Check if user has already acknowledged disclaimer in this session
@@ -24,7 +24,7 @@ export default function DisclaimerModal() {
 
   return (
     <div className="disclaimer-overlay">
-      <div className="disclaimer-box rounded-sm shadow-2xl border border-white/20 animate-fade-in-up">
+      <div className="disclaimer-box rounded-sm shadow-2xl border border-white/20 animate-[fadeIn_0.5s_ease]">
         <div className="mb-6 border-b border-white/10 pb-4">
           <p className="text-xs uppercase tracking-[0.3em] text-[#8B2232] font-semibold mb-1">
             Official Compliance
