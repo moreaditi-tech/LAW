@@ -99,7 +99,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
           >
             {/* Search Input Bar */}
             <div className="flex items-center px-6 py-5 border-b border-white/10 gap-4">
-              <Search className="w-6 h-6 text-[#8B2232] flex-shrink-0" />
+              <Search className="w-6 h-6 text-[#C9A45C] flex-shrink-0" />
               <input
                 ref={inputRef}
                 type="text"
@@ -130,7 +130,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
               <button
                 onClick={() => setFilter('all')}
                 className={`px-3 py-1 rounded-sm transition-colors ${
-                  filter === 'all' ? 'bg-[#8B2232] text-white' : 'text-white/70 hover:bg-white/5'
+                  filter === 'all' ? 'bg-[#0B2A52] text-white' : 'text-white/70 hover:bg-white/5'
                 }`}
               >
                 All
@@ -138,7 +138,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
               <button
                 onClick={() => setFilter('practice')}
                 className={`px-3 py-1 rounded-sm transition-colors ${
-                  filter === 'practice' ? 'bg-[#8B2232] text-white' : 'text-white/70 hover:bg-white/5'
+                  filter === 'practice' ? 'bg-[#0B2A52] text-white' : 'text-white/70 hover:bg-white/5'
                 }`}
               >
                 Practice Areas ({matchingPractice.length})
@@ -146,7 +146,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
               <button
                 onClick={() => setFilter('team')}
                 className={`px-3 py-1 rounded-sm transition-colors ${
-                  filter === 'team' ? 'bg-[#8B2232] text-white' : 'text-white/70 hover:bg-white/5'
+                  filter === 'team' ? 'bg-[#0B2A52] text-white' : 'text-white/70 hover:bg-white/5'
                 }`}
               >
                 Advocates ({matchingTeam.length})
@@ -154,7 +154,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
               <button
                 onClick={() => setFilter('states')}
                 className={`px-3 py-1 rounded-sm transition-colors ${
-                  filter === 'states' ? 'bg-[#8B2232] text-white' : 'text-white/70 hover:bg-white/5'
+                  filter === 'states' ? 'bg-[#0B2A52] text-white' : 'text-white/70 hover:bg-white/5'
                 }`}
               >
                 Jurisdictions ({matchingStates.length})
@@ -191,7 +191,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   {/* Practice Areas */}
                   {(filter === 'all' || filter === 'practice') && matchingPractice.length > 0 && (
                     <div>
-                      <h4 className="text-xs uppercase tracking-widest text-[#8B2232] font-semibold mb-3 flex items-center gap-2">
+                      <h4 className="text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-3 flex items-center gap-2">
                         <Scale className="w-4 h-4" /> Practice Areas
                       </h4>
                       <div className="space-y-2">
@@ -199,7 +199,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                           <div
                             key={p.id}
                             onClick={() => handleSelect('/practice-areas')}
-                            className="group p-3.5 rounded-sm bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#8B2232]/50 transition-all duration-200 cursor-pointer flex items-start justify-between"
+                            className="group p-3.5 rounded-sm bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#0B2A52]/50 transition-all duration-200 cursor-pointer flex items-start justify-between"
                           >
                             <div>
                               <p className="font-heading text-base text-white group-hover:text-white transition-colors">
@@ -209,7 +209,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                                 {p.shortDescription}
                               </p>
                             </div>
-                            <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-[#8B2232] transition-colors mt-1 flex-shrink-0 ml-4" />
+                            <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-[#C9A45C] transition-colors mt-1 flex-shrink-0 ml-4" />
                           </div>
                         ))}
                       </div>
@@ -219,7 +219,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   {/* Team Members */}
                   {(filter === 'all' || filter === 'team') && matchingTeam.length > 0 && (
                     <div>
-                      <h4 className="text-xs uppercase tracking-widest text-[#8B2232] font-semibold mb-3 flex items-center gap-2">
+                      <h4 className="text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-3 flex items-center gap-2">
                         <User className="w-4 h-4" /> Senior Counsel & Advocates
                       </h4>
                       <div className="space-y-2">
@@ -227,14 +227,14 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                           <div
                             key={idx}
                             onClick={() => handleSelect('/about')}
-                            className="group p-3.5 rounded-sm bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#8B2232]/50 transition-all duration-200 cursor-pointer flex items-start justify-between"
+                            className="group p-3.5 rounded-sm bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#0B2A52]/50 transition-all duration-200 cursor-pointer flex items-start justify-between"
                           >
                             <div>
                               <p className="font-heading text-base text-white">{t.name}</p>
-                              <p className="text-xs text-[#8B2232] font-medium mt-0.5">{t.role}</p>
+                              <p className="text-xs text-[#0B2A52] font-medium mt-0.5">{t.role}</p>
                               <p className="text-xs text-white/60 font-body mt-1 line-clamp-1">{t.bio}</p>
                             </div>
-                            <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-[#8B2232] transition-colors mt-1 flex-shrink-0 ml-4" />
+                            <ArrowRight className="w-4 h-4 text-white/40 group-hover:text-[#C9A45C] transition-colors mt-1 flex-shrink-0 ml-4" />
                           </div>
                         ))}
                       </div>
@@ -244,7 +244,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                   {/* Jurisdictions */}
                   {(filter === 'all' || filter === 'states') && matchingStates.length > 0 && (
                     <div>
-                      <h4 className="text-xs uppercase tracking-widest text-[#8B2232] font-semibold mb-3 flex items-center gap-2">
+                      <h4 className="text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-3 flex items-center gap-2">
                         <MapPin className="w-4 h-4" /> Jurisdictions
                       </h4>
                       <div className="flex flex-wrap gap-2">

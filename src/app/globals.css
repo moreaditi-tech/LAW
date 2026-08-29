@@ -5,7 +5,7 @@
 :root {
   --color-primary: #0f1b2d;
   --color-secondary: #222222;
-  --color-accent: #8b2232;
+  --color-accent: #0b2a52;
   --color-white: #ffffff;
   --color-light: #f8f8f8;
   --color-gray: #999999;
@@ -35,7 +35,7 @@
     @apply font-heading;
   }
   ::selection {
-    background: rgba(139, 34, 50, 0.3);
+    background: rgba(11, 42, 82, 0.3);
     color: #fff;
   }
 }
@@ -107,7 +107,7 @@
 
   .section-label {
     @apply text-xs uppercase tracking-[0.35em] font-body font-semibold mb-5;
-    color: #8B2232;
+    color: #C9A45C;
     letter-spacing: 0.35em;
   }
 
@@ -160,13 +160,13 @@
     @apply inline-flex items-center gap-3 font-body font-medium tracking-wide transition-all duration-300;
     padding: 0.875rem 2rem;
     font-size: 0.875rem;
-    background: #8B2232;
+    background: #0B2A52;
     color: #fff;
-    border: 1px solid #8B2232;
+    border: 1px solid #0B2A52;
   }
   .btn-khaitan-accent:hover {
-    background: #a52a3a;
-    border-color: #a52a3a;
+    background: #071D3A;
+    border-color: #071D3A;
   }
 
   /* Arrow icon inside CTA buttons */
@@ -268,7 +268,7 @@
   }
   .glass-card:hover {
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(139, 34, 50, 0.4);
+    border-color: rgba(11, 42, 82, 0.4);
   }
 
   .hero-title .char,

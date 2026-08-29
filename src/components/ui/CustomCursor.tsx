@@ -42,8 +42,8 @@ export default function CustomCursor() {
         if (isHovered) {
           ringRef.current.style.width = '52px';
           ringRef.current.style.height = '52px';
-          ringRef.current.style.backgroundColor = 'rgba(139, 34, 50, 0.85)';
-          ringRef.current.style.borderColor = 'rgba(139, 34, 50, 0.9)';
+          ringRef.current.style.backgroundColor = 'rgba(201, 164, 92, 0.85)';
+          ringRef.current.style.borderColor = 'rgba(201, 164, 92, 0.9)';
         } else {
           ringRef.current.style.width = '28px';
           ringRef.current.style.height = '28px';
@@ -109,7 +109,7 @@ export default function CustomCursor() {
       {/* Center Dot with instant transform */}
       <div
         ref={dotRef}
-        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-[#8B2232] will-change-transform opacity-0 pointer-events-none transition-transform duration-100"
+        className="fixed top-0 left-0 w-1.5 h-1.5 rounded-full bg-[#C9A45C] will-change-transform opacity-0 pointer-events-none transition-transform duration-100"
       />
     </div>
   );

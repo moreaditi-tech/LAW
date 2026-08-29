@@ -49,7 +49,7 @@ export default function GalleryGrid({ filter = 'all' }: GalleryGridProps) {
         {filteredImages.map((image, index) => (
           <div 
             key={index} 
-            className="break-inside-avoid group cursor-pointer overflow-hidden rounded-sm border border-white/10 hover:border-[#8B2232]/50 transition-all duration-300 shadow-subtle hover:shadow-elevated relative bg-white/5"
+            className="break-inside-avoid group cursor-pointer overflow-hidden rounded-sm border border-white/10 hover:border-[#0B2A52]/50 transition-all duration-300 shadow-subtle hover:shadow-elevated relative bg-white/5"
             onClick={() => setSelectedIdx(index)}
             data-cursor="view"
           >

@@ -13,10 +13,10 @@ export default function WhyChooseUs() {
           {WHY_CHOOSE_US.map((item, index) => (
             <div 
               key={index} 
-              className="p-8 md:p-10 border border-white/10 rounded-sm bg-white/5 hover:border-[#8B2232]/50 transition-all duration-300 flex flex-col justify-start"
+              className="p-8 md:p-10 border border-white/10 rounded-sm bg-white/5 hover:border-[#0B2A52]/50 transition-all duration-300 flex flex-col justify-start"
             >
               <div className="flex items-center gap-4 mb-4">
-                <span className="font-heading text-3xl font-bold text-[#8B2232]">
+                <span className="font-heading text-3xl font-bold text-[#C9A45C]">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <h3 className="font-heading text-xl sm:text-2xl text-white">{item.title}</h3>

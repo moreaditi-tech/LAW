@@ -30,7 +30,7 @@ export default function ContactPage() {
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#8B2232] font-semibold mb-4 font-body">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#C9A45C] font-semibold mb-4 font-body">
             Direct Communication
           </p>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tight">
@@ -56,7 +56,7 @@ export default function ContactPage() {
             <div className="mt-12 space-y-10">
               <div>
                 <h3 className="font-heading text-xl text-white mb-2">Office Chamber</h3>
-                <div className="w-8 h-[2px] bg-[#8B2232] mb-3" />
+                <div className="w-8 h-[2px] bg-[#0B2A52] mb-3" />
                 <p className="font-body text-white/80 text-base sm:text-lg leading-relaxed">
                   {FIRM.address}
                 </p>
@@ -64,15 +64,15 @@ export default function ContactPage() {
               
               <div>
                 <h3 className="font-heading text-xl text-white mb-2">Telephone Inquiries</h3>
-                <div className="w-8 h-[2px] bg-[#8B2232] mb-3" />
+                <div className="w-8 h-[2px] bg-[#0B2A52] mb-3" />
                 <div className="space-y-2 font-body text-white/80 text-base sm:text-lg">
                   <p>
-                    <a href={`tel:${FIRM.phone1.replace(/\s+/g, '')}`} className="hover:text-[#8B2232] transition-colors">
+                    <a href={`tel:${FIRM.phone1.replace(/\s+/g, '')}`} className="hover:text-[#C9A45C] transition-colors">
                       {FIRM.phone1}
                     </a>
                   </p>
                   <p>
-                    <a href={`tel:${FIRM.phone2.replace(/\s+/g, '')}`} className="hover:text-[#8B2232] transition-colors">
+                    <a href={`tel:${FIRM.phone2.replace(/\s+/g, '')}`} className="hover:text-[#C9A45C] transition-colors">
                       {FIRM.phone2}
                     </a>
                   </p>
@@ -81,9 +81,9 @@ export default function ContactPage() {
 
               <div>
                 <h3 className="font-heading text-xl text-white mb-2">Official Website</h3>
-                <div className="w-8 h-[2px] bg-[#8B2232] mb-3" />
+                <div className="w-8 h-[2px] bg-[#0B2A52] mb-3" />
                 <p className="font-body text-white/80 text-base sm:text-lg">
-                  <a href={`https://${FIRM.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#8B2232] transition-colors">
+                  <a href={`https://${FIRM.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#C9A45C] transition-colors">
                     {FIRM.website}
                   </a>
                 </p>
@@ -91,7 +91,7 @@ export default function ContactPage() {
               
               <div className="pt-4">
                 <h3 className="font-heading text-xl text-white mb-2">Active Jurisdictions</h3>
-                <div className="w-8 h-[2px] bg-[#8B2232] mb-4" />
+                <div className="w-8 h-[2px] bg-[#0B2A52] mb-4" />
                 <p className="font-body text-white/70 text-sm leading-relaxed mb-4">
                   {ABOUT.whereWePractice}
                 </p>
@@ -114,7 +114,7 @@ export default function ContactPage() {
             </p>
 
             {submitted ? (
-              <div className="p-8 bg-[#8B2232]/20 border border-[#8B2232] rounded-sm text-center">
+              <div className="p-8 bg-[#0B2A52]/20 border border-[#0B2A52] rounded-sm text-center">
                 <h4 className="font-heading text-2xl text-white mb-2">Message Received</h4>
                 <p className="font-body text-white/80 text-sm">
                   Thank you for reaching out to Prime Law Bharat. Our office will review your inquiry and follow up promptly.
@@ -131,7 +131,7 @@ export default function ContactPage() {
                       type="text" 
                       id="fullName" 
                       required
-                      className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#8B2232] transition-colors text-sm"
+                      className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#0B2A52] transition-colors text-sm"
                       placeholder="e.g. Adv. Sharma / Mr. Verma"
                     />
                   </div>
@@ -143,7 +143,7 @@ export default function ContactPage() {
                       type="tel" 
                       id="phone" 
                       required
-                      className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#8B2232] transition-colors text-sm"
+                      className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#0B2A52] transition-colors text-sm"
                       placeholder="+91"
                     />
                   </div>
@@ -157,7 +157,7 @@ export default function ContactPage() {
                     type="email" 
                     id="email" 
                     required
-                    className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#8B2232] transition-colors text-sm"
+                    className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#0B2A52] transition-colors text-sm"
                     placeholder="name@example.com"
                   />
                 </div>
@@ -169,7 +169,7 @@ export default function ContactPage() {
                   <input 
                     type="text" 
                     id="subject" 
-                    className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#8B2232] transition-colors text-sm"
+                    className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#0B2A52] transition-colors text-sm"
                     placeholder="e.g. High Court Appeal / Corporate / RERA / Property"
                   />
                 </div>
@@ -182,14 +182,14 @@ export default function ContactPage() {
                     id="message" 
                     rows={5}
                     required
-                    className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#8B2232] transition-colors resize-none text-sm"
+                    className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#0B2A52] transition-colors resize-none text-sm"
                     placeholder="Provide a brief overview of the forum, key facts, and current stage of proceedings..."
                   />
                 </div>
                 
                 <button 
                   type="submit"
-                  className="w-full bg-[#8B2232] hover:bg-[#a52a3a] text-white font-body font-medium tracking-wide py-4 px-8 rounded-sm transition-all duration-300 text-sm uppercase"
+                  className="w-full bg-[#0B2A52] hover:bg-[#071D3A] text-white font-body font-medium tracking-wide py-4 px-8 rounded-sm transition-all duration-300 text-sm uppercase"
                 >
                   Submit Consultation Request
                 </button>
