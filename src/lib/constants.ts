@@ -430,7 +430,6 @@ export const PRACTICE_AREAS: PracticeArea[] = [
 
 export const GALLERY_IMAGES = [
   { src: "/images/conference-room/conference-room-01.jpg", alt: "Conference Room" },
-  { src: "/images/corridor/corridor.jpg", alt: "Conference Room" },
   { src: "/images/executive cabin/executive-cabin-01.jpg", alt: "Executive Cabin" },
   { src: "/images/workstation/workstation.jpg", alt: "Workstation" },
   { src: "/images/Outside/Building.jpeg", alt: "Building Exterior" },
