@@ -6,7 +6,7 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
-import { FIRM, ABOUT, PRACTICE_AREAS, COMMITMENTS } from '@/lib/constants';
+import { FIRM, ABOUT, PRACTICE_AREAS, COMMITMENTS, TEAM_MEMBERS } from '@/lib/constants';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import InfiniteMarquee from '@/components/ui/InfiniteMarquee';
 import { emitSiteScroll } from '@/lib/scroll';
@@ -16,6 +16,7 @@ import { motion } from 'framer-motion';
 const SECTIONS = [
   { id: 'hero', label: 'Prime Law Bharat' },
   { id: 'about', label: 'About The Firm' },
+  { id: 'team', label: 'Team Members' },
   { id: 'practice', label: 'Expertise' },
   { id: 'strategy', label: 'Strategic Advocacy' },
   { id: 'commitments', label: 'Commitments' },
@@ -289,6 +290,43 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" className="snap-section bg-[#0A1220] flex items-center">
+        <div className="section-content w-full relative py-20">
+          <div className="mb-12 text-center flex flex-col items-center">
+            <p className="section-label reveal-up">Team Members</p>
+            <h2 className="section-title mb-6 reveal-up">Meet our expert attorneys</h2>
+            <div className="w-16 h-[2px] bg-[#C9A45C] reveal-up" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {TEAM_MEMBERS.map((member) => (
+              <div key={member.id} className="reveal-up group relative border border-white/10 bg-white/[0.03] hover:border-[#C9A45C]/50 hover:bg-white/[0.06] transition-all duration-500 overflow-hidden flex flex-col h-full rounded-sm shadow-xl">
+                <div className="relative w-full aspect-[4/4.5] overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1220] via-[#0A1220]/20 to-transparent opacity-90" />
+                </div>
+                <div className="p-8 flex flex-col flex-grow relative z-10 -mt-16 bg-gradient-to-t from-[#0A1220] via-[#0A1220] to-transparent pt-12">
+                  <p className="text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-2">{member.designation}</p>
+                  <h3 className="font-heading text-2xl sm:text-3xl text-white mb-4">{member.name}</h3>
+                  <p className="text-sm text-white/70 font-body leading-relaxed mb-8 flex-grow">
+                    {member.shortExpertise}
+                  </p>
+                  <Link href={`/team/${member.id}`} className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-white hover:text-[#C9A45C] font-medium transition-colors group/btn">
+                    <span>View Profile</span>
+                    <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
