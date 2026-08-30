@@ -75,7 +75,7 @@ export default function Navbar() {
         {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-3.5 sm:gap-4 z-50 group">
           {/* Prominent Gold-Framed Official Emblem */}
-          <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full p-[2px] bg-gradient-to-br from-[#F9E29D] via-[#D4AF37] to-[#8B2232] shadow-[0_2px_16px_rgba(212,175,55,0.35)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_4px_24px_rgba(212,175,55,0.5)] flex-shrink-0">
+          <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full p-[2px] bg-gradient-to-br from-[#F9E29D] via-[#D4AF37] to-[#C9A45C] shadow-[0_2px_16px_rgba(212,175,55,0.35)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_4px_24px_rgba(212,175,55,0.5)] flex-shrink-0">
             <div className="w-full h-full rounded-full overflow-hidden bg-[#0F1B2D] border border-white/20 relative flex items-center justify-center">
               <Image
                 src="/images/logo/logo-1.png"
@@ -141,7 +141,7 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center my-auto">
               {/* Primary Navigation Links */}
               <div className="lg:col-span-6 flex flex-col space-y-6">
-                <p className="text-xs uppercase tracking-[0.35em] text-[#8B2232] font-semibold font-body">
+                <p className="text-xs uppercase tracking-[0.35em] text-[#C9A45C] font-semibold font-body">
                   Navigation
                 </p>
                 <div className="flex flex-col space-y-4 sm:space-y-6">
@@ -157,11 +157,11 @@ export default function Navbar() {
                         <Link
                           href={link.href}
                           className={`group inline-flex items-center gap-4 font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight transition-colors duration-300 ${
-                            isActive ? 'text-[#8B2232]' : 'text-white hover:text-[#8B2232]'
+                            isActive ? 'text-[#C9A45C]' : 'text-white hover:text-[#C9A45C]'
                           }`}
                         >
                           <span>{link.label}</span>
-                          <ArrowRight className="w-6 h-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-[#8B2232]" />
+                          <ArrowRight className="w-6 h-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-[#C9A45C]" />
                         </Link>
                       </motion.div>
                     );
@@ -183,14 +183,14 @@ export default function Navbar() {
                         href="/practice-areas"
                         className="text-xs text-white/70 hover:text-white hover:translate-x-1 font-body transition-all flex items-center gap-2 py-1"
                       >
-                        <span className="w-1 h-1 rounded-full bg-[#8B2232]" />
+                        <span className="w-1 h-1 rounded-full bg-[#C9A45C]" />
                         <span className="line-clamp-1">{area.title}</span>
                       </Link>
                     ))}
                   </div>
                   <Link
                     href="/practice-areas"
-                    className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[#8B2232] hover:text-white font-medium mt-4 transition-colors"
+                    className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[#C9A45C] hover:text-white font-medium mt-4 transition-colors"
                   >
                     <span>View all 16 practice areas</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -204,11 +204,11 @@ export default function Navbar() {
                   </p>
                   <div className="space-y-2 text-sm text-white/80 font-body">
                     <p className="flex items-center gap-2.5">
-                      <MapPin className="w-4 h-4 text-[#8B2232] flex-shrink-0" />
+                      <MapPin className="w-4 h-4 text-[#C9A45C] flex-shrink-0" />
                       <span>{FIRM.address}</span>
                     </p>
                     <p className="flex items-center gap-2.5">
-                      <Phone className="w-4 h-4 text-[#8B2232] flex-shrink-0" />
+                      <Phone className="w-4 h-4 text-[#C9A45C] flex-shrink-0" />
                       <a href={`tel:${FIRM.phone1.replace(/\s+/g, '')}`} className="hover:text-white">
                         {FIRM.phone1}
                       </a>
