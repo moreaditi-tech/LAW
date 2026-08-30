@@ -441,7 +441,7 @@ export default function HomePage() {
               <p className="section-desc mb-8 reveal-up text-justify">{ABOUT.commitment}</p>
               <div className="reveal-up">
                 <Link href="/about" className="btn-khaitan group" data-cursor="view">
-                  <span>Meet Our Advocates</span>
+                  <span>About Us</span>
                   <ArrowRight className="btn-arrow w-4 h-4" />
                 </Link>
               </div>
