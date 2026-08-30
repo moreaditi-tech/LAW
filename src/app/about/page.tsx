@@ -53,7 +53,7 @@ export default function AboutPage() {
               <div key={index} className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-[#0B2A52]/50 transition-all duration-300">
                 <div className="w-10 h-[2px] bg-[#C9A45C] mb-6" />
                 <h3 className="font-heading text-2xl mb-4 text-white">{commitment.title}</h3>
-                <p className="font-body text-white/70 leading-relaxed text-justify">{commitment.description}</p>
+                <p className="font-body text-white/70 leading-relaxed">{commitment.description}</p>
               </div>
             ))}
           </div>
