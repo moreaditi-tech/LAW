@@ -8,7 +8,7 @@ export const FIRM = {
   tagline: "Comprehensive Legal Solutions | Trusted Advocacy Across Forums",
   tagline2: "You seek justice. We deliver it",
   closingQuote:
-    "You bring us the problem. We bring the strategy, the preparation, and the persistence to see it through.",
+    "You seek justice, we deliver it.",
   phone1: "+91 9109101055",
   phone2: "+91 86000 12001",
   website: "www.primelawbharat.com",
@@ -25,7 +25,7 @@ export const ABOUT = {
   experience: `Practicing across five states means dealing with more than just different courtrooms — it means working within different state-specific legislations, registration and stamp duty regimes, land revenue systems, and local procedural rules that a single-state practice never has to navigate. This is where our multi-state experience becomes a genuine advantage for clients.`,
   experienceDetail: `Our exposure spans central legislations applied with state-specific variations — including the Registration Act, the Indian Stamp Act (and its state amendments in Maharashtra, Karnataka, Gujarat, Delhi, and Haryana), state Rent Control and Tenancy Acts, Land Revenue Codes, Cooperative Societies Acts, and state-specific RERA rules — alongside focused experience under special statutes such as the MPID Act (Maharashtra), the Prevention of Money Laundering Act (PMLA) before the ED, the SARFAESI Act and DRT Act in banking recovery, the SEBI Act and allied regulations, and the Companies Act, 2013 in corporate matters.`,
   experienceClosing: `This cross-state, cross-statute experience means we don't treat your matter as a template case. We factor in the specific state law, local registration practice, and forum-specific procedure that actually applies to your matter — rather than a generalized approach that overlooks state-level nuance.`,
-  commitment: `Legal disputes are stressful — often because clients don't know what's happening or why. At Prime Law Bharat, we make it our job to change that. We explain your options in plain terms, prepare your case with the seriousness it deserves, and stand with you through every hearing, adjournment, and appeal until your matter is resolved.`,
+  commitment: `Legal disputes are stressful, often because clients don't know what's happening or why. At Prime Law Bharat, we make it our job to change that. We explain your options in plain terms, prepare your case with the seriousness it deserves, and stand with you through every hearing, adjournment, and appeal until your matter is resolved.`,
 };
 
 export const COMMITMENTS = [

@@ -463,7 +463,7 @@ export default function HomePage() {
                 You Bring Us the Problem.
                 <br className="hidden sm:inline" /> We Bring the Strategy.
               </h2>
-              <p className="section-desc mb-8 reveal-up">{ABOUT.commitment}</p>
+              <p className="section-desc mb-8 reveal-up text-justify">{ABOUT.commitment}</p>
               <div className="border-l-2 border-[#0B2A52] pl-6 py-2 mb-8 reveal-up">
                 <blockquote className="font-heading text-lg sm:text-xl md:text-2xl text-white/90 italic leading-relaxed">
                   &ldquo;{FIRM.closingQuote}&rdquo;
