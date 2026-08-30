@@ -16,7 +16,7 @@
 | **Phone 1** | +91 9109101055 |
 | **Phone 2** | +91 86000 12001 |
 | **Website** | www.primelawbharat.com |
-| **Address** | Chamber 63, Anjani Buildcon, Office No. 801 |
+| **Address** | Office No. 801, Anjani Buildcon, Chamber 63 |
 | **States** | Maharashtra \| Karnataka \| Gujarat \| Delhi \| Haryana |
 
 ---

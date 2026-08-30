@@ -12,7 +12,7 @@ export const FIRM = {
   phone1: "+91 9109101055",
   phone2: "+91 86000 12001",
   website: "www.primelawbharat.com",
-  address: "Chamber 63, Anjani Buildcon, Office No. 801",
+  address: "Office No. 801, Anjani Buildcon, Chamber 63",
   states: ["Maharashtra", "Karnataka", "Gujarat", "Delhi", "Haryana"],
   forums:
     "Criminal • Civil • Divorce • Property • Corporate • Consumer • RERA • DRT / DRAT • SEBI • MPID • Multi-State Co-operative Societies • ED / PMLA • All Appellate Tribunals • High Court • Supreme Court",
