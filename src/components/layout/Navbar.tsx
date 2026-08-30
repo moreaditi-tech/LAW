@@ -192,7 +192,7 @@ export default function Navbar() {
                     href="/practice-areas"
                     className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[#C9A45C] hover:text-white font-medium mt-4 transition-colors"
                   >
-                    <span>View all 16 practice areas</span>
+                    <span>View all 36 practice areas</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>

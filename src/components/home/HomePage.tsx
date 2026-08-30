@@ -276,7 +276,7 @@ export default function HomePage() {
               </div>
               <div className="reveal-up p-6 bg-white/5 border border-white/10 rounded-sm">
                 <p className="font-heading text-4xl font-bold text-[#C9A45C] mb-1">
-                  <AnimatedCounter value={16} />
+                  <AnimatedCounter value={36} />
                 </p>
                 <p className="text-xs uppercase tracking-widest text-white/90 font-medium">Practice Domains</p>
                 <p className="text-xs text-white/50 mt-2 font-body">Civil, Criminal, Corporate, RERA & more</p>
