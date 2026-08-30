@@ -51,7 +51,7 @@ export default function TeamProfilePage({ params }: TeamProfileProps) {
                 src={member.image} 
                 alt={member.name} 
                 fill 
-                className="object-cover object-top"
+                className="object-cover object-[center_30%]"
                 priority
               />
             </div>
