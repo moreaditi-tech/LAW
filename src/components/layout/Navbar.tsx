@@ -81,9 +81,9 @@ export default function Navbar() {
                 src="/images/logo/logo-1.png"
                 alt="Prime Law Bharat Official Logo"
                 fill
+                sizes="40px"
                 className="object-cover rounded-full filter contrast-[1.12] brightness-[1.06] saturate-[1.18]"
                 priority
-                unoptimized
               />
             </div>
           </div>

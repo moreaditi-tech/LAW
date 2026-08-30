@@ -13,6 +13,8 @@ export default function AboutPage() {
             src="/images/executive cabin/executive-cabin-03.jpg" 
             alt="About Prime Law Bharat" 
             fill 
+            sizes="100vw"
+            quality={90}
             className="object-cover"
             priority
           />

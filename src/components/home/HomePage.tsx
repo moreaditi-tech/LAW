@@ -195,8 +195,9 @@ export default function HomePage() {
             alt="Prime Law Bharat Legal Chambers"
             fill
             priority
-            unoptimized
-            className="hero-bg-img object-cover scale-105"
+            quality={90}
+            sizes="100vw"
+                        className="hero-bg-img object-cover scale-105"
           />
         </div>
         <div className="section-overlay bg-[#0F1B2D]/75" />
@@ -211,8 +212,7 @@ export default function HomePage() {
               height={260}
               className="w-[190px] h-[190px] lg:w-[230px] lg:h-[230px] xl:w-[260px] xl:h-[260px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]"
               priority
-              unoptimized
-            />
+                          />
           </div>
         </div>
         <div className="section-content">

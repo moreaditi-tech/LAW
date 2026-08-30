@@ -37,6 +37,8 @@ export default function CareerPage() {
             src="/images/conference-room/conference-room-01.jpg"
             alt="Prime Law Bharat Chambers"
             fill
+            sizes="100vw"
+            quality={90}
             className="object-cover filter grayscale contrast-125 brightness-[0.4]"
             priority
           />
