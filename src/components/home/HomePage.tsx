@@ -460,15 +460,10 @@ export default function HomePage() {
             <div className="lg:col-span-7 flex flex-col justify-center">
               <p className="section-label reveal-up">Strategic Advocacy</p>
               <h2 className="section-title leading-[1.12] reveal-up">
-                You Bring Us the Problem.
-                <br className="hidden sm:inline" /> We Bring the Strategy.
+                You Seek Justice.
+                <br className="hidden sm:inline" /> We Deliver It.
               </h2>
               <p className="section-desc mb-8 reveal-up text-justify">{ABOUT.commitment}</p>
-              <div className="border-l-2 border-[#0B2A52] pl-6 py-2 mb-8 reveal-up">
-                <blockquote className="font-heading text-lg sm:text-xl md:text-2xl text-white/90 italic leading-relaxed">
-                  &ldquo;{FIRM.closingQuote}&rdquo;
-                </blockquote>
-              </div>
               <div className="reveal-up">
                 <Link href="/about" className="btn-khaitan group" data-cursor="view">
                   <span>Meet Our Advocates</span>
