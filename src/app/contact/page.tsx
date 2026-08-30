@@ -79,16 +79,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div>
-                <h3 className="font-heading text-xl text-white mb-2">Official Website</h3>
-                <div className="w-8 h-[2px] bg-[#0B2A52] mb-3" />
-                <p className="font-body text-white/80 text-base sm:text-lg">
-                  <a href={`https://${FIRM.website}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#C9A45C] transition-colors">
-                    {FIRM.website}
-                  </a>
-                </p>
-              </div>
-              
+
               <div className="pt-4">
                 <h3 className="font-heading text-xl text-white mb-2">Active Jurisdictions</h3>
                 <div className="w-8 h-[2px] bg-[#0B2A52] mb-4" />
