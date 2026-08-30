@@ -1,7 +1,6 @@
 import { FIRM, ABOUT, COMMITMENTS, KEY_STRENGTHS } from '@/lib/constants';
 import SectionHeading from '@/components/ui/SectionHeading';
 import TeamProfiles from '@/components/about/TeamProfiles';
-import WhyChooseUs from '@/components/about/WhyChooseUs';
 import Image from 'next/image';
 
 export default function AboutPage() {
@@ -108,9 +107,6 @@ export default function AboutPage() {
 
       {/* Team */}
       <TeamProfiles />
-
-      {/* Why Choose Us */}
-      <WhyChooseUs />
 
       {/* Closing Commitment Quote */}
       <section className="py-32 px-6 text-center max-w-4xl mx-auto">
