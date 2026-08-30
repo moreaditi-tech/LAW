@@ -429,12 +429,13 @@ export const GALLERY_IMAGES = [
   { src: "/images/conference-room/conference-room-02.jpg", alt: "Conference Room" },
   { src: "/images/corridor/corridor.jpg", alt: "Office Corridor" },
   { src: "/images/executive cabin/executive-cabin-01.jpg", alt: "Executive Cabin" },
-  { src: "/images/executive cabin/executive-cabin-02.jpg", alt: "Executive Cabin" },
   { src: "/images/executive cabin/executive-cabin-03.jpg", alt: "Executive Cabin" },
   { src: "/images/executive cabin/executive-cabin-04.jpg", alt: "Executive Cabin" },
   { src: "/images/executive cabin/executive-cabin-05.jpg", alt: "Executive Cabin" },
   { src: "/images/gallery/gallary.jpg", alt: "Office Gallery" },
   { src: "/images/workstation/workstation.jpg", alt: "Workstation" },
+  { src: "/images/Outside/Building.jpeg", alt: "Building Exterior" },
+  { src: "/images/Outside/Entrance.jpg", alt: "Office Entrance" },
 ];
 
 export const NAV_LINKS = [

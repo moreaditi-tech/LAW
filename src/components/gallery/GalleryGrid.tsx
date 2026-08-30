@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { GALLERY_IMAGES } from '@/lib/constants';
 
 interface GalleryGridProps {
-  filter?: 'all' | 'cabin' | 'conference' | 'workstation';
+  filter?: 'all' | 'cabin' | 'conference' | 'workstation' | 'outside';
 }
 
 export default function GalleryGrid({ filter = 'all' }: GalleryGridProps) {
@@ -16,6 +16,7 @@ export default function GalleryGrid({ filter = 'all' }: GalleryGridProps) {
     if (filter === 'cabin') return img.src.includes('executive cabin');
     if (filter === 'conference') return img.src.includes('conference-room');
     if (filter === 'workstation') return img.src.includes('workstation') || img.src.includes('corridor') || img.src.includes('gallery');
+    if (filter === 'outside') return img.src.includes('Outside');
     return true;
   });
 

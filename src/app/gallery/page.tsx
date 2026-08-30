@@ -6,13 +6,14 @@ import GalleryGrid from '@/components/gallery/GalleryGrid';
 import Image from 'next/image';
 
 export default function GalleryPage() {
-  const [activeCategory, setActiveCategory] = useState<'all' | 'cabin' | 'conference' | 'workstation'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'cabin' | 'conference' | 'workstation' | 'outside'>('all');
 
   const categories = [
     { id: 'all', label: 'All Chambers' },
     { id: 'cabin', label: 'Executive Cabins' },
     { id: 'conference', label: 'Conference Suites' },
     { id: 'workstation', label: 'Workspaces & Corridors' },
+    { id: 'outside', label: 'Exterior & Building' },
   ] as const;
 
   return (
