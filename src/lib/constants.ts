@@ -81,6 +81,10 @@ export const WHY_CHOOSE_US = [
     title: "Client-First Approach, Not Case-First",
     description: `For us, a case file is not just a number — it represents a person's property, business, family, or freedom. We take the time to understand what outcome actually matters to you, not just what's legally possible, and we shape our strategy around your real priorities, whether that's a quick resolution, minimizing cost, protecting a relationship, or fighting a matter to its fullest extent.`,
   },
+  {
+    title: "Our Commitment",
+    description: `Legal disputes are stressful, often because clients don't know what's happening or why. At Prime Law Bharat, we make it our job to change that. We explain your options in plain terms, prepare your case with the seriousness it deserves, and stand with you through every hearing, adjournment, and appeal until your matter is resolved.`,
+  }
 ];
 
 export const TEAM = [

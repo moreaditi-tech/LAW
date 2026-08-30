@@ -15,7 +15,7 @@ import { motion } from 'framer-motion';
 
 const SECTIONS = [
   { id: 'hero', label: 'Prime Law Bharat' },
-  { id: 'about', label: 'About The Firm' },
+  { id: 'why-choose-us', label: 'Why Choose Us' },
   { id: 'team', label: 'Team Members' },
   { id: 'practice', label: 'Expertise' },
   { id: 'strategy', label: 'Strategic Advocacy' },
@@ -246,49 +246,24 @@ export default function HomePage() {
       </section>
 
       <section
-        id="about"
+        id="why-choose-us"
         className="snap-section relative flex items-center"
         style={{ backgroundImage: "url('/images/corridor/corridor.jpg')" }}
       >
         <div className="section-overlay bg-[#0F1B2D]/85" />
-        <div className="section-content">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7">
-              <p className="section-label reveal-up">About The Firm</p>
-              <h2 className="section-title reveal-up">Full-Service Practice Across Courts & Tribunals</h2>
-              <p className="section-desc mb-6 reveal-up">{ABOUT.intro}</p>
-              <p className="text-sm md:text-base text-white/60 font-body leading-relaxed mb-8 reveal-up">
-                {ABOUT.foundation}
-              </p>
-              <div className="reveal-up">
-                <Link href="/about" className="btn-khaitan group" data-cursor="view">
-                  <span>Read Full Profile</span>
-                  <ArrowRight className="btn-arrow w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="reveal-up p-6 bg-white/5 border border-white/10 rounded-sm">
-                <p className="font-heading text-4xl font-bold text-[#C9A45C] mb-1">
-                  <AnimatedCounter value={5} />
-                </p>
-                <p className="text-xs uppercase tracking-widest text-white/90 font-medium">State Jurisdictions</p>
-                <p className="text-xs text-white/50 mt-2 font-body">MH, KA, GJ, DL, HR</p>
-              </div>
-              <div className="reveal-up p-6 bg-white/5 border border-white/10 rounded-sm">
-                <p className="font-heading text-4xl font-bold text-[#C9A45C] mb-1">
-                  <AnimatedCounter value={36} />
-                </p>
-                <p className="text-xs uppercase tracking-widest text-white/90 font-medium">Practice Domains</p>
-                <p className="text-xs text-white/50 mt-2 font-body">Civil, Criminal, Corporate, RERA & more</p>
-              </div>
-              <div className="reveal-up p-6 bg-white/5 border border-white/10 rounded-sm sm:col-span-2">
-                <p className="font-heading text-3xl sm:text-4xl font-bold text-[#C9A45C] mb-1">Trial to Supreme Court</p>
-                <p className="text-xs uppercase tracking-widest text-white/90 font-medium">Multi-Forum Advocacy</p>
-                <p className="text-xs text-white/50 mt-2 font-body">
-                  District Courts, Tribunals, High Courts & Supreme Court of India
-                </p>
-              </div>
+        <div className="section-content relative">
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center py-20">
+            <p className="section-label reveal-up">Why Choose Us</p>
+            <h2 className="section-title reveal-up mb-6">Why Clients Choose Prime Law Bharat</h2>
+            <div className="w-16 h-[2px] bg-[#C9A45C] reveal-up mb-8" />
+            <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-10 reveal-up">
+              Strategic legal representation, honest case assessment, meticulous preparation, and consistent representation across courts, tribunals, and jurisdictions.
+            </p>
+            <div className="reveal-up">
+              <Link href="/why-choose-us" className="btn-khaitan group inline-flex" data-cursor="view">
+                <span>View Details</span>
+                <ArrowRight className="btn-arrow w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
