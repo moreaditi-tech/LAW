@@ -536,7 +536,7 @@ export default function HomePage() {
           <div>
             <p className="section-label reveal-up">Get In Touch</p>
             <h2 className="section-title max-w-4xl reveal-up">Schedule a Confidential Consultation</h2>
-            <p className="section-desc reveal-up">{ABOUT.whereWePractice}</p>
+            <p className="section-desc reveal-up text-justify">{ABOUT.whereWePractice}</p>
             <div className="flex flex-col sm:flex-row gap-5 items-stretch sm:items-center reveal-up">
               <Link href="/contact" className="btn-khaitan-accent group justify-center" data-cursor="view">
                 <span>Contact Senior Counsel</span>
