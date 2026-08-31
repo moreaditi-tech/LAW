@@ -450,7 +450,7 @@ export const TEAM_MEMBERS = [
     id: "reetika-kamthan",
     name: "Adv. Reetika Kamthan",
     designation: "Advocate",
-    image: "/images/team/Reetika.jpg",
+    image: "/images/Team/Reetika.jpg",
     expertise: "Civil & Property Litigation • Criminal Litigation & Trial Advocacy • High Court & Supreme Court Matters • RERA & Real Estate Litigation • Corporate & Commercial Litigation • Consumer Protection • Family Matters • Cheque Bounce & Recovery Matters • Injunction & Interim Relief Proceedings • Franchisee & Business Disputes.",
     shortExpertise: "Civil & Property Litigation, Criminal Litigation, High Court & Supreme Court Matters, RERA, Corporate Litigation, Family Matters.",
     biography: `With over 8 years of hands-on litigation experience before the Pune District Court and the Bombay High Court, Adv. Reetika Kamthan has built a practice that spans an unusually wide range of matters — and an unusually wide geography, with exposure to cases across Pune, Mumbai, Nagpur, Delhi, and Bangalore.
@@ -463,7 +463,7 @@ Adv. Reetika’s approach is strategic and result-oriented, grounded in strong c
     id: "abhishek-motewar",
     name: "Adv. Abhishek Motewar",
     designation: "Advocate",
-    image: "/images/team/Abhishek.jpg",
+    image: "/images/Team/Abhishek.jpg",
     expertise: "Financial & Economic Offences • SEBI & Regulatory Matters • ED & PMLA Proceedings • CBI & Criminal Litigation • MPID & Investor Disputes • DRT, DRAT & Financial Disputes • High Court & Supreme Court Litigation",
     shortExpertise: "Financial & Economic Offences, SEBI & Regulatory Matters, ED & PMLA Proceedings, CBI & Criminal Litigation, MPID.",
     biography: `Adv. Abhishek Motewar has built his practice around some of the highest-stakes work in Indian litigation: financial fraud, regulatory enforcement, and criminal proceedings, handled before SEBI, the Enforcement Directorate, the CBI, MPID courts, the DRT, and the higher judiciary.
