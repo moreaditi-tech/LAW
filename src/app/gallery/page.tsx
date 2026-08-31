@@ -6,13 +6,14 @@ import GalleryGrid from '@/components/gallery/GalleryGrid';
 import Image from 'next/image';
 
 export default function GalleryPage() {
-  const [activeCategory, setActiveCategory] = useState<'all' | 'cabin' | 'conference' | 'workstation'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'cabin' | 'conference' | 'workstation' | 'outside'>('all');
 
   const categories = [
     { id: 'all', label: 'All Chambers' },
     { id: 'cabin', label: 'Executive Cabins' },
     { id: 'conference', label: 'Conference Suites' },
     { id: 'workstation', label: 'Workspaces & Corridors' },
+    { id: 'outside', label: 'Exterior & Building' },
   ] as const;
 
   return (
@@ -32,7 +33,7 @@ export default function GalleryPage() {
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-[#8B2232] font-semibold mb-4 font-body">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-[#C9A45C] font-semibold mb-4 font-body">
             Chambers & Facilities
           </p>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tight">
@@ -61,7 +62,7 @@ export default function GalleryPage() {
               onClick={() => setActiveCategory(cat.id)}
               className={`px-5 py-2.5 rounded-sm font-body text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 ${
                 activeCategory === cat.id
-                  ? 'bg-[#8B2232] text-white shadow-lg'
+                  ? 'bg-[#0B2A52] text-white shadow-lg'
                   : 'bg-white/5 hover:bg-white/10 text-white/70 border border-white/10'
               }`}
             >

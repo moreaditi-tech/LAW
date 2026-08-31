@@ -1,7 +1,6 @@
 import { FIRM, ABOUT, COMMITMENTS, KEY_STRENGTHS } from '@/lib/constants';
 import SectionHeading from '@/components/ui/SectionHeading';
 import TeamProfiles from '@/components/about/TeamProfiles';
-import WhyChooseUs from '@/components/about/WhyChooseUs';
 import Image from 'next/image';
 
 export default function AboutPage() {
@@ -14,6 +13,8 @@ export default function AboutPage() {
             src="/images/executive cabin/executive-cabin-03.jpg" 
             alt="About Prime Law Bharat" 
             fill 
+            sizes="100vw"
+            quality={90}
             className="object-cover"
             priority
           />
@@ -22,7 +23,7 @@ export default function AboutPage() {
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#8B2232] font-semibold mb-4 font-body">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#C9A45C] font-semibold mb-4 font-body">
             About The Firm
           </p>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tight">
@@ -35,11 +36,11 @@ export default function AboutPage() {
       </section>
 
       {/* About Introduction */}
-      <section className="py-24 px-6 md:px-12 max-w-4xl mx-auto text-center space-y-8">
-        <p className="font-body text-lg md:text-xl leading-relaxed text-white/90 font-light">
+      <section className="py-24 px-6 md:px-12 max-w-4xl mx-auto space-y-8">
+        <p className="font-body text-lg md:text-xl leading-relaxed text-white/90 font-light text-justify">
           {ABOUT.intro}
         </p>
-        <p className="font-body text-lg md:text-xl leading-relaxed text-white/80 font-light">
+        <p className="font-body text-lg md:text-xl leading-relaxed text-white/80 font-light text-justify">
           {ABOUT.foundation}
         </p>
       </section>
@@ -50,8 +51,8 @@ export default function AboutPage() {
           <SectionHeading title="Our Commitments" center />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             {COMMITMENTS.map((commitment, index) => (
-              <div key={index} className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-[#8B2232]/50 transition-all duration-300">
-                <div className="w-10 h-[2px] bg-[#8B2232] mb-6" />
+              <div key={index} className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-[#0B2A52]/50 transition-all duration-300">
+                <div className="w-10 h-[2px] bg-[#C9A45C] mb-6" />
                 <h3 className="font-heading text-2xl mb-4 text-white">{commitment.title}</h3>
                 <p className="font-body text-white/70 leading-relaxed">{commitment.description}</p>
               </div>
@@ -66,7 +67,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-7">
               <SectionHeading title="Our Experience" />
-              <div className="space-y-6 text-white/80 mt-8 font-body text-base sm:text-lg leading-relaxed">
+              <div className="space-y-6 text-white/80 mt-8 font-body text-base sm:text-lg leading-relaxed text-justify">
                 <p>{ABOUT.experience}</p>
                 <p>{ABOUT.experienceDetail}</p>
                 <p className="text-white font-medium">{ABOUT.experienceClosing}</p>
@@ -75,11 +76,11 @@ export default function AboutPage() {
             
             <div className="lg:col-span-5 bg-white/5 border border-white/10 p-8 md:p-10 rounded-sm">
               <h3 className="font-heading text-2xl text-white mb-6">Key Strengths</h3>
-              <div className="w-12 h-[2px] bg-[#8B2232] mb-6" />
+              <div className="w-12 h-[2px] bg-[#0B2A52] mb-6" />
               <ul className="space-y-5">
                 {KEY_STRENGTHS.map((strength, index) => (
                   <li key={index} className="flex items-center space-x-4">
-                    <span className="w-2 h-2 rounded-full bg-[#8B2232]" />
+                    <span className="w-2 h-2 rounded-full bg-[#C9A45C]" />
                     <span className="font-body text-lg text-white/90">{strength}</span>
                   </li>
                 ))}
@@ -93,7 +94,7 @@ export default function AboutPage() {
       <section className="py-24 bg-[#14233A] px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <SectionHeading title="Where We Practice" center />
-          <p className="mt-8 text-white/80 font-body text-base sm:text-lg leading-relaxed mb-10">
+          <p className="mt-8 text-white/80 font-body text-base sm:text-lg leading-relaxed mb-10 text-justify">
             {ABOUT.whereWePractice}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -109,15 +110,12 @@ export default function AboutPage() {
       {/* Team */}
       <TeamProfiles />
 
-      {/* Why Choose Us */}
-      <WhyChooseUs />
-
       {/* Closing Commitment Quote */}
       <section className="py-32 px-6 text-center max-w-4xl mx-auto">
-        <p className="font-body text-lg sm:text-xl text-white/80 mb-12 leading-relaxed">
+        <p className="font-body text-lg sm:text-xl text-white/80 mb-12 leading-relaxed text-justify">
           {ABOUT.commitment}
         </p>
-        <div className="w-16 h-[2px] bg-[#8B2232] mx-auto mb-10" />
+        <div className="w-16 h-[2px] bg-[#C9A45C] mx-auto mb-10" />
         <blockquote className="font-heading text-2xl sm:text-3xl md:text-4xl italic text-white leading-relaxed">
           &ldquo;{FIRM.closingQuote}&rdquo;
         </blockquote>

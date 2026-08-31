@@ -1,19 +1,35 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import type { PracticeArea } from '@/lib/constants';
 
 interface PracticeAreaCardProps {
   area: PracticeArea;
+  defaultExpanded?: boolean;
 }
 
-export default function PracticeAreaCard({ area }: PracticeAreaCardProps) {
-  const [expanded, setExpanded] = useState(false);
+export default function PracticeAreaCard({ area, defaultExpanded = false }: PracticeAreaCardProps) {
+  const [expanded, setExpanded] = useState(defaultExpanded);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (defaultExpanded) {
+      setExpanded(true);
+      const timer = setTimeout(() => {
+        if (cardRef.current) {
+          cardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [defaultExpanded]);
 
   return (
     <div 
-      className="relative bg-white/5 border border-white/10 rounded-sm overflow-hidden flex flex-col group hover:border-[#8B2232]/60 hover:bg-white/[0.08] transition-all duration-500 cursor-pointer shadow-subtle hover:shadow-elevated hover:-translate-y-1"
+      id={area.id}
+      ref={cardRef}
+      className="relative bg-white/5 border border-white/10 rounded-sm overflow-hidden flex flex-col group hover:border-[#0B2A52]/60 hover:bg-white/[0.08] transition-all duration-500 cursor-pointer shadow-subtle hover:shadow-elevated hover:-translate-y-1"
       onClick={() => setExpanded(!expanded)}
     >
       <div className="relative h-52 w-full overflow-hidden">
@@ -52,7 +68,7 @@ export default function PracticeAreaCard({ area }: PracticeAreaCardProps) {
           </div>
         </div>
 
-        <div className="pt-2 flex items-center justify-between text-xs uppercase tracking-widest text-[#8B2232] font-body font-semibold">
+        <div className="pt-2 flex items-center justify-between text-xs uppercase tracking-widest text-[#C9A45C] font-body font-semibold">
           <span>{expanded ? 'Show Less' : 'Read Full Scope'}</span>
           <svg 
             className={`w-5 h-5 transform transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`}

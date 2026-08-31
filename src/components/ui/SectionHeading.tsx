@@ -11,7 +11,7 @@ export default function SectionHeading({ title, subtitle, center = false, light 
       <h2 className="font-heading text-4xl md:text-5xl text-white tracking-tight mb-4">
         {title}
       </h2>
-      <div className="h-1 w-24 bg-[#8B2232] mb-6"></div>
+      <div className="h-1 w-24 bg-[#0B2A52] mb-6"></div>
       {subtitle && (
         <p className="font-body text-lg text-white/60 max-w-2xl">
           {subtitle}

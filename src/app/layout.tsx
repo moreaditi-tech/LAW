@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${playfair.variable} ${inter.variable} font-body antialiased bg-[#0F1B2D] text-white flex flex-col min-h-screen selection:bg-[#8B2232]/40 selection:text-white`}>
+      <body className={`${playfair.variable} ${inter.variable} font-body antialiased bg-[#0F1B2D] text-white flex flex-col min-h-screen selection:bg-[#0B2A52]/20 selection:text-white`}>
         <CustomCursor />
         <PageTransition />
         <ScrollProgress />

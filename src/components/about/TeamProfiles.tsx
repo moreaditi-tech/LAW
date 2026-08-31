@@ -13,12 +13,12 @@ export default function TeamProfiles() {
           {TEAM.map((member, index) => (
             <div 
               key={index} 
-              className="bg-white/5 border border-white/10 rounded-sm p-8 md:p-10 flex flex-col justify-between hover:border-[#8B2232]/50 hover:-translate-y-1 transition-all duration-500"
+              className="bg-white/5 border border-white/10 rounded-sm p-8 md:p-10 flex flex-col justify-between hover:border-[#0B2A52]/50 hover:-translate-y-1 transition-all duration-500"
             >
               <div>
                 <div className="mb-6">
                   <h3 className="font-heading text-3xl text-white mb-2">{member.name}</h3>
-                  <p className="font-body text-[#8B2232] font-semibold tracking-wide text-base">{member.role}</p>
+                  <p className="font-body text-[#C9A45C] font-semibold tracking-wide text-base">{member.role}</p>
                   
                   {member.experience && (
                     <p className="font-body text-sm text-white/70 mt-2 font-medium">{member.experience}</p>
@@ -41,7 +41,7 @@ export default function TeamProfiles() {
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                     {member.expertise.map((item, idx) => (
                       <li key={idx} className="flex items-start text-xs sm:text-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#8B2232] mt-1.5 mr-2.5 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#C9A45C] mt-1.5 mr-2.5 flex-shrink-0" />
                         <span className="font-body text-white/70">{item}</span>
                       </li>
                     ))}

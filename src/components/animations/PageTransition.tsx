@@ -47,7 +47,7 @@ export default function PageTransition() {
             </span>
             <span className="block h-[2px] w-32 overflow-hidden bg-white/15">
               <motion.span
-                className="block h-full w-full bg-[#8B2232]"
+                className="block h-full w-full bg-[#C9A45C]"
                 initial={{ x: '-100%' }}
                 animate={{ x: '0%' }}
                 transition={{ duration: 0.55, ease: 'easeInOut' }}

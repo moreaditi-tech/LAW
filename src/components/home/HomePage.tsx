@@ -5,16 +5,18 @@ import Image from 'next/image';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, ChevronDown } from 'lucide-react';
-import { FIRM, ABOUT, PRACTICE_AREAS, COMMITMENTS } from '@/lib/constants';
+import { ArrowRight, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { FIRM, ABOUT, PRACTICE_AREAS, COMMITMENTS, TEAM_MEMBERS } from '@/lib/constants';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import InfiniteMarquee from '@/components/ui/InfiniteMarquee';
 import { emitSiteScroll } from '@/lib/scroll';
+import { motion } from 'framer-motion';
 
 
 const SECTIONS = [
   { id: 'hero', label: 'Prime Law Bharat' },
-  { id: 'about', label: 'About The Firm' },
+  { id: 'why-choose-us', label: 'Why Choose Us' },
+  { id: 'team', label: 'Team Members' },
   { id: 'practice', label: 'Expertise' },
   { id: 'strategy', label: 'Strategic Advocacy' },
   { id: 'commitments', label: 'Commitments' },
@@ -25,6 +27,41 @@ const SECTIONS = [
 export default function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeSection, setActiveSection] = useState(0);
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(4);
+  const maxCarouselIndex = Math.max(0, PRACTICE_AREAS.length - itemsPerPage);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setItemsPerPage(4);
+      } else if (window.innerWidth >= 768) {
+        setItemsPerPage(2);
+      } else {
+        setItemsPerPage(1);
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const nextSlide = () => {
+    setCarouselIndex((prev) => Math.min(prev + 1, maxCarouselIndex));
+  };
+
+  const prevSlide = () => {
+    setCarouselIndex((prev) => Math.max(prev - 1, 0));
+  };
+
+  const handleDragEnd = (event: any, info: any) => {
+    const threshold = 50;
+    if (info.offset.x < -threshold) {
+      nextSlide();
+    } else if (info.offset.x > threshold) {
+      prevSlide();
+    }
+  };
 
   const scrollToSection = (index: number) => {
     const el = document.getElementById(SECTIONS[index].id);
@@ -143,7 +180,7 @@ export default function HomePage() {
             <span
               className={`block rounded-full transition-all duration-300 ${
                 activeSection === idx
-                  ? 'w-3 h-3 bg-[#8B2232] scale-125 ring-4 ring-[#8B2232]/30'
+                  ? 'w-3 h-3 bg-[#C9A45C] scale-125 ring-4 ring-[#C9A45C]/30'
                   : 'w-2 h-2 bg-white/40 group-hover:bg-white'
               }`}
             />
@@ -158,8 +195,9 @@ export default function HomePage() {
             alt="Prime Law Bharat Legal Chambers"
             fill
             priority
-            unoptimized
-            className="hero-bg-img object-cover scale-105"
+            quality={90}
+            sizes="100vw"
+                        className="hero-bg-img object-cover scale-105"
           />
         </div>
         <div className="section-overlay bg-[#0F1B2D]/75" />
@@ -174,21 +212,17 @@ export default function HomePage() {
               height={260}
               className="w-[190px] h-[190px] lg:w-[230px] lg:h-[230px] xl:w-[260px] xl:h-[260px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]"
               priority
-              unoptimized
-            />
+                          />
           </div>
         </div>
         <div className="section-content">
           <div className="flex flex-col items-start pt-6 sm:pt-0">
             <p className="hero-label section-label">Advocates & Legal Consultants</p>
             <h1 className="hero-title section-title overflow-hidden">
-              PRIME LAW <span className="tiranga-gradient">BHARAT</span>
+              <span className="text-[#FF9933]">Your</span> <span className="text-white">Case,</span> <span className="text-white">Our</span> <span className="text-[#128807]">Commitment</span>
             </h1>
             <p className="hero-sub section-desc">{FIRM.tagline}</p>
-            <div className="hero-sub w-20 h-[2px] bg-[#8B2232] mb-6" />
-            <p className="hero-sub text-xs sm:text-sm uppercase tracking-[0.25em] text-white/70 mb-10 font-body">
-              {FIRM.states.join(' | ')}
-            </p>
+            <div className="hero-sub w-20 h-[2px] bg-[#C9A45C] mb-10" />
             <div className="hero-cta flex flex-wrap gap-4 items-center">
               <Link href="/contact" className="btn-khaitan-accent group" data-cursor="view">
                 <span>Schedule a Consultation</span>
@@ -212,50 +246,59 @@ export default function HomePage() {
       </section>
 
       <section
-        id="about"
+        id="why-choose-us"
         className="snap-section relative flex items-center"
         style={{ backgroundImage: "url('/images/corridor/corridor.jpg')" }}
       >
         <div className="section-overlay bg-[#0F1B2D]/85" />
-        <div className="section-content">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7">
-              <p className="section-label reveal-up">About The Firm</p>
-              <h2 className="section-title reveal-up">Full-Service Practice Across Courts & Tribunals</h2>
-              <p className="section-desc mb-6 reveal-up">{ABOUT.intro}</p>
-              <p className="text-sm md:text-base text-white/60 font-body leading-relaxed mb-8 reveal-up">
-                {ABOUT.foundation}
-              </p>
-              <div className="reveal-up">
-                <Link href="/about" className="btn-khaitan group" data-cursor="view">
-                  <span>Read Full Profile</span>
-                  <ArrowRight className="btn-arrow w-4 h-4" />
-                </Link>
-              </div>
+        <div className="section-content relative">
+          <div className="max-w-4xl mx-auto text-center flex flex-col items-center py-20">
+            <p className="section-label reveal-up">Why Choose Us</p>
+            <h2 className="section-title reveal-up mb-6">Why Clients Choose Prime Law Bharat</h2>
+            <div className="w-16 h-[2px] bg-[#C9A45C] reveal-up mb-8" />
+            <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-10 reveal-up">
+              Strategic legal representation, honest case assessment, meticulous preparation, and consistent representation across courts, tribunals, and jurisdictions.
+            </p>
+            <div className="reveal-up">
+              <Link href="/why-choose-us" className="btn-khaitan group inline-flex" data-cursor="view">
+                <span>View Details</span>
+                <ArrowRight className="btn-arrow w-4 h-4" />
+              </Link>
             </div>
-            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="reveal-up p-6 bg-white/5 border border-white/10 rounded-sm">
-                <p className="font-heading text-4xl font-bold text-[#8B2232] mb-1">
-                  <AnimatedCounter value={5} />
-                </p>
-                <p className="text-xs uppercase tracking-widest text-white/90 font-medium">State Jurisdictions</p>
-                <p className="text-xs text-white/50 mt-2 font-body">MH, KA, GJ, DL, HR</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" className="snap-section bg-[#0A1220] flex items-center">
+        <div className="section-content w-full relative py-10">
+          <div className="mb-8 text-center flex flex-col items-center">
+            <p className="section-label reveal-up">Team Members</p>
+            <h2 className="section-title mb-4 reveal-up">Meet our expert attorneys</h2>
+            <div className="w-16 h-[2px] bg-[#C9A45C] reveal-up" />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {TEAM_MEMBERS.map((member) => (
+              <div key={member.id} className="reveal-up group relative border border-white/10 bg-white/[0.03] hover:border-[#C9A45C]/50 hover:bg-white/[0.06] transition-all duration-500 overflow-hidden flex flex-col h-full rounded-sm shadow-xl">
+                <div className="relative w-full aspect-[5/4] overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0A1220] via-[#0A1220]/20 to-transparent opacity-90" />
+                </div>
+                <div className="p-6 flex flex-col flex-grow relative z-10 -mt-12 bg-gradient-to-t from-[#0A1220] via-[#0A1220] to-transparent pt-8">
+                  <p className="text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-2">{member.designation}</p>
+                  <h3 className="font-heading text-xl sm:text-2xl text-white mb-6 flex-grow">{member.name}</h3>
+                  <Link href={`/team/${member.id}`} className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-white hover:text-[#C9A45C] font-medium transition-colors group/btn">
+                    <span>View Profile</span>
+                    <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
               </div>
-              <div className="reveal-up p-6 bg-white/5 border border-white/10 rounded-sm">
-                <p className="font-heading text-4xl font-bold text-[#8B2232] mb-1">
-                  <AnimatedCounter value={16} />
-                </p>
-                <p className="text-xs uppercase tracking-widest text-white/90 font-medium">Practice Domains</p>
-                <p className="text-xs text-white/50 mt-2 font-body">Civil, Criminal, Corporate, RERA & more</p>
-              </div>
-              <div className="reveal-up p-6 bg-white/5 border border-white/10 rounded-sm sm:col-span-2">
-                <p className="font-heading text-3xl sm:text-4xl font-bold text-[#8B2232] mb-1">Trial to Supreme Court</p>
-                <p className="text-xs uppercase tracking-widest text-white/90 font-medium">Multi-Forum Advocacy</p>
-                <p className="text-xs text-white/50 mt-2 font-body">
-                  District Courts, Tribunals, High Courts & Supreme Court of India
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -266,43 +309,110 @@ export default function HomePage() {
         style={{ backgroundImage: "url('/images/conference-room/conference-room-01.jpg')" }}
       >
         <div className="section-overlay bg-[#0F1B2D]/85" />
-        <div className="section-content">
+        <div className="section-content w-full relative">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
             <div>
               <p className="section-label reveal-up">Areas of Practice</p>
               <h2 className="section-title mb-0 reveal-up">Comprehensive Legal Solutions</h2>
             </div>
             <Link href="/practice-areas" className="btn-khaitan group flex-shrink-0 self-start md:self-auto reveal-up" data-cursor="view">
-              <span>View All 16 Areas</span>
+              <span>View All 36 Areas</span>
               <ArrowRight className="btn-arrow w-4 h-4" />
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {PRACTICE_AREAS.slice(0, 3).map((area) => (
-              <Link
-                key={area.id}
-                href="/practice-areas"
-                data-cursor="view"
-                className="practice-card group relative bg-white/5 border border-white/10 rounded-sm overflow-hidden p-6 hover:border-[#8B2232]/60 hover:bg-white/[0.08] transition-all duration-500 flex flex-col justify-between"
+
+          {/* Carousel Wrapper */}
+          <div className="relative w-full group/carousel">
+            {/* Left navigation arrow */}
+            {carouselIndex > 0 && (
+              <button
+                onClick={prevSlide}
+                className="absolute -left-6 top-[40%] -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#0F1B2D]/80 border border-white/10 hover:border-[#C9A45C] hover:bg-[#0B2A52] flex items-center justify-center text-white transition-all shadow-2xl backdrop-blur-sm hidden lg:flex"
+                aria-label="Previous slide"
               >
-                <div>
-                  <div className="relative h-36 w-full rounded-sm overflow-hidden mb-5 img-clip">
-                    <Image
-                      src={area.image}
-                      alt={area.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-[#0F1B2D]/40 group-hover:bg-[#0F1B2D]/20 transition-colors" />
-                  </div>
-                  <h3 className="font-heading text-xl text-white mb-2">{area.title}</h3>
-                  <p className="text-xs text-white/70 font-body leading-relaxed line-clamp-3">{area.shortDescription}</p>
-                </div>
-                <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs text-[#8B2232] font-body uppercase tracking-wider font-semibold">
-                  <span>Explore Practice</span>
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-                </div>
-              </Link>
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+            )}
+
+            {/* Right navigation arrow */}
+            {carouselIndex < maxCarouselIndex && (
+              <button
+                onClick={nextSlide}
+                className="absolute -right-6 top-[40%] -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#0F1B2D]/80 border border-white/10 hover:border-[#C9A45C] hover:bg-[#0B2A52] flex items-center justify-center text-white transition-all shadow-2xl backdrop-blur-sm hidden lg:flex"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            )}
+
+            {/* Cards viewport */}
+            <div className="overflow-hidden w-full py-4">
+              <motion.div
+                drag="x"
+                dragConstraints={{ left: 0, right: 0 }}
+                dragElastic={0.2}
+                onDragEnd={handleDragEnd}
+                className="flex cursor-grab active:cursor-grabbing"
+                style={{ gap: '24px' }}
+                animate={{
+                  x: `calc(-${carouselIndex} * (100% / ${itemsPerPage}) - ${carouselIndex * (24 / itemsPerPage)}px)`
+                }}
+                transition={{ type: 'spring', stiffness: 220, damping: 26 }}
+              >
+                {PRACTICE_AREAS.map((area) => (
+                  <Link
+                    key={area.id}
+                    href={`/practice-areas?id=${area.id}`}
+                    data-cursor="view"
+                    className="relative flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4.2] rounded-sm overflow-hidden border border-white/10 group cursor-pointer shadow-xl transition-all duration-500 hover:border-[#C9A45C]/50 hover:bg-white/[0.04]"
+                  >
+                    {/* Card background image */}
+                    <div className="absolute inset-0 z-0">
+                      {area.image ? (
+                        <Image
+                          src={area.image}
+                          alt={area.title}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 bg-[#14233A]" />
+                      )}
+                      {/* Dark overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0F1B2D]/95 via-[#0F1B2D]/40 to-transparent group-hover:from-[#0F1B2D]/98 group-hover:via-[#0F1B2D]/55 transition-all duration-300" />
+                    </div>
+
+                    {/* Card Content */}
+                    <div className="absolute inset-0 z-10 p-6 flex flex-col justify-end">
+                      <div className="flex items-end justify-between w-full">
+                        <h3 className="font-heading text-lg sm:text-xl text-white font-bold leading-tight max-w-[80%] drop-shadow-md">
+                          {area.title}
+                        </h3>
+                        <div className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center bg-white/5 group-hover:bg-[#C9A45C] group-hover:border-[#C9A45C] transition-all duration-300 transform group-hover:translate-x-1 flex-shrink-0">
+                          <ArrowRight className="w-4 h-4 text-white" />
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </motion.div>
+            </div>
+          </div>
+
+          {/* Pagination dots */}
+          <div className="flex justify-center gap-2 mt-4">
+            {Array.from({ length: Math.ceil(PRACTICE_AREAS.length / itemsPerPage) }).map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCarouselIndex(Math.min(idx * itemsPerPage, maxCarouselIndex))}
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  Math.floor(carouselIndex / itemsPerPage) === idx
+                    ? 'bg-[#C9A45C] scale-125'
+                    : 'bg-white/30 hover:bg-white/60'
+                }`}
+                aria-label={`Go to page ${idx + 1}`}
+              />
             ))}
           </div>
         </div>
@@ -314,7 +424,7 @@ export default function HomePage() {
             <div className="lg:col-span-5 flex justify-center lg:justify-start">
               <div className="img-clip relative w-full max-w-sm sm:max-w-md aspect-[3/4] overflow-hidden rounded-sm border border-white/15 shadow-2xl group">
                 <Image
-                  src="/images/owner/owner.jpg"
+                  src="/images/2.jpg"
                   alt="Prime Law Bharat Leadership"
                   fill
                   className="object-cover filter grayscale contrast-115 brightness-90 transition-transform duration-700 group-hover:scale-105"
@@ -325,18 +435,13 @@ export default function HomePage() {
             <div className="lg:col-span-7 flex flex-col justify-center">
               <p className="section-label reveal-up">Strategic Advocacy</p>
               <h2 className="section-title leading-[1.12] reveal-up">
-                You Bring Us the Problem.
-                <br className="hidden sm:inline" /> We Bring the Strategy.
+                You Seek Justice.
+                <br className="hidden sm:inline" /> We Deliver It.
               </h2>
-              <p className="section-desc mb-8 reveal-up">{ABOUT.commitment}</p>
-              <div className="border-l-2 border-[#8B2232] pl-6 py-2 mb-8 reveal-up">
-                <blockquote className="font-heading text-lg sm:text-xl md:text-2xl text-white/90 italic leading-relaxed">
-                  &ldquo;{FIRM.closingQuote}&rdquo;
-                </blockquote>
-              </div>
+              <p className="section-desc mb-8 reveal-up text-justify">{ABOUT.commitment}</p>
               <div className="reveal-up">
                 <Link href="/about" className="btn-khaitan group" data-cursor="view">
-                  <span>Meet Our Advocates</span>
+                  <span>About Us</span>
                   <ArrowRight className="btn-arrow w-4 h-4" />
                 </Link>
               </div>
@@ -354,9 +459,9 @@ export default function HomePage() {
             {COMMITMENTS.map((item) => (
               <div
                 key={item.title}
-                className="reveal-up group p-8 border border-white/10 bg-white/[0.03] hover:border-[#8B2232]/50 hover:bg-white/[0.06] transition-all duration-500"
+                className="reveal-up group p-8 border border-white/10 bg-white/[0.03] hover:border-[#0B2A52]/50 hover:bg-white/[0.06] transition-all duration-500"
               >
-                <div className="w-10 h-[2px] bg-[#8B2232] mb-6 transition-all duration-500 group-hover:w-16" />
+                <div className="w-10 h-[2px] bg-[#C9A45C] mb-6 transition-all duration-500 group-hover:w-16" />
                 <h3 className="font-heading text-2xl mb-4">{item.title}</h3>
                 <p className="font-body text-white/70 leading-relaxed text-sm">{item.description}</p>
               </div>
@@ -401,7 +506,7 @@ export default function HomePage() {
           <div>
             <p className="section-label reveal-up">Get In Touch</p>
             <h2 className="section-title max-w-4xl reveal-up">Schedule a Confidential Consultation</h2>
-            <p className="section-desc reveal-up">{ABOUT.whereWePractice}</p>
+            <p className="section-desc reveal-up text-justify">{ABOUT.whereWePractice}</p>
             <div className="flex flex-col sm:flex-row gap-5 items-stretch sm:items-center reveal-up">
               <Link href="/contact" className="btn-khaitan-accent group justify-center" data-cursor="view">
                 <span>Contact Senior Counsel</span>

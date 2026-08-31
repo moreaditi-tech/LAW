@@ -26,7 +26,7 @@ export default function DisclaimerModal() {
     <div className="disclaimer-overlay">
       <div className="disclaimer-box rounded-sm shadow-2xl border border-white/20 animate-[fadeIn_0.5s_ease]">
         <div className="mb-6 border-b border-white/10 pb-4">
-          <p className="text-xs uppercase tracking-[0.3em] text-[#8B2232] font-semibold mb-1">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#C9A45C] font-semibold mb-1">
             Official Compliance
           </p>
           <h2 className="font-heading text-2xl md:text-3xl text-white font-bold">
@@ -52,7 +52,7 @@ export default function DisclaimerModal() {
             id="disclaimer-check" 
             checked={accepted} 
             onChange={(e) => setAccepted(e.target.checked)}
-            className="w-4 h-4 accent-[#8B2232] rounded cursor-pointer"
+            className="w-4 h-4 accent-[#C9A45C] rounded cursor-pointer"
           />
           <label htmlFor="disclaimer-check" className="text-xs md:text-sm text-white/90 font-medium cursor-pointer">
             I understand and accept the above terms
@@ -65,7 +65,7 @@ export default function DisclaimerModal() {
             disabled={!accepted}
             className={`px-8 py-3.5 text-xs md:text-sm uppercase tracking-widest font-medium transition-all duration-300 ${
               accepted 
-                ? 'bg-[#8B2232] hover:bg-[#a52a3a] text-white cursor-pointer' 
+                ? 'bg-[#0B2A52] hover:bg-[#071D3A] text-white cursor-pointer' 
                 : 'bg-white/10 text-white/40 cursor-not-allowed'
             }`}
           >

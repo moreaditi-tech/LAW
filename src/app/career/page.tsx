@@ -1,0 +1,270 @@
+import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowRight, ArrowDown } from 'lucide-react';
+import { FIRM } from '@/lib/constants';
+
+export const metadata = {
+  title: 'Careers | Prime Law Bharat',
+  description: 'Join Prime Law Bharat. Opportunities for lawyers, interns, and legal professionals.',
+};
+
+export default function CareerPage() {
+  const OPPORTUNITIES = [
+    { title: "Junior Advocates", desc: "Begin your litigation career with hands-on court exposure.", exposure: "Trial Courts, Drafting, Legal Research" },
+    { title: "Associate Lawyers", desc: "Take on independent matters and develop case strategy.", exposure: "High Court, Tribunals, Client Conferences" },
+    { title: "Law Students / Legal Interns", desc: "Gain practical insights into real courtroom litigation.", exposure: "Court Visits, Brief Preparation, Research" },
+    { title: "Trainees", desc: "Structured learning across different practice areas.", exposure: "Multi-Forum Advocacy, Case Documentation" },
+    { title: "Legal Researchers", desc: "Support complex litigation with deep legal analysis.", exposure: "Case-Law Research, Strategy Development" },
+    { title: "Litigation Associates", desc: "Manage matters across specialized tribunals and courts.", exposure: "RERA, DRT, NCLT, Commercial Courts" }
+  ];
+
+  const WHY_US = [
+    { title: "Broad Legal Exposure", desc: "Work across different areas of litigation and legal practice." },
+    { title: "Multi-Forum Experience", desc: "Understand how matters progress across courts, tribunals and appellate forums." },
+    { title: "Practical Learning", desc: "Develop skills through real legal research, drafting and case preparation." },
+    { title: "Mentorship & Collaboration", desc: "Learn alongside experienced advocates and legal professionals." },
+    { title: "Strategic Thinking", desc: "Understand not just the law, but how legal strategy is developed and implemented." },
+    { title: "Professional Growth", desc: "Build the skills, discipline and courtroom awareness required for a long-term legal career." }
+  ];
+
+  return (
+    <div className="bg-[#0A1220] min-h-screen text-white">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 flex items-center min-h-[85vh]">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/conference-room/conference-room-01.jpg"
+            alt="Prime Law Bharat Chambers"
+            fill
+            sizes="100vw"
+            quality={90}
+            className="object-cover filter grayscale contrast-125 brightness-[0.4]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A1220] via-[#0F1B2D]/90 to-[#0A1220]/80" />
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 w-full">
+          <div className="max-w-3xl">
+            <p className="text-sm uppercase tracking-[0.3em] text-[#C9A45C] font-semibold mb-6">Careers</p>
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl text-white tracking-tight leading-tight mb-8">
+              Build Your Legal Career With Prime Law Bharat
+            </h1>
+            <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-10">
+              Prime Law Bharat welcomes lawyers, law students, interns, and legal professionals who are looking to develop their practice through meaningful exposure to litigation, legal research, drafting, and courtroom work.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-5">
+              <a href="#apply" className="btn-khaitan-accent group inline-flex justify-center">
+                <span>Apply to Join Us</span>
+                <ArrowDown className="btn-arrow w-4 h-4" />
+              </a>
+              <a href="#opportunities" className="btn-khaitan group inline-flex justify-center">
+                <span>Explore Opportunities</span>
+                <ArrowDown className="btn-arrow w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Opportunities Section */}
+      <section id="opportunities" className="py-24 bg-[#0F1B2D]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+          <div className="text-center mb-16">
+            <h2 className="section-title mb-6">Opportunities at Prime Law Bharat</h2>
+            <div className="w-16 h-[2px] bg-[#C9A45C] mx-auto mb-6" />
+            <p className="section-desc max-w-3xl mx-auto">
+              Our firm may have opportunities across various levels of legal practice. We welcome expressions of interest for the following roles:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {OPPORTUNITIES.map((opp, idx) => (
+              <div key={idx} className="group p-8 border border-white/10 bg-white/[0.03] hover:border-[#C9A45C]/50 transition-all duration-300 flex flex-col">
+                <h3 className="font-heading text-2xl text-white mb-3">{opp.title}</h3>
+                <p className="text-white/70 font-body text-sm leading-relaxed mb-6 flex-grow">{opp.desc}</p>
+                <div className="border-t border-white/10 pt-4 mb-6">
+                  <p className="text-xs uppercase tracking-wider text-[#C9A45C] mb-1">Key Exposure</p>
+                  <p className="text-sm text-white/60 font-body">{opp.exposure}</p>
+                </div>
+                <a href="#apply" className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-white hover:text-[#C9A45C] font-medium transition-colors">
+                  <span>Apply Now</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Dedicated Sections */}
+      <section className="py-24 bg-[#0A1220]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            
+            {/* For Students */}
+            <div className="border border-white/10 p-8 md:p-10 bg-white/[0.02]">
+              <p className="text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-4">For Law Students & Interns</p>
+              <h3 className="font-heading text-3xl sm:text-4xl text-white mb-6">Learn Through Real Legal Work</h3>
+              <p className="text-white/70 font-body mb-8 leading-relaxed">
+                Interns and trainees gain exposure to practical legal work, bridging the gap between academic theory and courtroom reality:
+              </p>
+              <ul className="space-y-4">
+                {['Legal research', 'Case-law research', 'Drafting assistance', 'Brief preparation', 'Court and tribunal proceedings', 'Case documentation', 'Understanding litigation strategy', 'Legal analysis'].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-[#C9A45C] mt-1">•</span>
+                    <span className="text-white/80 font-body">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* For Associates */}
+            <div className="border border-white/10 p-8 md:p-10 bg-[#0F1B2D]">
+              <p className="text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-4">For Lawyers & Associates</p>
+              <h3 className="font-heading text-3xl sm:text-4xl text-white mb-6">Grow Your Practice With Us</h3>
+              <p className="text-white/70 font-body mb-8 leading-relaxed">
+                Lawyers and associates work across a broad litigation practice and gain exposure to matters involving:
+              </p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {['Civil Litigation', 'Criminal Litigation', 'Corporate & Commercial Disputes', 'Property & Real Estate', 'RERA', 'Consumer Matters', 'Financial & Regulatory Disputes', 'DRT / DRAT', 'High Court & Supreme Court Matters', 'Family & Matrimonial Matters'].map((item, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <span className="text-[#C9A45C] mt-1">•</span>
+                    <span className="text-white/80 font-body text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us & Who Should Apply */}
+      <section className="py-24 bg-[#0F1B2D]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+          
+          <div className="text-center mb-16">
+            <h2 className="section-title mb-6">Why Build Your Career Here?</h2>
+            <div className="w-16 h-[2px] bg-[#C9A45C] mx-auto" />
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+            {WHY_US.map((item, idx) => (
+              <div key={idx} className="p-6">
+                <h4 className="font-heading text-xl text-white mb-3">{item.title}</h4>
+                <p className="text-white/60 font-body text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="border-t border-white/10 pt-20">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="section-title mb-10">Who We're Looking For</h2>
+              <div className="text-left inline-block">
+                <ul className="space-y-5">
+                  {[
+                    "Law students seeking practical exposure",
+                    "Students looking for internships or training",
+                    "Junior advocates beginning their litigation practice",
+                    "Lawyers seeking broader litigation experience",
+                    "Legal researchers with strong analytical skills",
+                    "Professionals interested in litigation, regulatory and commercial matters"
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-4">
+                      <div className="w-2 h-2 rounded-full bg-[#C9A45C] flex-shrink-0" />
+                      <span className="text-white/90 font-body md:text-lg">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Application Form */}
+      <section id="apply" className="py-24 bg-[#0A1220]">
+        <div className="max-w-4xl mx-auto px-6 md:px-10 lg:px-16">
+          <div className="text-center mb-16">
+            <p className="text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-4">Application</p>
+            <h2 className="section-title mb-6">Interested in Working With Us?</h2>
+            <p className="section-desc max-w-2xl mx-auto">
+              Tell us about yourself, your experience, your area of interest, and the kind of opportunity you are looking for.
+            </p>
+          </div>
+
+          <div className="bg-[#0F1B2D] p-8 md:p-12 border border-white/10 rounded-sm">
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Full Name *</label>
+                  <input type="text" className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-[#C9A45C] transition-colors" required />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Email Address *</label>
+                  <input type="email" className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-[#C9A45C] transition-colors" required />
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Phone Number *</label>
+                  <input type="tel" className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-[#C9A45C] transition-colors" required />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Current Role / Qualification *</label>
+                  <input type="text" className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-[#C9A45C] transition-colors" required />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Area of Interest *</label>
+                  <select className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white/80 focus:outline-none focus:border-[#C9A45C] transition-colors appearance-none" required defaultValue="">
+                    <option value="" disabled>Select an option</option>
+                    <option value="internship">Internship</option>
+                    <option value="junior">Junior Advocate</option>
+                    <option value="associate">Associate Lawyer</option>
+                    <option value="research">Legal Research</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Experience *</label>
+                  <input type="text" placeholder="e.g. 2 years, Student, etc." className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-[#C9A45C] transition-colors" required />
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Message / Cover Note *</label>
+                <textarea rows={5} className="w-full bg-[#0A1220] border border-white/10 px-4 py-3 text-white focus:outline-none focus:border-[#C9A45C] transition-colors resize-none" required></textarea>
+              </div>
+
+              <div className="space-y-2">
+                <label className="text-xs uppercase tracking-wider text-white/60 font-medium">Upload CV / Resume</label>
+                <label className="block w-full border border-dashed border-white/20 bg-[#0A1220] px-4 py-8 text-center hover:border-[#C9A45C] hover:bg-white/[0.02] transition-colors cursor-pointer rounded-sm">
+                  <span className="text-white/60 text-sm font-body">Click to upload file (PDF, DOCX)</span>
+                  <input type="file" className="hidden" accept=".pdf,.doc,.docx" />
+                </label>
+              </div>
+
+              <div className="pt-6 flex flex-col sm:flex-row gap-5 items-center">
+                <button type="submit" className="w-full sm:w-auto btn-khaitan-accent group justify-center">
+                  <span>Submit Application</span>
+                  <ArrowRight className="btn-arrow w-4 h-4" />
+                </button>
+                <Link href="/contact" className="w-full sm:w-auto btn-khaitan group justify-center text-center">
+                  <span>Contact the Firm</span>
+                  <ArrowRight className="btn-arrow w-4 h-4" />
+                </Link>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  );
+}

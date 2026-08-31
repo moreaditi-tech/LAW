@@ -16,7 +16,7 @@ export default function InfiniteMarquee({ items, className = '' }: InfiniteMarqu
             key={`${item}-${i}`}
             className="font-body text-xs uppercase tracking-[0.28em] text-white/55 whitespace-nowrap"
           >
-            <span className="text-[#8B2232] mr-12">●</span>
+            <span className="text-[#C9A45C] mr-12">●</span>
             {item}
           </span>
         ))}

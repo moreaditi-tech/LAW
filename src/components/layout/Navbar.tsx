@@ -5,14 +5,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Phone, MapPin, ArrowRight } from 'lucide-react';
 import { NAV_LINKS, FIRM, PRACTICE_AREAS } from '@/lib/constants';
-import SearchModal from '@/components/layout/SearchModal';
 import type { ScrollPayload } from '@/lib/scroll';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const lastY = useRef(0);
@@ -64,8 +62,6 @@ export default function Navbar() {
 
   return (
     <>
-      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
-
       {/* Header Bar */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 px-6 py-5 md:px-12 flex justify-between items-center transition-all duration-500 ${
@@ -79,15 +75,15 @@ export default function Navbar() {
         {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-3.5 sm:gap-4 z-50 group">
           {/* Prominent Gold-Framed Official Emblem */}
-          <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full p-[2px] bg-gradient-to-br from-[#F9E29D] via-[#D4AF37] to-[#8B2232] shadow-[0_2px_16px_rgba(212,175,55,0.35)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_4px_24px_rgba(212,175,55,0.5)] flex-shrink-0">
+          <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full p-[2px] bg-gradient-to-br from-[#F9E29D] via-[#D4AF37] to-[#C9A45C] shadow-[0_2px_16px_rgba(212,175,55,0.35)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_4px_24px_rgba(212,175,55,0.5)] flex-shrink-0">
             <div className="w-full h-full rounded-full overflow-hidden bg-[#0F1B2D] border border-white/20 relative flex items-center justify-center">
               <Image
                 src="/images/logo/logo-1.png"
                 alt="Prime Law Bharat Official Logo"
                 fill
+                sizes="40px"
                 className="object-cover rounded-full filter contrast-[1.12] brightness-[1.06] saturate-[1.18]"
                 priority
-                unoptimized
               />
             </div>
           </div>
@@ -103,21 +99,8 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Right Navigation Controls (Search + Hamburger) */}
+        {/* Right Navigation Controls (Hamburger) */}
         <div className="flex items-center gap-3 md:gap-4 z-50">
-          {/* Quick Search Trigger (Khaitan style) */}
-          <button
-            onClick={() => setIsSearchOpen(true)}
-            className="flex items-center gap-2 px-3 py-2 rounded-full bg-white/5 hover:bg-white/15 border border-white/20 text-white/80 hover:text-white transition-all duration-300 text-xs tracking-wider font-body group focus:outline-none"
-            aria-label="Search"
-          >
-            <Search className="w-4 h-4 text-[#8B2232] group-hover:scale-110 transition-transform" />
-            <span className="hidden sm:inline">Search</span>
-            <kbd className="hidden lg:inline text-[10px] bg-white/10 px-1.5 py-0.5 rounded text-white/60">
-              ⌘K
-            </kbd>
-          </button>
-
           {/* Hamburger Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -158,7 +141,7 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center my-auto">
               {/* Primary Navigation Links */}
               <div className="lg:col-span-6 flex flex-col space-y-6">
-                <p className="text-xs uppercase tracking-[0.35em] text-[#8B2232] font-semibold font-body">
+                <p className="text-xs uppercase tracking-[0.35em] text-[#C9A45C] font-semibold font-body">
                   Navigation
                 </p>
                 <div className="flex flex-col space-y-4 sm:space-y-6">
@@ -174,11 +157,11 @@ export default function Navbar() {
                         <Link
                           href={link.href}
                           className={`group inline-flex items-center gap-4 font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight transition-colors duration-300 ${
-                            isActive ? 'text-[#8B2232]' : 'text-white hover:text-[#8B2232]'
+                            isActive ? 'text-[#C9A45C]' : 'text-white hover:text-[#C9A45C]'
                           }`}
                         >
                           <span>{link.label}</span>
-                          <ArrowRight className="w-6 h-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-[#8B2232]" />
+                          <ArrowRight className="w-6 h-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-[#C9A45C]" />
                         </Link>
                       </motion.div>
                     );
@@ -200,16 +183,16 @@ export default function Navbar() {
                         href="/practice-areas"
                         className="text-xs text-white/70 hover:text-white hover:translate-x-1 font-body transition-all flex items-center gap-2 py-1"
                       >
-                        <span className="w-1 h-1 rounded-full bg-[#8B2232]" />
+                        <span className="w-1 h-1 rounded-full bg-[#C9A45C]" />
                         <span className="line-clamp-1">{area.title}</span>
                       </Link>
                     ))}
                   </div>
                   <Link
                     href="/practice-areas"
-                    className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[#8B2232] hover:text-white font-medium mt-4 transition-colors"
+                    className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-[#C9A45C] hover:text-white font-medium mt-4 transition-colors"
                   >
-                    <span>View all 16 practice areas</span>
+                    <span>View all 36 practice areas</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
@@ -221,11 +204,11 @@ export default function Navbar() {
                   </p>
                   <div className="space-y-2 text-sm text-white/80 font-body">
                     <p className="flex items-center gap-2.5">
-                      <MapPin className="w-4 h-4 text-[#8B2232] flex-shrink-0" />
+                      <MapPin className="w-4 h-4 text-[#C9A45C] flex-shrink-0" />
                       <span>{FIRM.address}</span>
                     </p>
                     <p className="flex items-center gap-2.5">
-                      <Phone className="w-4 h-4 text-[#8B2232] flex-shrink-0" />
+                      <Phone className="w-4 h-4 text-[#C9A45C] flex-shrink-0" />
                       <a href={`tel:${FIRM.phone1.replace(/\s+/g, '')}`} className="hover:text-white">
                         {FIRM.phone1}
                       </a>
