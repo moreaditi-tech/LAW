@@ -7,10 +7,33 @@ import Image from 'next/image';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError('');
+
+    const formData = new FormData(e.currentTarget);
+    // Remove botcheck if you had it for Web3Forms, though keeping it hurts nothing
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+      } else {
+        setError('Something went wrong. Please try again or contact us directly.');
+      }
+    } catch {
+      setError('Network error. Please check your connection and try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -113,6 +136,14 @@ export default function ContactPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                <input type="checkbox" name="botcheck" className="hidden" />
+                
+                {error && (
+                  <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-sm text-center">
+                    <p className="font-body text-red-400 text-sm">{error}</p>
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="fullName" className="block font-body text-xs uppercase tracking-wider text-white/70 mb-2">
@@ -120,7 +151,8 @@ export default function ContactPage() {
                     </label>
                     <input 
                       type="text" 
-                      id="fullName" 
+                      id="fullName"
+                      name="name" 
                       required
                       className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#0B2A52] transition-colors text-sm"
                       placeholder="e.g. Adv. Sharma / Mr. Verma"
@@ -132,7 +164,8 @@ export default function ContactPage() {
                     </label>
                     <input 
                       type="tel" 
-                      id="phone" 
+                      id="phone"
+                      name="phone" 
                       required
                       className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#0B2A52] transition-colors text-sm"
                       placeholder="+91"
@@ -146,7 +179,8 @@ export default function ContactPage() {
                   </label>
                   <input 
                     type="email" 
-                    id="email" 
+                    id="email"
+                    name="email" 
                     required
                     className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#0B2A52] transition-colors text-sm"
                     placeholder="name@example.com"
@@ -159,7 +193,8 @@ export default function ContactPage() {
                   </label>
                   <input 
                     type="text" 
-                    id="subject" 
+                    id="subject"
+                    name="legal_domain" 
                     className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#0B2A52] transition-colors text-sm"
                     placeholder="e.g. High Court Appeal / Corporate / RERA / Property"
                   />
@@ -170,7 +205,8 @@ export default function ContactPage() {
                     Brief Matter Summary *
                   </label>
                   <textarea 
-                    id="message" 
+                    id="message"
+                    name="message" 
                     rows={5}
                     required
                     className="w-full bg-white/5 border border-white/15 rounded-sm px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#0B2A52] transition-colors resize-none text-sm"
@@ -180,11 +216,13 @@ export default function ContactPage() {
                 
                 <button 
                   type="submit"
-                  className="w-full bg-[#0B2A52] hover:bg-[#071D3A] text-white font-body font-medium tracking-wide py-4 px-8 rounded-sm transition-all duration-300 text-sm uppercase"
+                  disabled={loading}
+                  className="w-full bg-[#0B2A52] hover:bg-[#071D3A] disabled:opacity-60 disabled:cursor-not-allowed text-white font-body font-medium tracking-wide py-4 px-8 rounded-sm transition-all duration-300 text-sm uppercase"
                 >
-                  Submit Consultation Request
+                  {loading ? 'Submitting...' : 'Submit Consultation Request'}
                 </button>
               </form>
+
             )}
           </div>
           
