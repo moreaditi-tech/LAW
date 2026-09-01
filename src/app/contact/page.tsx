@@ -190,6 +190,53 @@ export default function ContactPage() {
           
         </div>
       </section>
+
+      {/* Google Map Section */}
+      <section className="py-24 px-6 md:px-12 bg-[#0A1220]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#C9A45C] font-semibold mb-4 font-body">
+              Our Location
+            </p>
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-tight">
+              Visit Our Chambers
+            </h2>
+            <div className="w-16 h-[2px] bg-[#C9A45C] mx-auto mb-6" />
+            <p className="font-body text-white/70 text-base sm:text-lg max-w-2xl mx-auto">
+              {FIRM.address}
+            </p>
+          </div>
+
+          <div className="border border-white/10 rounded-sm overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15131.97!2d73.9!3d18.56!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1dc48abc8e1%3A0xbc0a41ab3d911e93!2sAnjani%20Buildcon%2C%20Chamber%2063!5e0!3m2!1sen!2sin!4v1"
+              width="100%"
+              height="450"
+              style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(0.95) contrast(0.9)' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Prime Law Bharat Office Location"
+            />
+          </div>
+
+          <div className="mt-8 text-center">
+            <a
+              href="https://maps.google.com?ftid=0x3bc2c1dc48abc8e1:0xbc0a41ab3d911e93"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 font-body text-sm uppercase tracking-wider text-[#C9A45C] hover:text-white transition-colors duration-300"
+            >
+              <span>Get Directions on Google Maps</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
