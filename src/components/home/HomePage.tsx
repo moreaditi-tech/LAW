@@ -19,7 +19,7 @@ const SECTIONS = [
   { id: 'team', label: 'Team Members' },
   { id: 'practice', label: 'Expertise' },
   { id: 'strategy', label: 'Strategic Advocacy' },
-  { id: 'commitments', label: 'Commitments' },g
+  { id: 'commitments', label: 'Commitments' },
   { id: 'contact', label: 'Get In Touch' },
 ];
 
