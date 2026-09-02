@@ -119,6 +119,14 @@ export default function AboutPage() {
         <blockquote className="font-heading text-2xl sm:text-3xl md:text-4xl italic text-white leading-relaxed">
           &ldquo;{FIRM.closingQuote}&rdquo;
         </blockquote>
+        <div className="mt-20 relative w-full h-[300px] sm:h-[400px] md:h-[500px] overflow-hidden rounded-sm border border-white/10">
+          <Image 
+            src="/images/about.jpeg" 
+            alt="About Prime Law Bharat" 
+            fill 
+            className="object-cover"
+          />
+        </div>
       </section>
     </div>
   );

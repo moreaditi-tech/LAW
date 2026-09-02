@@ -94,7 +94,7 @@ export default function Navbar() {
               PRIME LAW <span className="tiranga-gradient">BHARAT</span>
             </span>
             <span className="font-body text-[9px] sm:text-[10px] uppercase tracking-[0.24em] text-white/70 font-medium">
-              Integrity &bull; Diligence &bull; Accessibility
+              ADVOCATES
             </span>
           </div>
         </Link>
