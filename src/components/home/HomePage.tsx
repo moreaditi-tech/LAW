@@ -19,8 +19,7 @@ const SECTIONS = [
   { id: 'team', label: 'Team Members' },
   { id: 'practice', label: 'Expertise' },
   { id: 'strategy', label: 'Strategic Advocacy' },
-  { id: 'commitments', label: 'Commitments' },
-  { id: 'chambers', label: 'Chambers' },
+  { id: 'commitments', label: 'Commitments' },g
   { id: 'contact', label: 'Get In Touch' },
 ];
 
@@ -470,31 +469,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section
-        id="chambers"
-        className="snap-section relative flex items-center"
-        style={{ backgroundImage: "url('/images/executive cabin/executive-cabin-04.jpg')" }}
-      >
-        <div className="section-overlay bg-[#0F1B2D]/80" />
-        <div className="section-content">
-          <p className="section-label reveal-up">Chambers & Environment</p>
-          <h2 className="section-title max-w-4xl reveal-up">State-of-the-Art Legal Consultation Spaces</h2>
-          <p className="section-desc reveal-up">
-            Explore our professional conference chambers, client consultation suites, and research facilities located at{' '}
-            {FIRM.address}.
-          </p>
-          <div className="flex flex-wrap gap-4 items-center reveal-up">
-            <Link href="/gallery" className="btn-khaitan-accent group" data-cursor="view">
-              <span>View Chambers Gallery</span>
-              <ArrowRight className="btn-arrow w-4 h-4" />
-            </Link>
-            <Link href="/contact" className="btn-khaitan group" data-cursor="view">
-              <span>Visit Our Office</span>
-              <ArrowRight className="btn-arrow w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
+
 
       <section
         id="contact"
@@ -506,8 +481,7 @@ export default function HomePage() {
           <div>
             <p className="section-label reveal-up">Get In Touch</p>
             <h2 className="section-title max-w-4xl reveal-up">Schedule a Consultation</h2>
-            <p className="section-desc reveal-up text-justify">{ABOUT.whereWePractice}<tr></tr>{ABOUT.Address}
-            </p>
+            <p className="section-desc reveal-up text-justify">{ABOUT.whereWePractice}<tr></tr>{ABOUT.Address}</p>
             <div className="flex flex-col sm:flex-row gap-5 items-stretch sm:items-center reveal-up">
               <Link href="/contact" className="btn-khaitan-accent group justify-center" data-cursor="view">
                 <span>Contact Us</span>
