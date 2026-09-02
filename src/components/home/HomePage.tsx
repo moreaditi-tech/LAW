@@ -450,7 +450,7 @@ export default function HomePage() {
       </section>
 
       <section id="commitments" className="snap-section bg-[#0F1B2D] flex flex-col justify-center">
-        <InfiniteMarquee items={FIRM.forums.split(' • ')} />
+        
         <div className="section-content">
           <p className="section-label reveal-up">How We Work</p>
           <h2 className="section-title reveal-up">Three Core Commitments</h2>
