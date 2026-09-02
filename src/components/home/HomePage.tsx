@@ -203,15 +203,15 @@ export default function HomePage() {
 
         {/* Right-Side Transparent Law Emblem (logo-1-removebg.png) */}
         <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 pointer-events-none select-none z-10 hidden md:block">
-          <div className="relative transition-all duration-700 hover:scale-105">
+        <div className="relative transition-all duration-700 hover:scale-105">
             <Image
               src="/images/logo/logo-1-removebg.png"
               alt="Prime Law Bharat Legal Emblem"
-              width={260}
-              height={260}
-              className="w-[190px] h-[190px] lg:w-[230px] lg:h-[230px] xl:w-[260px] xl:h-[260px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]"
+              width={330}
+              height={330}
+              className="w-[235px] h-[235px] lg:w-[285px] lg:h-[285px] xl:w-[325px] xl:h-[325px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]"
               priority
-                          />
+            />
           </div>
         </div>
         <div className="section-content">

@@ -186,7 +186,7 @@ export default function ContactPage() {
               Our Location
             </p>
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-tight">
-              Visit Our Chambers
+              Visit Our Place
             </h2>
             <div className="w-16 h-[2px] bg-[#C9A45C] mx-auto mb-6" />
             <p className="font-body text-white/70 text-base sm:text-lg max-w-2xl mx-auto">
