@@ -505,11 +505,12 @@ export default function HomePage() {
         <div className="section-content flex flex-col justify-between min-h-[calc(100vh-0px)] py-28">
           <div>
             <p className="section-label reveal-up">Get In Touch</p>
-            <h2 className="section-title max-w-4xl reveal-up">Schedule a Confidential Consultation</h2>
-            <p className="section-desc reveal-up text-justify">{ABOUT.whereWePractice}</p>
+            <h2 className="section-title max-w-4xl reveal-up">Schedule a Consultation</h2>
+            <p className="section-desc reveal-up text-justify">{ABOUT.whereWePractice}<tr></tr>{ABOUT.Address}
+            </p>
             <div className="flex flex-col sm:flex-row gap-5 items-stretch sm:items-center reveal-up">
               <Link href="/contact" className="btn-khaitan-accent group justify-center" data-cursor="view">
-                <span>Contact Senior Counsel</span>
+                <span>Contact Us</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </Link>
               <a href={`tel:${FIRM.phone1.replace(/\s+/g, '')}`} className="btn-khaitan group justify-center" data-cursor="view">
