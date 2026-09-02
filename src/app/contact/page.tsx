@@ -80,20 +80,7 @@ export default function ContactPage() {
               </div>
 
 
-              <div className="pt-4">
-                <h3 className="font-heading text-xl text-white mb-2">Active Jurisdictions</h3>
-                <div className="w-8 h-[2px] bg-[#0B2A52] mb-4" />
-                <p className="font-body text-white/70 text-sm leading-relaxed mb-4">
-                  {ABOUT.whereWePractice}
-                </p>
-                <div className="flex flex-wrap gap-2.5">
-                  {FIRM.states.map((state, index) => (
-                    <span key={index} className="px-4 py-2 rounded-sm border border-white/20 bg-white/5 text-white/85 font-body text-xs tracking-wide">
-                      {state}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            
             </div>
           </div>
 
