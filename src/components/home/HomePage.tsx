@@ -316,7 +316,7 @@ export default function HomePage() {
               <h2 className="section-title mb-0 reveal-up">Comprehensive Legal Solutions</h2>
             </div>
             <Link href="/practice-areas" className="btn-khaitan group flex-shrink-0 self-start md:self-auto reveal-up" data-cursor="view">
-              <span>View All 36 Areas</span>
+              <span>View All Areas</span>
               <ArrowRight className="btn-arrow w-4 h-4" />
             </Link>
           </div>
