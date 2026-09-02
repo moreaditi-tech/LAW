@@ -59,44 +59,14 @@ export default function CareerPage() {
                 <span>Apply to Join Us</span>
                 <ArrowDown className="btn-arrow w-4 h-4" />
               </a>
-              <a href="#opportunities" className="btn-khaitan group inline-flex justify-center">
-                <span>Explore Opportunities</span>
-                <ArrowDown className="btn-arrow w-4 h-4" />
-              </a>
+             
             </div>
           </div>
         </div>
       </section>
 
-      {/* Opportunities Section */}
-      <section id="opportunities" className="py-24 bg-[#0F1B2D]">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
-          <div className="text-center mb-16">
-            <h2 className="section-title mb-6">Opportunities at Prime Law Bharat</h2>
-            <div className="w-16 h-[2px] bg-[#C9A45C] mx-auto mb-6" />
-            <p className="section-desc max-w-3xl mx-auto">
-              Our firm may have opportunities across various levels of legal practice. We welcome expressions of interest for the following roles:
-            </p>
-          </div>
+      
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {OPPORTUNITIES.map((opp, idx) => (
-              <div key={idx} className="group p-8 border border-white/10 bg-white/[0.03] hover:border-[#C9A45C]/50 transition-all duration-300 flex flex-col">
-                <h3 className="font-heading text-2xl text-white mb-3">{opp.title}</h3>
-                <p className="text-white/70 font-body text-sm leading-relaxed mb-6 flex-grow">{opp.desc}</p>
-                <div className="border-t border-white/10 pt-4 mb-6">
-                  <p className="text-xs uppercase tracking-wider text-[#C9A45C] mb-1">Key Exposure</p>
-                  <p className="text-sm text-white/60 font-body">{opp.exposure}</p>
-                </div>
-                <a href="#apply" className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-white hover:text-[#C9A45C] font-medium transition-colors">
-                  <span>Apply Now</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Dedicated Sections */}
       <section className="py-24 bg-[#0A1220]">
@@ -159,28 +129,7 @@ export default function CareerPage() {
             ))}
           </div>
 
-          <div className="border-t border-white/10 pt-20">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="section-title mb-10">Who We're Looking For</h2>
-              <div className="text-left inline-block">
-                <ul className="space-y-5">
-                  {[
-                    "Law students seeking practical exposure",
-                    "Students looking for internships or training",
-                    "Junior advocates beginning their litigation practice",
-                    "Lawyers seeking broader litigation experience",
-                    "Legal researchers with strong analytical skills",
-                    "Professionals interested in litigation, regulatory and commercial matters"
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-center gap-4">
-                      <div className="w-2 h-2 rounded-full bg-[#C9A45C] flex-shrink-0" />
-                      <span className="text-white/90 font-body md:text-lg">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+
         </div>
       </section>
 
