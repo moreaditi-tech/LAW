@@ -80,20 +80,7 @@ export default function ContactPage() {
               </div>
 
 
-              <div className="pt-4">
-                <h3 className="font-heading text-xl text-white mb-2">Active Jurisdictions</h3>
-                <div className="w-8 h-[2px] bg-[#0B2A52] mb-4" />
-                <p className="font-body text-white/70 text-sm leading-relaxed mb-4">
-                  {ABOUT.whereWePractice}
-                </p>
-                <div className="flex flex-wrap gap-2.5">
-                  {FIRM.states.map((state, index) => (
-                    <span key={index} className="px-4 py-2 rounded-sm border border-white/20 bg-white/5 text-white/85 font-body text-xs tracking-wide">
-                      {state}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            
             </div>
           </div>
 
@@ -199,7 +186,7 @@ export default function ContactPage() {
               Our Location
             </p>
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl text-white mb-4 tracking-tight">
-              Visit Our Chambers
+              Visit Our Place
             </h2>
             <div className="w-16 h-[2px] bg-[#C9A45C] mx-auto mb-6" />
             <p className="font-body text-white/70 text-base sm:text-lg max-w-2xl mx-auto">

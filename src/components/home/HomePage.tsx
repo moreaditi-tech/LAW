@@ -20,7 +20,6 @@ const SECTIONS = [
   { id: 'practice', label: 'Expertise' },
   { id: 'strategy', label: 'Strategic Advocacy' },
   { id: 'commitments', label: 'Commitments' },
-  { id: 'chambers', label: 'Chambers' },
   { id: 'contact', label: 'Get In Touch' },
 ];
 
@@ -204,15 +203,15 @@ export default function HomePage() {
 
         {/* Right-Side Transparent Law Emblem (logo-1-removebg.png) */}
         <div className="absolute right-8 md:right-16 lg:right-24 top-1/2 -translate-y-1/2 pointer-events-none select-none z-10 hidden md:block">
-          <div className="relative transition-all duration-700 hover:scale-105">
+        <div className="relative transition-all duration-700 hover:scale-105">
             <Image
               src="/images/logo/logo-1-removebg.png"
               alt="Prime Law Bharat Legal Emblem"
-              width={260}
-              height={260}
-              className="w-[190px] h-[190px] lg:w-[230px] lg:h-[230px] xl:w-[260px] xl:h-[260px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]"
+              width={330}
+              height={330}
+              className="w-[235px] h-[235px] lg:w-[285px] lg:h-[285px] xl:w-[325px] xl:h-[325px] object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.75)]"
               priority
-                          />
+            />
           </div>
         </div>
         <div className="section-content">
@@ -316,7 +315,7 @@ export default function HomePage() {
               <h2 className="section-title mb-0 reveal-up">Comprehensive Legal Solutions</h2>
             </div>
             <Link href="/practice-areas" className="btn-khaitan group flex-shrink-0 self-start md:self-auto reveal-up" data-cursor="view">
-              <span>View All 36 Areas</span>
+              <span>View All Areas</span>
               <ArrowRight className="btn-arrow w-4 h-4" />
             </Link>
           </div>
@@ -451,7 +450,7 @@ export default function HomePage() {
       </section>
 
       <section id="commitments" className="snap-section bg-[#0F1B2D] flex flex-col justify-center">
-        <InfiniteMarquee items={FIRM.forums.split(' • ')} />
+        
         <div className="section-content">
           <p className="section-label reveal-up">How We Work</p>
           <h2 className="section-title reveal-up">Three Core Commitments</h2>
@@ -470,31 +469,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section
-        id="chambers"
-        className="snap-section relative flex items-center"
-        style={{ backgroundImage: "url('/images/executive cabin/executive-cabin-04.jpg')" }}
-      >
-        <div className="section-overlay bg-[#0F1B2D]/80" />
-        <div className="section-content">
-          <p className="section-label reveal-up">Chambers & Environment</p>
-          <h2 className="section-title max-w-4xl reveal-up">State-of-the-Art Legal Consultation Spaces</h2>
-          <p className="section-desc reveal-up">
-            Explore our professional conference chambers, client consultation suites, and research facilities located at{' '}
-            {FIRM.address}.
-          </p>
-          <div className="flex flex-wrap gap-4 items-center reveal-up">
-            <Link href="/gallery" className="btn-khaitan-accent group" data-cursor="view">
-              <span>View Chambers Gallery</span>
-              <ArrowRight className="btn-arrow w-4 h-4" />
-            </Link>
-            <Link href="/contact" className="btn-khaitan group" data-cursor="view">
-              <span>Visit Our Office</span>
-              <ArrowRight className="btn-arrow w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
+
 
       <section
         id="contact"
@@ -505,11 +480,11 @@ export default function HomePage() {
         <div className="section-content flex flex-col justify-between min-h-[calc(100vh-0px)] py-28">
           <div>
             <p className="section-label reveal-up">Get In Touch</p>
-            <h2 className="section-title max-w-4xl reveal-up">Schedule a Confidential Consultation</h2>
-            <p className="section-desc reveal-up text-justify">{ABOUT.whereWePractice}</p>
+            <h2 className="section-title max-w-4xl reveal-up">Schedule a Consultation</h2>
+            <p className="section-desc reveal-up text-justify">{ABOUT.whereWePractice}<tr></tr>{ABOUT.Address}</p>
             <div className="flex flex-col sm:flex-row gap-5 items-stretch sm:items-center reveal-up">
               <Link href="/contact" className="btn-khaitan-accent group justify-center" data-cursor="view">
-                <span>Contact Senior Counsel</span>
+                <span>Contact Us</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </Link>
               <a href={`tel:${FIRM.phone1.replace(/\s+/g, '')}`} className="btn-khaitan group justify-center" data-cursor="view">
