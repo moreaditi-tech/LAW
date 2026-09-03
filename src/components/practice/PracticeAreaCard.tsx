@@ -11,6 +11,7 @@ interface PracticeAreaCardProps {
 
 export default function PracticeAreaCard({ area, defaultExpanded = false }: PracticeAreaCardProps) {
   const [expanded, setExpanded] = useState(defaultExpanded);
+  const [isLoaded, setIsLoaded] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -34,13 +35,17 @@ export default function PracticeAreaCard({ area, defaultExpanded = false }: Prac
     >
       <div className="relative h-52 w-full overflow-hidden">
         {area.image ? (
-          <Image 
-            src={area.image} 
-            alt={area.title}
-            fill
-            className="object-cover transition-transform duration-700 group-hover:scale-110"
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          />
+          <div className="w-full h-full relative bg-[#14233A]" style={{ transform: (area as any).imageScale ? `scale(${(area as any).imageScale})` : undefined }}>
+            <Image 
+              src={area.image} 
+              alt={area.title}
+              fill
+              style={{ objectPosition: (area as any).imagePosition || 'center' }}
+              className={`object-cover transition-all duration-700 group-hover:scale-110 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              onLoad={() => setIsLoaded(true)}
+            />
+          </div>
         ) : (
           <div className="absolute inset-0 bg-[#14233A]" />
         )}
