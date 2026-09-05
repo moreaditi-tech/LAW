@@ -6,7 +6,7 @@ import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight, ChevronDown, ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
-import { FIRM, ABOUT, PRACTICE_AREAS, COMMITMENTS, TEAM_MEMBERS } from '@/lib/constants';
+import { FIRM, ABOUT, PRACTICE_AREAS, TEAM_MEMBERS } from '@/lib/constants';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import InfiniteMarquee from '@/components/ui/InfiniteMarquee';
 import { emitSiteScroll } from '@/lib/scroll';
@@ -19,7 +19,6 @@ const SECTIONS = [
   { id: 'team', label: 'Team Members' },
   { id: 'practice', label: 'Expertise' },
   { id: 'strategy', label: 'Strategic Advocacy' },
-  { id: 'commitments', label: 'Commitments' },
   { id: 'presence', label: 'Our Presence' },
   { id: 'contact', label: 'Get In Touch' },
 ];
@@ -492,25 +491,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="commitments" className="snap-section bg-[#0F1B2D] flex flex-col justify-center">
-        
-        <div className="section-content">
-          <p className="section-label reveal-up">How We Work</p>
-          <h2 className="section-title reveal-up">Three Core Commitments</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-4">
-            {COMMITMENTS.map((item) => (
-              <div
-                key={item.title}
-                className="reveal-up group p-5 sm:p-8 border border-white/10 bg-white/[0.03] hover:border-[#0B2A52]/50 hover:bg-white/[0.06] transition-all duration-500"
-              >
-                <div className="w-10 h-[2px] bg-[#C9A45C] mb-6 transition-all duration-500 group-hover:w-16" />
-                <h3 className="font-heading text-2xl mb-4">{item.title}</h3>
-                <p className="font-body text-white/70 leading-relaxed text-sm">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
 
 
@@ -529,16 +509,7 @@ export default function HomePage() {
                 With a growing presence across India, we are committed to being closer to our clients. Our operations span 9 key markets, enabling us to deliver our expertise and representation seamlessly across diverse regional jurisdictions.
               </p>
               
-              <div className="reveal-up flex gap-6 sm:gap-8">
-                 <div className="flex flex-col border-l-2 border-[#C9A45C] pl-4 sm:pl-5">
-                    <span className="font-heading text-3xl sm:text-4xl text-white mb-1">9</span>
-                    <span className="font-body text-[10px] sm:text-xs text-white/50 uppercase tracking-[0.2em]">Key States</span>
-                 </div>
-                 <div className="flex flex-col border-l-2 border-[#C9A45C] pl-4 sm:pl-5">
-                    <span className="font-heading text-3xl sm:text-4xl text-white mb-1">1</span>
-                    <span className="font-body text-[10px] sm:text-xs text-white/50 uppercase tracking-[0.2em]">Unified Strategy</span>
-                 </div>
-              </div>
+
             </div>
 
             {/* Right Map Graphic */}
