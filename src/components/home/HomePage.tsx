@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, ChevronDown, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronDown, ChevronLeft, ChevronRight, MapPin } from 'lucide-react';
 import { FIRM, ABOUT, PRACTICE_AREAS, COMMITMENTS, TEAM_MEMBERS } from '@/lib/constants';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import InfiniteMarquee from '@/components/ui/InfiniteMarquee';
@@ -20,6 +20,7 @@ const SECTIONS = [
   { id: 'practice', label: 'Expertise' },
   { id: 'strategy', label: 'Strategic Advocacy' },
   { id: 'commitments', label: 'Commitments' },
+  { id: 'presence', label: 'Our Presence' },
   { id: 'contact', label: 'Get In Touch' },
 ];
 
@@ -500,6 +501,52 @@ export default function HomePage() {
       </section>
 
 
+
+      <section
+        id="presence"
+        className="snap-section relative flex flex-col justify-center py-24 bg-[#0A1220] overflow-hidden"
+      >
+        <div className="section-content relative z-10 w-full max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+            
+            {/* Left Content */}
+            <div className="lg:col-span-5 flex flex-col justify-center">
+              <p className="section-label reveal-up">Our Presence</p>
+              <h2 className="section-title reveal-up mb-6">Strategic Multi-State Operations</h2>
+              <p className="font-body text-white/70 text-base sm:text-lg leading-relaxed reveal-up mb-10 text-justify">
+                With a growing presence across India, we are committed to being closer to our clients. Our operations span 9 key markets, enabling us to deliver our expertise and representation seamlessly across diverse regional jurisdictions.
+              </p>
+              
+              <div className="reveal-up flex gap-8">
+                 <div className="flex flex-col border-l-2 border-[#C9A45C] pl-5">
+                    <span className="font-heading text-4xl text-white mb-1">9</span>
+                    <span className="font-body text-xs text-white/50 uppercase tracking-[0.2em]">Key States</span>
+                 </div>
+                 <div className="flex flex-col border-l-2 border-[#C9A45C] pl-5">
+                    <span className="font-heading text-4xl text-white mb-1">1</span>
+                    <span className="font-body text-xs text-white/50 uppercase tracking-[0.2em]">Unified Strategy</span>
+                 </div>
+              </div>
+            </div>
+
+            {/* Right Map Graphic */}
+            <div className="lg:col-span-7 relative flex justify-center lg:justify-end reveal-up">
+              <div className="relative w-full max-w-[650px] aspect-[4/3] sm:aspect-square drop-shadow-[0_0_35px_rgba(201,164,92,0.12)]">
+                <Image 
+                  src="/images/areas/india-map.png"
+                  alt="Prime Law Bharat - India Presence Map"
+                  fill
+                  className="object-contain hover:scale-105 transition-transform duration-700 ease-out"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+        {/* Subtle background glow behind the map */}
+        <div className="absolute top-1/2 right-0 -translate-y-1/2 w-1/2 h-[80%] bg-[#C9A45C]/5 blur-[120px] pointer-events-none rounded-full" />
+      </section>
 
       <section
         id="contact"
