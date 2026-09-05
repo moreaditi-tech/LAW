@@ -27,12 +27,6 @@ export default function Navbar() {
         y = window.scrollY;
       }
       setScrolled(y > 40);
-      if (isOpen) {
-        setHidden(false);
-        lastY.current = y;
-        return;
-      }
-      setHidden(y > lastY.current && y > 90);
       lastY.current = y;
     };
     window.addEventListener('plb-scroll', handleScroll as EventListener);
@@ -65,8 +59,6 @@ export default function Navbar() {
       {/* Header Bar */}
       <header
         className={`fixed top-0 left-0 right-0 z-50 px-6 py-5 md:px-12 flex justify-between items-center transition-all duration-500 ${
-          hidden && !isOpen ? '-translate-y-full' : 'translate-y-0'
-        } ${
           scrolled
             ? 'bg-[#0F1B2D]/95 backdrop-blur-md border-b border-white/10 shadow-lg py-4'
             : 'bg-transparent'
