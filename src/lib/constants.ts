@@ -153,7 +153,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Civil",
     shortDescription: "Civil disputes often involve important personal, commercial and property rights that require careful legal protection.",
     fullDescription: "Civil disputes often involve important personal, commercial and property rights that require careful legal protection. We represent individuals, businesses and institutions in a wide range of civil matters, including recovery suits, contractual disputes, injunction proceedings, declaration suits, specific performance claims and other complex civil litigation.\n\nOur approach combines detailed legal analysis, strategic planning and strong advocacy before courts and tribunals. From pre-litigation advice and negotiations to trial and appellate proceedings, we work closely with our clients to protect their interests and pursue practical, result-oriented solutions.",
-    image: "/images/areas/Civil_Rights.jpeg",
+    image: "/images/Practice Areas/Civil.jpg",
     category: "civil-property",
   },
   {
@@ -169,7 +169,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Property & Real Estate",
     shortDescription: "Property transactions and land-related disputes involve significant investments and require careful legal scrutiny.",
     fullDescription: "Property transactions and land-related disputes involve significant investments and require careful legal scrutiny. We advise and represent clients in matters relating to title verification, due diligence, property acquisitions, sale and purchase transactions, development agreements, conveyancing and possession-related disputes.\n\nOur practice also extends to ownership conflicts, encroachments, partition disputes, property recovery proceedings and builder-buyer disputes. We work to ensure that property transactions are legally secure while protecting our clients’ ownership and commercial interests.",
-    image: "/images/areas/Property_RealEstate.jpeg",
+    image: "/images/Practice Areas/Property & Real Estate.png",
     category: "civil-property",
   },
   {
@@ -201,7 +201,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Consumer Protection",
     shortDescription: "Consumers are entitled to fair treatment and protection against defective products and deficient services.",
     fullDescription: "Consumers are entitled to fair treatment and protection against defective products and deficient services. We represent consumers before District, State and National Consumer Commissions in matters involving compensation claims, product liability, service deficiencies and unfair trade practices.\n\nOur firm assists clients in pursuing effective remedies against manufacturers, service providers, developers and businesses. We focus on ensuring accountability and securing appropriate relief for consumers whose legal rights have been violated.",
-    image: "/images/areas/Consumer_production.jpeg",
+    image: "/images/Practice Areas/Consumer Protection.png",
     category: "civil-property",
   },
   {
@@ -217,7 +217,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Banking and Finance",
     shortDescription: "Financial disputes involving banks and lending institutions often require specialised legal representation.",
     fullDescription: "Financial disputes involving banks and lending institutions often require specialised legal representation. We represent borrowers, guarantors, financial institutions and businesses before the Debt Recovery Tribunal (DRT) and Debt Recovery Appellate Tribunal (DRAT) in recovery proceedings and related disputes.\n\nOur services include defence against recovery actions, challenges to enforcement measures, settlement negotiations and appellate proceedings. We work to protect our clients’ financial interests while identifying practical and commercially viable solutions.",
-    image: "/images/areas/Banking_Finance.png",
+    image: "/images/Practice Areas/Banking and Finance.png",
     category: "corporate-commercial",
   },
   {
@@ -225,7 +225,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "MPID",
     shortDescription: "Proceedings under the Maharashtra Protection of Interest of Depositors Act often involve complex issues concerning attachment of properties and recovery of investor funds.",
     fullDescription: "Proceedings under the Maharashtra Protection of Interest of Depositors Act often involve complex issues concerning attachment of properties and recovery of investor funds. We represent depositors, investors, directors and stakeholders in matters arising under the MPID framework.\n\nOur firm assists clients in attachment proceedings, claims processes, recovery actions and related litigation. We provide strategic legal advice aimed at protecting rights and securing effective remedies under the law.",
-    image: "/images/areas/MPID.png",
+    image: "/images/Practice Areas/MPID.png",
     category: "criminal-regulatory",
   },
   {
@@ -249,7 +249,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Technology & Intellectual Property Rights",
     shortDescription: "Technology and intellectual property are increasingly important assets for modern businesses, and protecting these assets requires carefully structured legal arrangements.",
     fullDescription: "Technology and intellectual property are increasingly important assets for modern businesses, and protecting these assets requires carefully structured legal arrangements. We advise businesses, startups, entrepreneurs and technology-driven organisations on software and technology agreements, SaaS arrangements, licensing, technology development contracts, confidentiality and non-disclosure agreements, intellectual property assignment and commercialisation arrangements. We assist clients in structuring agreements that clearly define ownership, usage rights, confidentiality obligations, licensing terms and responsibilities of the parties.\n\n\n\nOur practice also covers legal issues concerning trademarks, copyrights, software, brand protection, proprietary information and other intellectual property interests. We help businesses identify and protect their intellectual assets while addressing contractual and commercial risks associated with technology transactions, collaborations, licensing and transfer of intellectual property.",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&q=80",
+    image: "/images/Practice Areas/Technology & Intellectual Property Rights.png",
     category: "corporate-commercial",
   },
   {
@@ -257,7 +257,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Mergers & Acquisitions",
     shortDescription: "Mergers and acquisitions involve complex legal, commercial and regulatory considerations and require careful planning at every stage of the transaction.",
     fullDescription: "Mergers and acquisitions involve complex legal, commercial and regulatory considerations and require careful planning at every stage of the transaction. We advise companies, promoters, shareholders and investors on acquisitions, mergers, demergers, business transfers, restructuring and other strategic transactions. Our services include transaction structuring, legal due diligence, identification of regulatory and contractual risks and drafting and negotiation of transaction documents.\n\n\n\nWe assist clients throughout the transaction lifecycle, from preliminary discussions and due diligence to documentation, regulatory approvals, completion and post-transaction matters. Our focus is on protecting the client’s commercial objectives while ensuring that the transaction is appropriately structured and legally compliant.",
-    image: "/images/areas/Merger_and_Acquistions.png",
+    image: "/images/Practice Areas/Mergers & Acquisitions.png",
     category: "corporate-commercial",
   },
   {
@@ -265,7 +265,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Company Secretarial Services",
     shortDescription: "Corporate compliance is essential for maintaining the legal and regulatory standing of a company.",
     fullDescription: "Corporate compliance is essential for maintaining the legal and regulatory standing of a company. We provide legal and advisory assistance in corporate secretarial matters, including maintenance of statutory records, board and shareholder documentation, corporate resolutions, statutory filings, corporate governance requirements and compliance-related documentation. We assist companies in ensuring that their corporate actions are properly documented and undertaken in accordance with applicable law.\n\n\n\nOur services also extend to corporate restructuring, changes in shareholding and management, board-related matters, shareholder arrangements and regulatory correspondence. By combining legal and corporate compliance support, we help businesses maintain proper governance structures and reduce the risk of regulatory and procedural complications.",
-    image: "/images/areas/Secretary.png",
+    image: "/images/Practice Areas/Company Secretarial Services.png",
     imagePosition: "center top",
     category: "corporate-commercial",
   },
@@ -274,7 +274,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Enforcement Directorate (ED) & PMLA",
     shortDescription: "Proceedings under the Prevention of Money Laundering Act often involve complex investigations, attachment proceedings and prosecution actions.",
     fullDescription: "Proceedings under the Prevention of Money Laundering Act often involve complex investigations, attachment proceedings and prosecution actions. We provide legal representation to individuals, directors and companies facing proceedings before the Enforcement Directorate.\n\nOur services include assistance in responding to summons, challenging attachment orders, defending adjudication proceedings and representing clients before appellate forums and constitutional courts. We work to safeguard our clients’ rights throughout the investigative and legal process.",
-    image: "/images/areas/PMLA.png",
+    image: "/images/Practice Areas/Enforcement Directorate (ED) & PMLA.png",
     category: "criminal-regulatory",
   },
   {
@@ -282,7 +282,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "NCLT/ NCLAT & Corporate Insolvency",
     shortDescription: "Corporate disputes and insolvency proceedings require a combination of legal, financial and commercial understanding.",
     fullDescription: "Corporate disputes and insolvency proceedings require a combination of legal, financial and commercial understanding. We represent companies, promoters, directors, creditors, shareholders and other stakeholders before the National Company Law Tribunal (NCLT) in matters involving corporate insolvency, oppression and mismanagement, shareholder disputes, corporate restructuring, liquidation and other company law proceedings. We assist clients in understanding their legal position, evaluating available remedies and developing an appropriate litigation or resolution strategy.\n\nOur representation extends across different stages of NCLT proceedings, including preparation and filing of applications, responses, interim applications, hearings and appeals. We focus on protecting the interests of stakeholders while addressing the underlying commercial and corporate issues that may affect the continuity, control or financial position of a business.",
-    image: "/images/areas/NCLT.png",
+    image: "/images/Practice Areas/NCLT NCLAT & Corporate Insolvency.png",
     imagePosition: "center 20%",
     category: "appellate-tribunals",
   },
@@ -291,7 +291,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Arbitration & Alternative Dispute Resolution",
     shortDescription: "Arbitration provides businesses and individuals with an alternative mechanism for resolving contractual and commercial disputes outside conventional court litigation.",
     fullDescription: "Arbitration provides businesses and individuals with an alternative mechanism for resolving contractual and commercial disputes outside conventional court litigation. We advise clients on arbitration clauses, appointment of arbitrators, commencement of proceedings, interim measures, evidence, pleadings and final hearings before arbitral tribunals.\n\nOur practice also includes mediation, conciliation and negotiated settlements, wherever appropriate. We assist clients in developing dispute-resolution strategies that protect their legal and commercial interests while seeking efficient, cost-effective and sustainable outcomes. We also represent clients in proceedings concerning enforcement or challenge of arbitral awards.",
-    image: "/images/areas/Arbitration_and_Alternative_DIspute_Resolution.png",
+    image: "/images/Practice Areas/Arbitration & Alternative Dispute Resolution.png",
     category: "corporate-commercial",
   },
   {
@@ -307,7 +307,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Shareholder & Boardroom Disputes",
     shortDescription: "Disputes between shareholders, directors and management can significantly affect the functioning and value of a company.",
     fullDescription: "Disputes between shareholders, directors and management can significantly affect the functioning and value of a company. We advise and represent clients in matters involving ownership and control, voting rights, shareholder agreements, management decisions, boardroom conflicts, diversion of business interests and allegations of oppression or mismanagement.\n\nWe assist clients in evaluating both legal and commercial consequences before initiating proceedings. Where litigation is required, we represent shareholders, directors and companies before the appropriate forums and seek remedies aimed at protecting corporate rights, management interests and legitimate shareholder expectations.",
-    image: "/images/areas/Shareholder_.jpeg",
+    image: "/images/Practice Areas/Shareholder & Boardroom Disputes.webp",
     category: "corporate-commercial",
   },
   {
@@ -315,7 +315,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Due Diligence & Legal Advisory",
     shortDescription: "Effective legal due diligence is an important part of any significant business, investment or property transaction.",
     fullDescription: "Effective legal due diligence is an important part of any significant business, investment or property transaction. We conduct legal reviews to identify existing liabilities, contractual obligations, regulatory concerns, ownership issues, litigation exposure and other potential legal risks. Our due diligence services assist clients in making informed decisions before entering into transactions or investments.\n\nWe provide risk-based legal advice tailored to the nature of the transaction and the client’s objectives. Our advisory work may include reviewing corporate records, contracts, title documents, regulatory approvals, pending disputes and compliance requirements, enabling clients to understand potential risks before making commercial commitments.",
-    image: "/images/areas/Legal_Due.jpeg",
+    image: "/images/Practice Areas/Due Diligence & Legal Advisory.png",
     category: "corporate-commercial",
   },
   {
@@ -323,7 +323,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Business Collaboration",
     shortDescription: "Business collaborations often involve multiple parties with different commercial interests and responsibilities.",
     fullDescription: "Business collaborations often involve multiple parties with different commercial interests and responsibilities. We assist businesses in structuring collaboration arrangements and preparing Memoranda of Understanding (MOUs) that clearly establish the proposed relationship between the parties. Our documentation addresses responsibilities, financial arrangements, intellectual property, confidentiality, timelines, ownership, termination and dispute-resolution mechanisms.\n\nWe also assist clients in negotiating the commercial and legal terms of proposed collaborations. Our objective is to create a clear contractual framework that reduces uncertainty, prevents misunderstandings and provides appropriate protection if disagreements arise during the relationship.",
-    image: "/images/areas/Business_Collaboration.jpeg",
+    image: "/images/Practice Areas/Business collaboration.jpg",
     category: "corporate-commercial",
   },
   {
@@ -339,7 +339,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Employment & Business Agreements",
     shortDescription: "Employment and consultancy relationships require clear contractual terms to protect both the business and the individual.",
     fullDescription: "Employment and consultancy relationships require clear contractual terms to protect both the business and the individual. We draft and review employment agreements, consultancy agreements, employment bonds, confidentiality clauses, service arrangements and other employment-related documentation. We assist businesses in establishing clear provisions concerning duties, compensation, confidentiality, intellectual property, termination and contractual obligations.\n\nOur services are designed to help businesses reduce contractual uncertainty and manage potential employment-related risks. We also advise clients on the legal implications of contractual restrictions and disputes arising from employment or consultancy relationships.",
-    image: "/images/areas/Employee_Agreement.jpeg",
+    image: "/images/Practice Areas/Employment & Business Agreements.png",
     category: "corporate-commercial",
   },
   {
@@ -347,7 +347,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Financial Investigation & Economic Offences",
     shortDescription: "Financial investigations can involve multiple agencies, complex transactions and substantial legal consequences.",
     fullDescription: "Financial investigations can involve multiple agencies, complex transactions and substantial legal consequences. We represent individuals, companies, promoters and other stakeholders in proceedings arising from financial investigations, including matters involving summons, statements, provisional attachment, adjudication and related proceedings under the Prevention of Money Laundering Act framework\n\nEconomic offence matters frequently involve complex transactions, extensive documentation and investigations by specialised agencies. We represent individuals, companies, directors, promoters and other stakeholders facing allegations relating to financial fraud, misappropriation, cheating, criminal breach of trust, financial irregularities and other economic offences.\n\nOur representation may extend from the investigation stage through bail proceedings, trial, appeals and related regulatory or civil proceedings. We focus on understanding the underlying financial transactions, examining documentary evidence and developing a comprehensive legal strategy appropriate to the circumstances of each case.",
-    image: "/images/areas/FinancialInvestigation&economicoffice.jpeg",
+    image: "/images/Practice Areas/Financial Investigation & Economic Offences.png",
     category: "criminal-regulatory",
   },
   {
@@ -355,7 +355,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Central Bureau of Investigation (CBI)",
     shortDescription: "Proceedings involving the Central Bureau of Investigation (CBI) can have serious consequences for individuals, companies and public or private institutions.",
     fullDescription: "Proceedings involving the Central Bureau of Investigation (CBI) can have serious consequences for individuals, companies and public or private institutions. We represent clients in matters arising from CBI investigations, including investigation-related proceedings, criminal litigation, bail applications, challenges to investigative actions and proceedings before competent courts.\n\nWe assist clients in understanding the nature and scope of the investigation and provide representation at appropriate judicial stages. Our approach focuses on procedural safeguards, protection of legal rights and development of an effective defence strategy based on the facts and evidence of the case.",
-    image: "/images/areas/CBI_.jpeg",
+    image: "/images/Practice Areas/Central Bureau of Investigation (CBI).png",
     imagePosition: "center top",
     category: "criminal-regulatory",
   },
@@ -364,7 +364,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Goods & Services Tax (GST)",
     shortDescription: "GST compliance and disputes can have a significant impact on the financial and operational functioning of a business.",
     fullDescription: "GST compliance and disputes can have a significant impact on the financial and operational functioning of a business. We advise businesses, companies, traders, service providers and other entities on legal issues arising under the Goods and Services Tax framework. Our services include assistance with GST notices, assessments, audits, demands, classification disputes, input tax credit issues, registration-related matters and other compliance concerns.\n\nWe also represent clients in GST-related litigation and proceedings before the appropriate authorities and appellate forums. Our approach involves examining the underlying transactions, invoices, accounting records and applicable provisions to develop an effective response to tax proceedings while helping clients manage their ongoing compliance obligations",
-    image: "/images/areas/GST_.png",
+    image: "/images/Practice Areas/Goods & Services Tax (GST).png",
     category: "appellate-tribunals",
   },
   {
@@ -372,7 +372,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Revenue & Land",
     shortDescription: "Land and revenue disputes frequently involve complex records, historical transactions and proceedings before specialised revenue authorities.",
     fullDescription: "Land and revenue disputes frequently involve complex records, historical transactions and proceedings before specialised revenue authorities. We represent landowners, property holders, developers and other stakeholders in disputes involving ownership entries, land records, revenue proceedings, possession and rights connected with immovable property.\n\nOur services include representation before competent revenue authorities and courts, examination of historical records and development of appropriate legal strategies concerning land rights. We aim to resolve record-related and ownership issues while protecting our clients’ interests in the underlying property.",
-    image: "/images/areas/Land_and_Revenue.png",
+    image: "/images/Practice Areas/revenue and land.png",
     imagePosition: "center 25%",
     category: "civil-property",
   },
@@ -389,7 +389,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Stamp Duty & Registration",
     shortDescription: "Stamp duty and registration requirements are important components of property and commercial transactions.",
     fullDescription: "Stamp duty and registration requirements are important components of property and commercial transactions. Errors or disputes concerning stamping and registration can create significant legal and financial consequences. We advise clients on applicable requirements and assist with disputes involving insufficient stamping, registration issues and related legal proceedings.\n\nOur services include reviewing transaction documents, advising on applicable legal requirements and assisting clients before the competent authorities or courts where disputes arise. We aim to ensure that transactions are structured and documented in a manner that reduces avoidable legal complications.",
-    image: "/images/areas/Stamp_Duty.jpeg",
+    image: "/images/Practice Areas/stamp duty and registration.jpeg",
     category: "civil-property",
   },
   {
@@ -397,7 +397,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Mutation & Land Record",
     shortDescription: "Accurate land records are essential for establishing and maintaining a clear record of ownership and possession.",
     fullDescription: "Accurate land records are essential for establishing and maintaining a clear record of ownership and possession. We assist clients in matters involving mutation entries, correction of revenue records, inheritance-related entries, transfer of ownership and disputes concerning recording of rights in land records.\n\nWhere an incorrect or disputed entry affects a client’s property interests, we assist in pursuing appropriate remedies before the competent authorities. Our approach involves examining the underlying title documents, transaction history and revenue records to develop a legally sustainable position.",
-    image: "/images/areas/Land_and_Mutation.jpeg",
+    image: "/images/Practice Areas/Mutation & Land Record.png",
     category: "civil-property",
   },
   {
@@ -405,7 +405,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Central Registrar",
     shortDescription: "Multi-state co-operative societies and their stakeholders operate within a specialised statutory framework and may encounter disputes concerning management, elections, membership, governance, audits and financial matters.",
     fullDescription: "Multi-state co-operative societies and their stakeholders operate within a specialised statutory framework and may encounter disputes concerning management, elections, membership, governance, audits and financial matters. We represent societies, office bearers, members and other stakeholders in proceedings before the Central Registrar of Co-operative Societies.\n\nOur services include representation in disputes concerning statutory compliance, membership rights, management decisions, elections, amendments to bye-laws, audit-related issues and other proceedings under the applicable co-operative society laws. We provide both litigation support and advisory assistance to help societies and stakeholders effectively navigate the regulatory framework.",
-    image: "/images/areas/Centralregistarar.jpeg",
+    image: "/images/Practice Areas/Central Registrar.png",
     category: "appellate-tribunals",
   },
   {
@@ -413,7 +413,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Legal Notices & Pre-Litigation Strategy",
     shortDescription: "Effective legal action often begins well before a case reaches court.",
     fullDescription: "Effective legal action often begins well before a case reaches court. We prepare carefully structured legal notices relating to contractual breaches, recovery claims, property disputes, business disagreements, employment issues and other legal grievances. A properly considered notice can clarify the client’s position, preserve important rights and create an opportunity for resolution without prolonged litigation.\n\nWe also advise clients on pre-litigation strategy, negotiation, settlement and available legal remedies. Before initiating proceedings, we evaluate the facts, evidence, contractual documents and potential risks so that clients can make informed decisions regarding the most appropriate legal course of action.",
-    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
+    image: "/images/Practice Areas/Legal Notices & Pre-Litigation Strategy.png",
     category: "civil-property",
   },
   {
@@ -421,7 +421,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Constitutional & Writ Jurisdiction",
     shortDescription: "Constitutional remedies provide an important mechanism for challenging unlawful or arbitrary actions of public authorities.",
     fullDescription: "Constitutional remedies provide an important mechanism for challenging unlawful or arbitrary actions of public authorities. We represent individuals, businesses and organisations in writ proceedings involving administrative decisions, statutory actions, governmental authorities and other public law issues before the appropriate High Courts.\n\nOur practice includes matters involving judicial review, violation of legal rights, procedural irregularities and actions taken beyond statutory authority. We carefully examine the impugned decision, applicable law and available constitutional remedies before developing an appropriate litigation strategy.",
-    image: "https://images.unsplash.com/photo-1575505586569-646b2ca898fc?w=800&q=80",
+    image: "/images/Practice Areas/constitutional and writ jurisdiction.jpeg",
     category: "appellate-tribunals",
   },
   {
@@ -429,7 +429,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "High Court & Supreme Court",
     shortDescription: "Complex legal disputes often require representation before constitutional courts and higher judicial forums.",
     fullDescription: "Complex legal disputes often require representation before constitutional courts and higher judicial forums. We appear before various High Courts and the Supreme Court of India in writ petitions, constitutional matters, civil and criminal appeals, special leave petitions and challenges to tribunal orders.\n\nOur team focuses on detailed legal research, strategic case preparation and persuasive advocacy. We are committed to protecting our clients’ interests while pursuing effective legal remedies before the country’s highest courts.",
-    image: "/images/areas/HighCourt.jpeg",
+    image: "/images/Practice Areas/high court and supreme court.jpeg",
     category: "appellate-tribunals",
   },
 ];
