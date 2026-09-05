@@ -10,7 +10,7 @@ export const FIRM = {
   closingQuote:
     "You seek justice, we deliver it.",
   phone1: "+91 9109101055",
-  phone2: "+91 86000 12001",
+  phone2: "+91 8600012001",
   website: "www.primelawbharat.com",
   address: "801, chamber 63, opp district court metro station, Shivaji Nagar Pune :- 411005.",
   states: ["Maharashtra", "Karnataka", "Gujarat", "Delhi", "Haryana"],
