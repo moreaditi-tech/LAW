@@ -85,10 +85,16 @@ export default function HomePage() {
   };
 
   const handleDragEnd = (event: any, info: any) => {
-    const threshold = 50;
-    if (info.offset.x < -threshold) {
+    // Determine swipe based on distance or velocity
+    const swipeDistance = info.offset.x;
+    const swipeVelocity = info.velocity.x;
+    
+    // Reversed logic based on user request: 
+    // Pulling right (positive) -> goes to next (moves view left)
+    // Pulling left (negative) -> goes to prev (moves view right)
+    if (swipeDistance > 50 || swipeVelocity > 500) {
       nextSlide();
-    } else if (info.offset.x > threshold) {
+    } else if (swipeDistance < -50 || swipeVelocity < -500) {
       prevSlide();
     }
   };
@@ -301,33 +307,39 @@ export default function HomePage() {
 
       <section id="team" className="snap-section bg-[#0A1220] flex items-center">
         <div className="section-content w-full relative py-10">
-          <div className="mb-8 text-center flex flex-col items-center">
-            <p className="section-label reveal-up">Team Members</p>
-            <h2 className="section-title mb-4 reveal-up">Meet our expert attorneys</h2>
-            <div className="w-16 h-[2px] bg-[#C9A45C] reveal-up" />
+          <div className="mb-4 sm:mb-8 text-center flex flex-col items-center">
+            <p className="section-label reveal-up mb-2 sm:mb-5">Team Members</p>
+            <h2 className="section-title mb-2 sm:mb-4 reveal-up text-3xl sm:text-4xl md:text-5xl">Meet our expert attorneys</h2>
+            <div className="w-12 sm:w-16 h-[2px] bg-[#C9A45C] reveal-up" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {/* Vertical stack on mobile, optimized to fit within 100vh */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-6 md:gap-8 max-w-4xl mx-auto">
             {TEAM_MEMBERS.map((member) => (
-              <div key={member.id} className="reveal-up group relative border border-white/10 bg-white/[0.03] hover:border-[#C9A45C]/50 hover:bg-white/[0.06] transition-all duration-500 overflow-hidden flex flex-col h-full rounded-sm shadow-xl">
-                <div className="relative w-full aspect-[5/4] overflow-hidden">
+              <Link 
+                href={`/team/${member.id}`}
+                key={member.id} 
+                className="reveal-up group relative border border-white/10 bg-white/[0.03] hover:border-[#C9A45C]/50 hover:bg-white/[0.06] transition-all duration-500 overflow-hidden flex flex-col rounded-sm shadow-xl cursor-pointer"
+              >
+                <div className="relative w-full aspect-[16/9] md:aspect-[5/4] overflow-hidden">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
-                    className="object-cover object-[center_20%] transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    style={{ objectPosition: member.id === 'abhishek-motewar' ? 'center 15%' : 'center 35%' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A1220] via-[#0A1220]/20 to-transparent opacity-90" />
                 </div>
-                <div className="p-6 flex flex-col flex-grow relative z-10 -mt-12 bg-gradient-to-t from-[#0A1220] via-[#0A1220] to-transparent pt-8">
-                  <p className="text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-2">{member.designation}</p>
-                  <h3 className="font-heading text-xl sm:text-2xl text-white mb-6 flex-grow">{member.name}</h3>
-                  <Link href={`/team/${member.id}`} className="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-white hover:text-[#C9A45C] font-medium transition-colors group/btn">
+                <div className="p-4 sm:p-6 flex flex-col flex-grow relative z-10 -mt-8 sm:-mt-12 bg-gradient-to-t from-[#0A1220] via-[#0A1220] to-transparent pt-6 sm:pt-8">
+                  <p className="text-[10px] sm:text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-1 sm:mb-2">{member.designation}</p>
+                  <h3 className="font-heading text-lg sm:text-xl md:text-2xl text-white mb-2 sm:mb-6 flex-grow">{member.name}</h3>
+                  <div className="inline-flex items-center gap-2 text-[10px] sm:text-xs uppercase tracking-wider text-[#C9A45C] font-medium transition-colors">
                     <span>View Profile</span>
-                    <ArrowRight className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" />
-                  </Link>
+                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -380,14 +392,14 @@ export default function HomePage() {
               <motion.div
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={0.2}
+                dragElastic={1} // Allows element to freely follow the finger
                 onDragEnd={handleDragEnd}
                 className="flex cursor-grab active:cursor-grabbing"
                 style={{ gap: '24px' }}
                 animate={{
                   x: `calc(-${carouselIndex} * (100% / ${itemsPerPage}) - ${carouselIndex * (24 / itemsPerPage)}px)`
                 }}
-                transition={{ type: 'spring', stiffness: 220, damping: 26 }}
+                transition={{ type: 'spring', stiffness: 250, damping: 28 }}
               >
                 {PRACTICE_AREAS.map((area) => (
                   <Link
@@ -468,7 +480,7 @@ export default function HomePage() {
                 You Seek Justice.
                 <br className="hidden sm:inline" /> We Deliver It.
               </h2>
-              <p className="section-desc mb-8 reveal-up text-justify">{ABOUT.commitment}</p>
+              <p className="section-desc mb-8 reveal-up">{ABOUT.commitment}</p>
               <div className="reveal-up">
                 <Link href="/about" className="btn-khaitan group" data-cursor="view">
                   <span>About Us</span>
@@ -513,7 +525,7 @@ export default function HomePage() {
             <div className="lg:col-span-5 flex flex-col justify-center">
               <p className="section-label reveal-up">Our Presence</p>
               <h2 className="section-title reveal-up mb-4 sm:mb-6">Strategic Multi-State Operations</h2>
-              <p className="font-body text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed reveal-up mb-8 sm:mb-10 text-justify">
+              <p className="font-body text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed reveal-up mb-8 sm:mb-10">
                 With a growing presence across India, we are committed to being closer to our clients. Our operations span 9 key markets, enabling us to deliver our expertise and representation seamlessly across diverse regional jurisdictions.
               </p>
               
@@ -558,7 +570,7 @@ export default function HomePage() {
           <div>
             <p className="section-label reveal-up">Get In Touch</p>
             <h2 className="section-title max-w-4xl reveal-up">Schedule a Consultation</h2>
-            <p className="section-desc reveal-up text-justify">{ABOUT.whereWePractice}<br /><br />{ABOUT.Address}</p>
+            <p className="section-desc reveal-up">{ABOUT.whereWePractice}<br /><br />{ABOUT.Address}</p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 items-stretch sm:items-center reveal-up">
               <Link href="/contact" className="btn-khaitan-accent group justify-center text-center" data-cursor="view">
                 <span>Contact Us</span>
