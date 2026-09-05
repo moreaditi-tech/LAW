@@ -37,10 +37,10 @@ export default function AboutPage() {
 
       {/* About Introduction */}
       <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 md:px-12 max-w-4xl mx-auto space-y-6 sm:space-y-8">
-        <p className="font-body text-lg md:text-xl leading-relaxed text-white/90 font-light text-justify">
+        <p className="font-body text-lg md:text-xl leading-relaxed text-white/90 font-light">
           {ABOUT.intro}
         </p>
-        <p className="font-body text-lg md:text-xl leading-relaxed text-white/80 font-light text-justify">
+        <p className="font-body text-lg md:text-xl leading-relaxed text-white/80 font-light">
           {ABOUT.foundation}
         </p>
       </section>
@@ -67,7 +67,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-7">
               <SectionHeading title="Our Experience" />
-              <div className="space-y-6 text-white/80 mt-8 font-body text-base sm:text-lg leading-relaxed text-justify">
+              <div className="space-y-6 text-white/80 mt-8 font-body text-base sm:text-lg leading-relaxed">
                 <p>{ABOUT.experience}</p>
                 <p>{ABOUT.experienceDetail}</p>
                 <p className="text-white font-medium">{ABOUT.experienceClosing}</p>
@@ -94,7 +94,7 @@ export default function AboutPage() {
       <section className="py-14 sm:py-20 lg:py-24 bg-[#14233A] px-4 sm:px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <SectionHeading title="Where We Practice" center />
-          <p className="mt-8 text-white/80 font-body text-base sm:text-lg leading-relaxed mb-10 text-justify">
+          <p className="mt-8 text-white/80 font-body text-base sm:text-lg leading-relaxed mb-10">
             {ABOUT.whereWePractice}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -112,7 +112,7 @@ export default function AboutPage() {
 
       {/* Closing Commitment Quote */}
       <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 text-center max-w-4xl mx-auto">
-        <p className="font-body text-lg sm:text-xl text-white/80 mb-12 leading-relaxed text-justify">
+        <p className="font-body text-lg sm:text-xl text-white/80 mb-12 leading-relaxed">
           {ABOUT.commitment}
         </p>
         <div className="w-16 h-[2px] bg-[#C9A45C] mx-auto mb-10" />
