@@ -16,7 +16,7 @@ export default function ContactPage() {
   return (
     <div className="bg-[#0F1B2D] min-h-screen text-white">
       {/* Hero Header */}
-      <section className="relative h-[60vh] min-h-[420px] w-full flex items-center justify-center pt-20">
+      <section className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] min-h-[340px] sm:min-h-[420px] w-full flex items-center justify-center pt-20">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/executive cabin/executive-cabin-02.jpg" 
@@ -43,8 +43,8 @@ export default function ContactPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           
           {/* Contact Information */}
           <div className="lg:col-span-5">
@@ -176,7 +176,7 @@ export default function ContactPage() {
       </section>
 
       {/* Google Map Section */}
-      <section className="py-24 px-6 md:px-12 bg-[#0A1220]">
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 md:px-12 bg-[#0A1220]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#C9A45C] font-semibold mb-4 font-body">
@@ -195,7 +195,7 @@ export default function ContactPage() {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15131.97!2d73.9!3d18.56!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1dc48abc8e1%3A0xbc0a41ab3d911e93!2sAnjani%20Buildcon%2C%20Chamber%2063!5e0!3m2!1sen!2sin!4v1"
               width="100%"
-              height="450"
+              height="350"
               style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(0.95) contrast(0.9)' }}
               allowFullScreen
               loading="lazy"

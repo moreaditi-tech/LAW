@@ -31,7 +31,7 @@ export default function CareerPage() {
   return (
     <div className="bg-[#0A1220] min-h-screen text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 lg:pt-40 lg:pb-32 flex items-center min-h-[85vh]">
+      <section className="relative pt-24 pb-16 sm:pt-32 sm:pb-24 lg:pt-40 lg:pb-32 flex items-center min-h-[70vh] sm:min-h-[85vh]">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/conference-room/conference-room-01.jpg"
@@ -69,9 +69,9 @@ export default function CareerPage() {
 
 
       {/* Dedicated Sections */}
-      <section className="py-24 bg-[#0A1220]">
+      <section className="py-14 sm:py-20 lg:py-24 bg-[#0A1220]">
         <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
             
             {/* For Students */}
             <div className="border border-white/10 p-8 md:p-10 bg-white/[0.02]">
@@ -112,7 +112,7 @@ export default function CareerPage() {
       </section>
 
       {/* Why Choose Us & Who Should Apply */}
-      <section className="py-24 bg-[#0F1B2D]">
+      <section className="py-14 sm:py-20 lg:py-24 bg-[#0F1B2D]">
         <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
           
           <div className="text-center mb-16">
@@ -134,7 +134,7 @@ export default function CareerPage() {
       </section>
 
       {/* Application Form */}
-      <section id="apply" className="py-24 bg-[#0A1220]">
+      <section id="apply" className="py-14 sm:py-20 lg:py-24 bg-[#0A1220]">
         <div className="max-w-4xl mx-auto px-6 md:px-10 lg:px-16">
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-4">Application</p>

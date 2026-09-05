@@ -7,7 +7,7 @@ export default function AboutPage() {
   return (
     <div className="bg-[#0F1B2D] min-h-screen text-white">
       {/* Hero Header */}
-      <section className="relative h-[70vh] min-h-[480px] w-full flex items-center justify-center pt-20">
+      <section className="relative h-[50vh] sm:h-[60vh] md:h-[70vh] min-h-[380px] sm:min-h-[480px] w-full flex items-center justify-center pt-20">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/executive cabin/executive-cabin-03.jpg" 
@@ -36,7 +36,7 @@ export default function AboutPage() {
       </section>
 
       {/* About Introduction */}
-      <section className="py-24 px-6 md:px-12 max-w-4xl mx-auto space-y-8">
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 md:px-12 max-w-4xl mx-auto space-y-6 sm:space-y-8">
         <p className="font-body text-lg md:text-xl leading-relaxed text-white/90 font-light text-justify">
           {ABOUT.intro}
         </p>
@@ -46,10 +46,10 @@ export default function AboutPage() {
       </section>
 
       {/* Commitments */}
-      <section className="py-24 bg-[#14233A] px-6 md:px-12">
+      <section className="py-14 sm:py-20 lg:py-24 bg-[#14233A] px-4 sm:px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <SectionHeading title="Our Commitments" center />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-10 sm:mt-16">
             {COMMITMENTS.map((commitment, index) => (
               <div key={index} className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-[#0B2A52]/50 transition-all duration-300">
                 <div className="w-10 h-[2px] bg-[#C9A45C] mb-6" />
@@ -62,9 +62,9 @@ export default function AboutPage() {
       </section>
 
       {/* Experience & Strengths */}
-      <section className="py-24 px-6 md:px-12">
+      <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
             <div className="lg:col-span-7">
               <SectionHeading title="Our Experience" />
               <div className="space-y-6 text-white/80 mt-8 font-body text-base sm:text-lg leading-relaxed text-justify">
@@ -91,7 +91,7 @@ export default function AboutPage() {
       </section>
 
       {/* Where We Practice */}
-      <section className="py-24 bg-[#14233A] px-6 md:px-12">
+      <section className="py-14 sm:py-20 lg:py-24 bg-[#14233A] px-4 sm:px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <SectionHeading title="Where We Practice" center />
           <p className="mt-8 text-white/80 font-body text-base sm:text-lg leading-relaxed mb-10 text-justify">
@@ -111,7 +111,7 @@ export default function AboutPage() {
       <TeamProfiles />
 
       {/* Closing Commitment Quote */}
-      <section className="py-32 px-6 text-center max-w-4xl mx-auto">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 text-center max-w-4xl mx-auto">
         <p className="font-body text-lg sm:text-xl text-white/80 mb-12 leading-relaxed text-justify">
           {ABOUT.commitment}
         </p>

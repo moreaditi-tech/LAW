@@ -58,9 +58,9 @@ export default function Navbar() {
     <>
       {/* Header Bar */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 px-6 py-5 md:px-12 flex justify-between items-center transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4 sm:py-5 md:px-12 flex justify-between items-center transition-all duration-500 ${
           scrolled
-            ? 'bg-[#0F1B2D]/95 backdrop-blur-md border-b border-white/10 shadow-lg py-4'
+            ? 'bg-[#0F1B2D]/95 backdrop-blur-md border-b border-white/10 shadow-lg py-3 sm:py-4'
             : 'bg-transparent'
         }`}
       >
@@ -128,7 +128,7 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed inset-0 bg-[#0F1B2D]/98 backdrop-blur-xl z-[60] flex flex-col justify-between py-24 px-6 md:px-16 lg:px-24 overflow-y-auto"
+            className="fixed inset-0 bg-[#0F1B2D]/98 backdrop-blur-xl z-[60] flex flex-col justify-between py-20 sm:py-24 px-4 sm:px-6 md:px-16 lg:px-24 overflow-y-auto"
           >
             <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center my-auto">
               {/* Primary Navigation Links */}
@@ -148,7 +148,7 @@ export default function Navbar() {
                       >
                         <Link
                           href={link.href}
-                          className={`group inline-flex items-center gap-4 font-heading text-3xl sm:text-4xl md:text-5xl tracking-tight transition-colors duration-300 ${
+                          className={`group inline-flex items-center gap-3 sm:gap-4 font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight transition-colors duration-300 ${
                             isActive ? 'text-[#C9A45C]' : 'text-white hover:text-[#C9A45C]'
                           }`}
                         >

@@ -102,7 +102,10 @@
     @apply relative z-10 w-full;
     max-width: 80rem;
     margin: 0 auto;
-    padding: 5rem 2rem;
+    padding: 3rem 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .section-content { padding: 4rem 2rem; }
   }
   @media (min-width: 768px) {
     .section-content { padding: 5rem 4rem; }
@@ -138,14 +141,20 @@
      ═══════════════════════════════════════════ */
 
   .btn-khaitan {
-    @apply inline-flex items-center gap-3 font-body font-medium tracking-wide transition-all duration-300;
-    padding: 0.875rem 2rem;
-    font-size: 0.875rem;
+    @apply inline-flex items-center gap-2 sm:gap-3 font-body font-medium tracking-wide transition-all duration-300;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8125rem;
     border: 1px solid rgba(255, 255, 255, 0.25);
     color: #fff;
     background: transparent;
     position: relative;
     overflow: hidden;
+  }
+  @media (min-width: 640px) {
+    .btn-khaitan {
+      padding: 0.875rem 2rem;
+      font-size: 0.875rem;
+    }
   }
   .btn-khaitan::before {
     content: '';
@@ -167,12 +176,18 @@
   }
 
   .btn-khaitan-accent {
-    @apply inline-flex items-center gap-3 font-body font-medium tracking-wide transition-all duration-300;
-    padding: 0.875rem 2rem;
-    font-size: 0.875rem;
+    @apply inline-flex items-center gap-2 sm:gap-3 font-body font-medium tracking-wide transition-all duration-300;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8125rem;
     background: #0B2A52;
     color: #fff;
     border: 1px solid #0B2A52;
+  }
+  @media (min-width: 640px) {
+    .btn-khaitan-accent {
+      padding: 0.875rem 2rem;
+      font-size: 0.875rem;
+    }
   }
   .btn-khaitan-accent:hover {
     background: #071D3A;
