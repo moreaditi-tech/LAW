@@ -28,11 +28,11 @@ export default function TeamProfilePage({ params }: TeamProfileProps) {
   const paragraphs = member.biography.split('\n\n').filter(Boolean);
 
   return (
-    <div className="bg-[#0F1B2D] min-h-screen text-white pt-24 pb-20">
-      <div className="max-w-6xl mx-auto px-6 md:px-10 lg:px-16">
+    <div className="bg-[#0F1B2D] min-h-screen text-white pt-20 sm:pt-24 pb-14 sm:pb-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
         
         {/* Back navigation */}
-        <div className="mb-12">
+        <div className="mb-8 sm:mb-12">
           <Link 
             href="/#team" 
             className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/60 hover:text-[#C9A45C] transition-colors"
@@ -42,7 +42,7 @@ export default function TeamProfilePage({ params }: TeamProfileProps) {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-20 items-start">
           
           {/* Left Column: Image */}
           <div className="lg:col-span-5 relative">

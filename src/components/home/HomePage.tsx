@@ -450,7 +450,7 @@ export default function HomePage() {
 
       <section id="strategy" className="snap-section bg-[#0A1220] flex items-center">
         <div className="section-content">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center">
             <div className="lg:col-span-5 flex justify-center lg:justify-start">
               <div className="img-clip relative w-full max-w-sm sm:max-w-md aspect-[3/4] overflow-hidden rounded-sm border border-white/15 shadow-2xl group">
                 <Image
@@ -485,11 +485,11 @@ export default function HomePage() {
         <div className="section-content">
           <p className="section-label reveal-up">How We Work</p>
           <h2 className="section-title reveal-up">Three Core Commitments</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mt-4">
             {COMMITMENTS.map((item) => (
               <div
                 key={item.title}
-                className="reveal-up group p-8 border border-white/10 bg-white/[0.03] hover:border-[#0B2A52]/50 hover:bg-white/[0.06] transition-all duration-500"
+                className="reveal-up group p-5 sm:p-8 border border-white/10 bg-white/[0.03] hover:border-[#0B2A52]/50 hover:bg-white/[0.06] transition-all duration-500"
               >
                 <div className="w-10 h-[2px] bg-[#C9A45C] mb-6 transition-all duration-500 group-hover:w-16" />
                 <h3 className="font-heading text-2xl mb-4">{item.title}</h3>
@@ -507,24 +507,24 @@ export default function HomePage() {
         className="snap-section relative flex flex-col justify-center py-24 bg-[#0A1220] overflow-hidden"
       >
         <div className="section-content relative z-10 w-full max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             
             {/* Left Content */}
             <div className="lg:col-span-5 flex flex-col justify-center">
               <p className="section-label reveal-up">Our Presence</p>
-              <h2 className="section-title reveal-up mb-6">Strategic Multi-State Operations</h2>
-              <p className="font-body text-white/70 text-base sm:text-lg leading-relaxed reveal-up mb-10 text-justify">
+              <h2 className="section-title reveal-up mb-4 sm:mb-6">Strategic Multi-State Operations</h2>
+              <p className="font-body text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed reveal-up mb-8 sm:mb-10 text-justify">
                 With a growing presence across India, we are committed to being closer to our clients. Our operations span 9 key markets, enabling us to deliver our expertise and representation seamlessly across diverse regional jurisdictions.
               </p>
               
-              <div className="reveal-up flex gap-8">
-                 <div className="flex flex-col border-l-2 border-[#C9A45C] pl-5">
-                    <span className="font-heading text-4xl text-white mb-1">9</span>
-                    <span className="font-body text-xs text-white/50 uppercase tracking-[0.2em]">Key States</span>
+              <div className="reveal-up flex gap-6 sm:gap-8">
+                 <div className="flex flex-col border-l-2 border-[#C9A45C] pl-4 sm:pl-5">
+                    <span className="font-heading text-3xl sm:text-4xl text-white mb-1">9</span>
+                    <span className="font-body text-[10px] sm:text-xs text-white/50 uppercase tracking-[0.2em]">Key States</span>
                  </div>
-                 <div className="flex flex-col border-l-2 border-[#C9A45C] pl-5">
-                    <span className="font-heading text-4xl text-white mb-1">1</span>
-                    <span className="font-body text-xs text-white/50 uppercase tracking-[0.2em]">Unified Strategy</span>
+                 <div className="flex flex-col border-l-2 border-[#C9A45C] pl-4 sm:pl-5">
+                    <span className="font-heading text-3xl sm:text-4xl text-white mb-1">1</span>
+                    <span className="font-body text-[10px] sm:text-xs text-white/50 uppercase tracking-[0.2em]">Unified Strategy</span>
                  </div>
               </div>
             </div>
@@ -559,16 +559,16 @@ export default function HomePage() {
             <p className="section-label reveal-up">Get In Touch</p>
             <h2 className="section-title max-w-4xl reveal-up">Schedule a Consultation</h2>
             <p className="section-desc reveal-up text-justify">{ABOUT.whereWePractice}<br /><br />{ABOUT.Address}</p>
-            <div className="flex flex-col sm:flex-row gap-5 items-stretch sm:items-center reveal-up">
-              <Link href="/contact" className="btn-khaitan-accent group justify-center" data-cursor="view">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-5 items-stretch sm:items-center reveal-up">
+              <Link href="/contact" className="btn-khaitan-accent group justify-center text-center" data-cursor="view">
                 <span>Contact Us</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </Link>
-              <a href={`tel:${FIRM.phone1.replace(/\s+/g, '')}`} className="btn-khaitan group justify-center" data-cursor="view">
+              <a href={`tel:${FIRM.phone1.replace(/\s+/g, '')}`} className="btn-khaitan group justify-center text-center" data-cursor="view">
                 <span>Call {FIRM.phone1}</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </a>
-              <a href={`https://wa.me/919109101055?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20with%20Prime%20Law%20Bharat.`} target="_blank" rel="noopener noreferrer" className="btn-khaitan group justify-center" data-cursor="view">
+              <a href={`https://wa.me/919109101055?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20with%20Prime%20Law%20Bharat.`} target="_blank" rel="noopener noreferrer" className="btn-khaitan group justify-center text-center" data-cursor="view">
                 <span>WhatsApp Us</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </a>
