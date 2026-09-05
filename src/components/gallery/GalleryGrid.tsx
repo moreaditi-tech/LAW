@@ -46,11 +46,11 @@ export default function GalleryGrid({ filter = 'all' }: GalleryGridProps) {
 
   return (
     <>
-      <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
         {filteredImages.map((image, index) => (
           <div 
             key={index} 
-            className="break-inside-avoid group cursor-pointer overflow-hidden rounded-sm border border-white/10 hover:border-[#0B2A52]/50 transition-all duration-300 shadow-subtle hover:shadow-elevated relative bg-white/5"
+            className="group cursor-pointer overflow-hidden rounded-sm border border-white/10 hover:border-[#0B2A52]/50 transition-all duration-300 shadow-subtle hover:shadow-elevated relative bg-white/5"
             onClick={() => setSelectedIdx(index)}
             data-cursor="view"
           >
@@ -60,10 +60,10 @@ export default function GalleryGrid({ filter = 'all' }: GalleryGridProps) {
                 alt={image.alt}
                 fill
                 className="object-cover transform transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-[#0F1B2D]/40 group-hover:bg-[#0F1B2D]/10 transition-colors duration-300 flex items-end p-6">
-                <span className="text-white font-body text-xs uppercase tracking-widest bg-[#0F1B2D]/80 backdrop-blur-sm px-3.5 py-1.5 rounded-sm border border-white/20">
+              <div className="absolute inset-0 bg-[#0F1B2D]/40 group-hover:bg-[#0F1B2D]/10 transition-colors duration-300 flex items-end p-4 sm:p-6">
+                <span className="text-white font-body text-[10px] sm:text-xs uppercase tracking-widest bg-[#0F1B2D]/80 backdrop-blur-sm px-3 py-1.5 rounded-sm border border-white/20">
                   {image.alt}
                 </span>
               </div>
