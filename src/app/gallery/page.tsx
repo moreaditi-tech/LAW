@@ -19,7 +19,7 @@ export default function GalleryPage() {
   return (
     <div className="bg-[#0F1B2D] min-h-screen text-white">
       {/* Hero Header */}
-      <section className="relative h-[60vh] min-h-[440px] w-full flex items-center justify-center pt-20">
+      <section className="relative h-[45vh] sm:h-[50vh] md:h-[60vh] min-h-[340px] sm:min-h-[440px] w-full flex items-center justify-center pt-20">
         <div className="absolute inset-0 z-0">
           <Image 
             src="/images/executive cabin/executive-cabin-05.jpg" 
@@ -46,8 +46,8 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery Section */}
-      <section className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4 sm:gap-6">
           <SectionHeading 
             title="Firm Environment" 
             subtitle="Professional conference rooms, private executive chambers, and research facilities."
@@ -55,12 +55,12 @@ export default function GalleryPage() {
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap gap-2.5 mb-12 pb-4 border-b border-white/10">
+        <div className="flex gap-2 sm:gap-2.5 mb-8 sm:mb-12 pb-4 border-b border-white/10 overflow-x-auto scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0">
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-5 py-2.5 rounded-sm font-body text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 ${
+              className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-sm font-body text-[11px] sm:text-sm tracking-wider uppercase transition-all duration-300 whitespace-nowrap flex-shrink-0 ${
                 activeCategory === cat.id
                   ? 'bg-[#0B2A52] text-white shadow-lg'
                   : 'bg-white/5 hover:bg-white/10 text-white/70 border border-white/10'
