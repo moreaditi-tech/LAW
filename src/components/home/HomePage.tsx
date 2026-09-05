@@ -45,6 +45,36 @@ export default function HomePage() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Fix Back Button scroll restoration (Point 7)
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    // Restore scroll position
+    const savedPos = sessionStorage.getItem('plb_home_scroll');
+    if (savedPos) {
+      setTimeout(() => {
+        if (containerRef.current) {
+          containerRef.current.scrollTop = parseInt(savedPos, 10);
+        }
+      }, 100); // slight delay to allow GSAP and layout to initialize
+    }
+
+    // Save scroll position
+    let debounceTimer: ReturnType<typeof setTimeout>;
+    const handleScrollSave = () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        if (containerRef.current) {
+          sessionStorage.setItem('plb_home_scroll', containerRef.current.scrollTop.toString());
+        }
+      }, 150);
+    };
+
+    container.addEventListener('scroll', handleScrollSave, { passive: true });
+    return () => container.removeEventListener('scroll', handleScrollSave);
+  }, []);
+
   const nextSlide = () => {
     setCarouselIndex((prev) => Math.min(prev + 1, maxCarouselIndex));
   };
