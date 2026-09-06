@@ -54,7 +54,7 @@ export default function AboutPage() {
               <div key={index} className="bg-white/5 border border-white/10 px-5 pt-5 pb-4 sm:px-6 sm:pt-6 sm:pb-5 rounded-sm hover:border-[#0B2A52]/50 transition-all duration-300">
                 <div className="w-10 h-[2px] bg-[#C9A45C] mb-5" />
                 <h3 className="font-heading text-2xl mb-4 text-white">{commitment.title}</h3>
-                <p className="font-body text-white/70 leading-relaxed text-left">{commitment.description}</p>
+                <p className="font-body text-white/70 leading-relaxed text-justify">{commitment.description}</p>
               </div>
             ))}
           </div>
@@ -94,7 +94,7 @@ export default function AboutPage() {
       <section className="py-14 sm:py-20 lg:py-24 bg-[#14233A] px-4 sm:px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-center">
           <SectionHeading title="Where We Practice" center />
-          <p className="mt-8 text-white/80 font-body text-base sm:text-lg leading-relaxed mb-10 text-center">
+          <p className="mt-8 text-white/80 font-body text-base sm:text-lg leading-relaxed mb-10 text-justify">
             {ABOUT.whereWePractice}
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -112,7 +112,7 @@ export default function AboutPage() {
 
       {/* Closing Commitment Quote */}
       <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6 text-center max-w-4xl mx-auto">
-        <p className="font-body text-lg sm:text-xl text-white/80 mb-12 leading-relaxed text-center">
+        <p className="font-body text-lg sm:text-xl text-white/80 mb-12 leading-relaxed text-justify">
           {ABOUT.commitment}
         </p>
         <div className="w-16 h-[2px] bg-[#C9A45C] mx-auto mb-10" />
