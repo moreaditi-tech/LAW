@@ -34,14 +34,14 @@ export default function DisclaimerModal() {
           </h2>
         </div>
 
-        <div className="space-y-4 text-white/80 font-body text-xs md:text-sm leading-relaxed mb-8 text-left">
-          <p>
+        <div className="space-y-4 text-white/80 font-body text-xs md:text-sm leading-relaxed mb-8">
+          <p className="text-left sm:text-justify">
             The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner.
           </p>
-          <p>
-            By accessing this website, <strong className="text-white">www.primelawbharat.com</strong>, you acknowledge and confirm that you are seeking information relating to Prime Law <span className="tiranga-gradient font-semibold">Bharat</span> of your own accord and that there has been no form of solicitation, advertisement, or inducement by Prime Law <span className="tiranga-gradient font-semibold">Bharat</span> or its members.
+          <p className="text-left sm:text-justify">
+            By accessing this website, <strong className="text-white break-all sm:break-normal">www.primelawbharat.com</strong>, you acknowledge and confirm that you are seeking information relating to Prime Law <span className="tiranga-gradient font-semibold">Bharat</span> of your own accord and that there has been no form of solicitation, advertisement, or inducement by Prime Law <span className="tiranga-gradient font-semibold">Bharat</span> or its members.
           </p>
-          <p>
+          <p className="text-left sm:text-justify">
             The content of this website is for informational purposes only and should not be interpreted as soliciting or advertisement. No material or information provided on this website should be construed as legal advice.
           </p>
         </div>

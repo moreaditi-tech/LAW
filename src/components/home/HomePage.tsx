@@ -10,8 +10,6 @@ import { FIRM, ABOUT, PRACTICE_AREAS, TEAM_MEMBERS } from '@/lib/constants';
 import AnimatedCounter from '@/components/ui/AnimatedCounter';
 import InfiniteMarquee from '@/components/ui/InfiniteMarquee';
 import { emitSiteScroll } from '@/lib/scroll';
-import { motion } from 'framer-motion';
-
 
 const SECTIONS = [
   { id: 'hero', label: 'Prime Law Bharat' },
@@ -26,26 +24,9 @@ const SECTIONS = [
 export default function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeSection, setActiveSection] = useState(0);
-  const [carouselIndex, setCarouselIndex] = useState(0);
-  const [itemsPerPage, setItemsPerPage] = useState(4);
-  const maxCarouselIndex = Math.max(0, PRACTICE_AREAS.length - itemsPerPage);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setItemsPerPage(4);
-      } else if (window.innerWidth >= 768) {
-        setItemsPerPage(2);
-      } else {
-        setItemsPerPage(1);
-      }
-    };
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // Fix Back Button scroll restoration (Point 7)
+  // Fix Back Button scroll restoration
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -57,7 +38,7 @@ export default function HomePage() {
         if (containerRef.current) {
           containerRef.current.scrollTop = parseInt(savedPos, 10);
         }
-      }, 100); // slight delay to allow GSAP and layout to initialize
+      }, 100);
     }
 
     // Save scroll position
@@ -76,25 +57,16 @@ export default function HomePage() {
   }, []);
 
   const nextSlide = () => {
-    setCarouselIndex((prev) => Math.min(prev + 1, maxCarouselIndex));
+    if (carouselRef.current) {
+      const itemWidth = carouselRef.current.firstElementChild?.clientWidth || 0;
+      carouselRef.current.scrollBy({ left: itemWidth + 24, behavior: 'smooth' });
+    }
   };
 
   const prevSlide = () => {
-    setCarouselIndex((prev) => Math.max(prev - 1, 0));
-  };
-
-  const handleDragEnd = (event: any, info: any) => {
-    // Determine swipe based on distance or velocity
-    const swipeDistance = info.offset.x;
-    const swipeVelocity = info.velocity.x;
-    
-    // Reversed logic based on user request: 
-    // Pulling right (positive) -> goes to next (moves view left)
-    // Pulling left (negative) -> goes to prev (moves view right)
-    if (swipeDistance > 50 || swipeVelocity > 500) {
-      nextSlide();
-    } else if (swipeDistance < -50 || swipeVelocity < -500) {
-      prevSlide();
+    if (carouselRef.current) {
+      const itemWidth = carouselRef.current.firstElementChild?.clientWidth || 0;
+      carouselRef.current.scrollBy({ left: -(itemWidth + 24), behavior: 'smooth' });
     }
   };
 
@@ -365,96 +337,67 @@ export default function HomePage() {
           {/* Carousel Wrapper */}
           <div className="relative w-full group/carousel">
             {/* Left navigation arrow */}
-            {carouselIndex > 0 && (
-              <button
-                onClick={prevSlide}
-                className="absolute -left-6 top-[40%] -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#0F1B2D]/80 border border-white/10 hover:border-[#C9A45C] hover:bg-[#0B2A52] flex items-center justify-center text-white transition-all shadow-2xl backdrop-blur-sm hidden lg:flex"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-            )}
+            <button
+              onClick={prevSlide}
+              className="absolute -left-6 top-[40%] -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#0F1B2D]/80 border border-white/10 hover:border-[#C9A45C] hover:bg-[#0B2A52] flex items-center justify-center text-white transition-all shadow-2xl backdrop-blur-sm hidden lg:flex"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
 
             {/* Right navigation arrow */}
-            {carouselIndex < maxCarouselIndex && (
-              <button
-                onClick={nextSlide}
-                className="absolute -right-6 top-[40%] -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#0F1B2D]/80 border border-white/10 hover:border-[#C9A45C] hover:bg-[#0B2A52] flex items-center justify-center text-white transition-all shadow-2xl backdrop-blur-sm hidden lg:flex"
-                aria-label="Next slide"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            )}
+            <button
+              onClick={nextSlide}
+              className="absolute -right-6 top-[40%] -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#0F1B2D]/80 border border-white/10 hover:border-[#C9A45C] hover:bg-[#0B2A52] flex items-center justify-center text-white transition-all shadow-2xl backdrop-blur-sm hidden lg:flex"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
 
             {/* Cards viewport */}
-            <div className="overflow-hidden w-full py-4">
-              <motion.div
-                drag="x"
-                dragConstraints={{ left: 0, right: 0 }}
-                dragElastic={1} // Allows element to freely follow the finger
-                onDragEnd={handleDragEnd}
-                className="flex cursor-grab active:cursor-grabbing"
-                style={{ gap: '24px' }}
-                animate={{
-                  x: `calc(-${carouselIndex} * (100% / ${itemsPerPage}) - ${carouselIndex * (24 / itemsPerPage)}px)`
-                }}
-                transition={{ type: 'spring', stiffness: 250, damping: 28 }}
-              >
-                {PRACTICE_AREAS.map((area) => (
-                  <Link
-                    key={area.id}
-                    href={`/practice-areas?id=${area.id}`}
-                    data-cursor="view"
-                    className="relative flex-shrink-0 w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4.2] rounded-sm overflow-hidden border border-white/10 group cursor-pointer shadow-xl transition-all duration-500 hover:border-[#C9A45C]/50 hover:bg-white/[0.04]"
-                  >
-                    {/* Card background image */}
-                    <div className="absolute inset-0 z-0">
-                      {area.image ? (
-                        <Image
-                          src={area.image}
-                          alt={area.title}
-                          fill
-                          className="object-cover transition-transform duration-700 group-hover:scale-105"
-                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                        />
-                      ) : (
-                        <div className="absolute inset-0 bg-[#14233A]" />
-                      )}
-                      {/* Dark overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0F1B2D]/95 via-[#0F1B2D]/40 to-transparent group-hover:from-[#0F1B2D]/98 group-hover:via-[#0F1B2D]/55 transition-all duration-300" />
-                    </div>
+            <div 
+              ref={carouselRef}
+              className="flex w-full py-4 overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden"
+              style={{ gap: '24px', scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {PRACTICE_AREAS.map((area) => (
+                <Link
+                  key={area.id}
+                  href={`/practice-areas?id=${area.id}`}
+                  data-cursor="view"
+                  className="snap-start relative flex-shrink-0 w-[85%] sm:w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] aspect-[3/4] sm:aspect-[4/5] lg:aspect-[3/4.2] rounded-sm overflow-hidden border border-white/10 group cursor-pointer shadow-xl transition-all duration-500 hover:border-[#C9A45C]/50 hover:bg-white/[0.04]"
+                >
+                  {/* Card background image */}
+                  <div className="absolute inset-0 z-0">
+                    {area.image ? (
+                      <Image
+                        src={area.image}
+                        alt={area.title}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 bg-[#14233A]" />
+                    )}
+                    {/* Dark overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0F1B2D]/95 via-[#0F1B2D]/40 to-transparent group-hover:from-[#0F1B2D]/98 group-hover:via-[#0F1B2D]/55 transition-all duration-300" />
+                  </div>
 
-                    {/* Card Content */}
-                    <div className="absolute inset-0 z-10 p-6 flex flex-col justify-end">
-                      <div className="flex items-end justify-between w-full">
-                        <h3 className="font-heading text-lg sm:text-xl text-white font-bold leading-tight max-w-[80%] drop-shadow-md">
-                          {area.title}
-                        </h3>
-                        <div className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center bg-white/5 group-hover:bg-[#C9A45C] group-hover:border-[#C9A45C] transition-all duration-300 transform group-hover:translate-x-1 flex-shrink-0">
-                          <ArrowRight className="w-4 h-4 text-white" />
-                        </div>
+                  {/* Card Content */}
+                  <div className="absolute inset-0 z-10 p-6 flex flex-col justify-end">
+                    <div className="flex items-end justify-between w-full">
+                      <h3 className="font-heading text-lg sm:text-xl text-white font-bold leading-tight max-w-[80%] drop-shadow-md">
+                        {area.title}
+                      </h3>
+                      <div className="w-9 h-9 rounded-full border border-white/30 flex items-center justify-center bg-white/5 group-hover:bg-[#C9A45C] group-hover:border-[#C9A45C] transition-all duration-300 transform group-hover:translate-x-1 flex-shrink-0">
+                        <ArrowRight className="w-4 h-4 text-white" />
                       </div>
                     </div>
-                  </Link>
-                ))}
-              </motion.div>
+                  </div>
+                </Link>
+              ))}
             </div>
-          </div>
-
-          {/* Pagination dots */}
-          <div className="flex justify-center gap-2 mt-4">
-            {Array.from({ length: Math.ceil(PRACTICE_AREAS.length / itemsPerPage) }).map((_, idx) => (
-              <button
-                key={idx}
-                onClick={() => setCarouselIndex(Math.min(idx * itemsPerPage, maxCarouselIndex))}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                  Math.floor(carouselIndex / itemsPerPage) === idx
-                    ? 'bg-[#C9A45C] scale-125'
-                    : 'bg-white/30 hover:bg-white/60'
-                }`}
-                aria-label={`Go to page ${idx + 1}`}
-              />
-            ))}
           </div>
         </div>
       </section>
