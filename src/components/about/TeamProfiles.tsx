@@ -24,12 +24,12 @@ export default function TeamProfiles() {
                     <p className="font-body text-sm text-white/70 mt-2 font-medium">{member.experience}</p>
                   )}
                   {member.courts && (
-                    <p className="font-body text-xs sm:text-sm text-white/50 mt-1 italic leading-relaxed">{member.courts}</p>
+                    <p className="font-body text-xs sm:text-sm text-white/50 mt-1 italic leading-relaxed text-justify">{member.courts}</p>
                   )}
                 </div>
                 
                 <div className="border-t border-white/10 pt-6 mb-8">
-                  <p className="font-body text-white/75 text-sm sm:text-base leading-relaxed whitespace-pre-line">
+                  <p className="font-body text-white/75 text-sm sm:text-base leading-relaxed whitespace-pre-line text-justify">
                     {member.bio}
                   </p>
                 </div>

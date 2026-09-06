@@ -85,7 +85,7 @@ export default function TeamProfilePage({ params }: TeamProfileProps) {
             <div className="space-y-6">
               <h2 className="text-xl font-heading text-white/90 mb-4">Professional Profile</h2>
               {paragraphs.map((p, idx) => (
-                <p key={idx} className="text-base sm:text-lg text-white/70 font-body leading-relaxed font-light">
+                <p key={idx} className="text-base sm:text-lg text-white/70 font-body leading-relaxed font-light text-justify">
                   {p}
                 </p>
               ))}

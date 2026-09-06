@@ -291,7 +291,7 @@ export default function HomePage() {
             <p className="section-label reveal-up">Why Choose Us</p>
             <h2 className="section-title reveal-up mb-6">Why Clients Choose Prime Law Bharat</h2>
             <div className="w-16 h-[2px] bg-[#C9A45C] reveal-up mb-8" />
-            <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-10 reveal-up">
+            <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-10 reveal-up text-justify">
               Strategic legal representation, honest case assessment, meticulous preparation, and consistent representation across courts, tribunals, and jurisdictions.
             </p>
             <div className="reveal-up">
@@ -523,6 +523,7 @@ export default function HomePage() {
                   alt="Prime Law Bharat - India Presence Map"
                   fill
                   className="object-contain hover:scale-105 transition-transform duration-700 ease-out"
+                  sizes="(max-width: 768px) 90vw, 550px"
                 />
               </div>
             </div>

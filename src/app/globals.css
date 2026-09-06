@@ -130,14 +130,14 @@
   }
 
   .section-title {
-    @apply font-heading font-bold text-white leading-[1.08] mb-6;
-    font-size: clamp(2.25rem, 5vw, 4.5rem);
+    @apply font-heading font-bold text-white leading-[1.12] mb-5;
+    font-size: clamp(1.85rem, 3.8vw, 3.5rem);
     letter-spacing: -0.02em;
   }
 
   .section-desc {
-    @apply font-body text-white/75 leading-relaxed mb-10;
-    font-size: clamp(0.95rem, 1.5vw, 1.25rem);
+    @apply font-body text-white/75 leading-relaxed mb-8 text-justify;
+    font-size: clamp(0.875rem, 1.1vw, 1.05rem);
     max-width: 42rem;
   }
 

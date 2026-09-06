@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import type { PracticeArea } from '@/lib/constants';
 
 interface PracticeAreaCardProps {
@@ -9,29 +10,14 @@ interface PracticeAreaCardProps {
   defaultExpanded?: boolean;
 }
 
-export default function PracticeAreaCard({ area, defaultExpanded = false }: PracticeAreaCardProps) {
-  const [expanded, setExpanded] = useState(defaultExpanded);
+export default function PracticeAreaCard({ area }: PracticeAreaCardProps) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (defaultExpanded) {
-      setExpanded(true);
-      const timer = setTimeout(() => {
-        if (cardRef.current) {
-          cardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }, 500);
-      return () => clearTimeout(timer);
-    }
-  }, [defaultExpanded]);
 
   return (
-    <div 
+    <Link
+      href={`/practice-areas/${area.id}`}
       id={area.id}
-      ref={cardRef}
       className="relative bg-white/5 border border-white/10 rounded-sm overflow-hidden flex flex-col group hover:border-[#0B2A52]/60 hover:bg-white/[0.08] transition-all duration-500 cursor-pointer shadow-subtle hover:shadow-elevated hover:-translate-y-1"
-      onClick={() => setExpanded(!expanded)}
     >
       <div className="relative h-52 w-full overflow-hidden">
         {area.image ? (
@@ -81,10 +67,10 @@ export default function PracticeAreaCard({ area, defaultExpanded = false }: Prac
             viewBox="0 0 24 24" 
             stroke="currentColor"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
