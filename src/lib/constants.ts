@@ -432,6 +432,15 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     image: "/images/Practice Areas/high court and supreme court.jpeg",
     category: "appellate-tribunals",
   },
+  {
+    id: "drt-drat",
+    title: "DRT & DRAT",
+    shortDescription: "Our firm has substantial experience in representing individuals, borrowers, guarantors, financial institutions, and other stakeholders before the Debt Recovery Tribunal (DRT) in matters arising under the SARFAESI Act, Recovery of Debts and Bankruptcy Act (RDB Act), and related banking and financial laws.",
+    fullDescription: "Our firm has substantial experience in representing individuals, borrowers, guarantors, financial institutions, and other stakeholders before the Debt Recovery Tribunal (DRT) in matters arising under the SARFAESI Act, Recovery of Debts and Bankruptcy Act (RDB Act), and related banking and financial laws. We handle proceedings involving recovery claims, securitisation applications, challenges to possession notices and measures taken by secured creditors, interim reliefs, objections to recovery proceedings, and matters concerning secured and unsecured assets.\n\nWe also represent clients before the Debt Recovery Appellate Tribunal (DRAT) in appeals and other proceedings arising from DRT orders. Our approach focuses on developing strong legal and factual grounds, challenging procedural irregularities, seeking appropriate interim protection and stay, and effectively presenting the client’s case at the appellate stage. We provide end-to-end representation from initial DRT proceedings through appellate remedies before the DRAT.",
+    image: "/images/Practice Areas/DRT and DRAT.jpeg",
+    imagePosition: "center top",
+    category: "appellate-tribunals",
+  },
 ];
 
 export const GALLERY_IMAGES = [
