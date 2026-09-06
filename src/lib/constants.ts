@@ -71,7 +71,7 @@ export const WHY_CHOOSE_US = [
     description: `Nothing adds to a client's stress more than silence, not knowing what's happening with your case, when the next hearing is, or what a filing actually means. We keep you informed at each stage without you having to call and ask. You'll know your next hearing date, what to expect from it, and what, if anything, is required from you, well before it becomes urgent.`,
   },
   {
-    title: "Multi-State Presence",
+    title: "Multistate Presence",
     description: `Businesses and individuals with property, operations, or disputes across state lines often struggle to find one legal team that can represent them consistently everywhere. With active practice across Maharashtra, Karnataka, Gujarat, Delhi, Uttar Pradesh, Andhra Pradesh, Rajasthan, Odisha, and Haryana, we give clients a single point of contact for matters that would otherwise require coordinating multiple firms in multiple states, saving time, cost, and the risk of inconsistent strategy.`,
   },
   {
