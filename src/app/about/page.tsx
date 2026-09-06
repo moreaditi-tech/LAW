@@ -51,8 +51,8 @@ export default function AboutPage() {
           <SectionHeading title="Our Commitments" center />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mt-10 sm:mt-16">
             {COMMITMENTS.map((commitment, index) => (
-              <div key={index} className="bg-white/5 border border-white/10 p-8 rounded-sm hover:border-[#0B2A52]/50 transition-all duration-300">
-                <div className="w-10 h-[2px] bg-[#C9A45C] mb-6" />
+              <div key={index} className="bg-white/5 border border-white/10 px-5 pt-5 pb-4 sm:px-6 sm:pt-6 sm:pb-5 rounded-sm hover:border-[#0B2A52]/50 transition-all duration-300">
+                <div className="w-10 h-[2px] bg-[#C9A45C] mb-5" />
                 <h3 className="font-heading text-2xl mb-4 text-white">{commitment.title}</h3>
                 <p className="font-body text-white/70 leading-relaxed">{commitment.description}</p>
               </div>
