@@ -39,13 +39,13 @@ function PracticeAreasContent() {
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-[#C9A45C] font-semibold mb-4 font-body">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.35em] text-[#C9A45C] font-semibold mb-4 font-body text-center ml-[0.35em]">
             Areas of Practice
           </p>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tight">
             Our Practice Areas
           </h1>
-          <p className="font-body text-lg sm:text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed text-justify">
+          <p className="font-body text-lg sm:text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed text-center">
             {FIRM.tagline}
           </p>
         </div>

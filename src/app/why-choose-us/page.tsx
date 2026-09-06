@@ -13,7 +13,7 @@ export default function WhyChooseUsPage() {
         
         {/* Header */}
         <div className="mb-10 sm:mb-16 text-center">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#C9A45C] font-semibold mb-4">Why Choose Us</p>
+          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#C9A45C] font-semibold mb-4 text-center ml-[0.3em]">Why Choose Us</p>
           <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight mb-6 sm:mb-8">
             Why Clients Choose <br className="hidden sm:block" /> Prime Law Bharat
           </h1>
