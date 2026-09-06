@@ -48,21 +48,12 @@ export default function PracticeAreaCard({ area }: PracticeAreaCardProps) {
             {area.shortDescription}
           </p>
           
-          <div 
-            className={`grid transition-all duration-300 ease-in-out ${expanded ? 'grid-rows-[1fr] opacity-100 mb-3' : 'grid-rows-[0fr] opacity-0'}`}
-          >
-            <div className="overflow-hidden">
-              <p className="font-body text-white/60 text-xs sm:text-sm leading-relaxed whitespace-pre-line pt-2 border-t border-white/10">
-                {area.fullDescription}
-              </p>
-            </div>
-          </div>
         </div>
 
         <div className="pt-2 flex items-center justify-between text-xs uppercase tracking-widest text-[#C9A45C] font-body font-semibold mt-1">
-          <span>{expanded ? 'Show Less' : 'Read Full Scope'}</span>
+          <span>Read Full Scope</span>
           <svg 
-            className={`w-4 h-4 sm:w-5 sm:h-5 transform transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`}
+            className="w-4 h-4 sm:w-5 sm:h-5"
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
