@@ -23,13 +23,13 @@ export default function AboutPage() {
         </div>
         
         <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#C9A45C] font-semibold mb-4 font-body">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.3em] text-[#C9A45C] font-semibold mb-4 font-body text-center ml-[0.3em]">
             About The Firm
           </p>
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tight">
             Prime Law <span className="tiranga-gradient">Bharat</span>
           </h1>
-          <p className="font-body text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto font-light leading-relaxed text-justify">
+          <p className="font-body text-lg sm:text-xl md:text-2xl text-white/80 max-w-3xl mx-auto font-light leading-relaxed text-center">
             {FIRM.tagline}
           </p>
         </div>
