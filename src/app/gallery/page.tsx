@@ -39,7 +39,7 @@ export default function GalleryPage() {
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tight">
             Our Chambers
           </h1>
-          <p className="font-body text-lg sm:text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="font-body text-lg sm:text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed text-justify">
             A glimpse into our professional workspace and client consultation facilities.
           </p>
         </div>

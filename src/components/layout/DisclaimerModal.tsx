@@ -34,7 +34,7 @@ export default function DisclaimerModal() {
           </h2>
         </div>
 
-        <div className="space-y-4 text-white/80 font-body text-xs md:text-sm leading-relaxed mb-8">
+        <div className="space-y-4 text-white/80 font-body text-xs md:text-sm leading-relaxed mb-8 text-justify">
           <p>
             The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner.
           </p>

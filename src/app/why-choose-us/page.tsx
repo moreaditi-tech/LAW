@@ -30,7 +30,7 @@ export default function WhyChooseUsPage() {
               <h2 className="text-2xl sm:text-3xl font-heading text-white mb-4">
                 {index + 1}. {item.title}
               </h2>
-              <p className="text-base sm:text-lg text-white/70 font-body leading-relaxed">
+              <p className="text-base sm:text-lg text-white/70 font-body leading-relaxed text-justify">
                 {item.description}
               </p>
             </div>

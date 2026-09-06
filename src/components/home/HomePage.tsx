@@ -291,7 +291,7 @@ export default function HomePage() {
             <p className="section-label reveal-up">Why Choose Us</p>
             <h2 className="section-title reveal-up mb-6">Why Clients Choose Prime Law Bharat</h2>
             <div className="w-16 h-[2px] bg-[#C9A45C] reveal-up mb-8" />
-            <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-10 reveal-up">
+            <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-10 reveal-up text-justify">
               Strategic legal representation, honest case assessment, meticulous preparation, and consistent representation across courts, tribunals, and jurisdictions.
             </p>
             <div className="reveal-up">
@@ -504,8 +504,8 @@ export default function HomePage() {
             {/* Left Content */}
             <div className="lg:col-span-5 flex flex-col justify-center">
               <p className="section-label reveal-up">Our Presence</p>
-              <h2 className="section-title reveal-up mb-4 sm:mb-6">Strategic Multi-State Operations</h2>
-              <p className="font-body text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed reveal-up mb-8 sm:mb-10">
+              <h2 className="section-title reveal-up mb-4 sm:mb-6">Strategic Multi State Operations</h2>
+              <p className="font-body text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed reveal-up mb-8 sm:mb-10 text-justify">
                 With a growing presence across India, we are committed to being closer to our clients. Our operations span 9 key markets, enabling us to deliver our expertise and representation seamlessly across diverse regional jurisdictions.
               </p>
               
@@ -513,13 +513,14 @@ export default function HomePage() {
             </div>
 
             {/* Right Map Graphic */}
-            <div className="lg:col-span-7 relative flex justify-center lg:justify-end reveal-up">
-              <div className="relative w-full max-w-[650px] aspect-[4/3] sm:aspect-square drop-shadow-[0_0_35px_rgba(201,164,92,0.12)]">
+            <div className="lg:col-span-7 relative flex justify-center items-center reveal-up">
+              <div className="relative w-full max-w-[550px] aspect-square drop-shadow-[0_0_35px_rgba(201,164,92,0.12)] flex items-center justify-center">
                 <Image 
                   src="/images/areas/india-map.png"
                   alt="Prime Law Bharat - India Presence Map"
                   fill
                   className="object-contain hover:scale-105 transition-transform duration-700 ease-out"
+                  sizes="(max-width: 768px) 90vw, 550px"
                 />
               </div>
             </div>
