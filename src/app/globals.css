@@ -111,8 +111,6 @@
   @media (max-width: 767px) {
     .snap-container {
       scroll-snap-type: none;
-      height: auto;
-      min-height: 100dvh;
     }
     .snap-section {
       height: auto;
@@ -150,7 +148,7 @@
      ═══════════════════════════════════════════ */
 
   .section-label {
-    @apply text-xs uppercase tracking-[0.35em] font-body font-semibold mb-5;
+    @apply text-xs uppercase tracking-[0.35em] font-body font-semibold mb-5 text-left;
     color: #C9A45C;
     letter-spacing: 0.35em;
   }
