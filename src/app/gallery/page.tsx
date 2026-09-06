@@ -37,7 +37,7 @@ export default function GalleryPage() {
             Chambers & Facilities
           </p>
           <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-6 tracking-tight">
-            Our Chambers
+            Our Workspace
           </h1>
           <p className="font-body text-lg sm:text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed text-center">
             A glimpse into our professional workspace and client consultation facilities.

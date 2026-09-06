@@ -53,7 +53,7 @@ export default function PracticeAreaDetailPage({ params }: PracticeAreaDetailPag
           <div className="absolute inset-0 bg-gradient-to-t from-[#0F1B2D] via-[#0F1B2D]/60 to-transparent" />
         </div>
 
-        <div className="relative z-10 px-6 sm:px-12 pb-10 sm:pb-14 max-w-5xl">
+        <div className="relative z-10 px-6 sm:px-12 pb-6 sm:pb-8 max-w-5xl">
           <Link
             href="/practice-areas"
             className="inline-flex items-center gap-2 text-[#C9A45C] text-xs sm:text-sm uppercase tracking-[0.2em] font-body font-semibold mb-4 hover:text-white transition-colors"
@@ -70,9 +70,9 @@ export default function PracticeAreaDetailPage({ params }: PracticeAreaDetailPag
       </section>
 
       {/* Content Section */}
-      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-8 lg:px-12 max-w-4xl mx-auto">
+      <section className="pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-24 px-4 sm:px-8 lg:px-12 max-w-4xl mx-auto">
         {/* Short Description - highlighted */}
-        <p className="font-body text-lg sm:text-xl text-white/90 leading-relaxed mb-8 border-l-4 border-[#C9A45C] pl-6 text-left">
+        <p className="font-body text-lg sm:text-xl text-white/90 leading-relaxed mb-4 border-l-4 border-[#C9A45C] pl-6 text-left">
           {area.shortDescription}
         </p>
 
