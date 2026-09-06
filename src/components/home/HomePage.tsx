@@ -517,7 +517,7 @@ export default function HomePage() {
 
             {/* Right Map Graphic */}
             <div className="lg:col-span-7 relative flex justify-center lg:justify-end reveal-up">
-              <div className="relative w-full max-w-[500px] sm:max-w-[550px] aspect-[4/3] sm:aspect-square drop-shadow-[0_0_35px_rgba(201,164,92,0.12)] transform translate-y-12 lg:translate-y-20">
+              <div className="relative w-full max-w-[500px] sm:max-w-[550px] aspect-square drop-shadow-[0_0_35px_rgba(201,164,92,0.12)] transform translate-y-0 sm:translate-y-12 lg:translate-y-20 mt-8 sm:mt-0">
                 <Image 
                   src="/images/areas/india-map.png"
                   alt="Prime Law Bharat - India Presence Map"
@@ -541,7 +541,7 @@ export default function HomePage() {
         style={{ backgroundImage: "url('/images/workstation/workstation.jpg')" }}
       >
         <div className="section-overlay bg-[#0F1B2D]/85" />
-        <div className="section-content flex flex-col justify-between min-h-[calc(100vh-0px)] py-28">
+        <div className="section-content flex flex-col justify-between min-h-[100dvh] py-16 sm:py-28">
           <div>
             <p className="section-label reveal-up">Get In Touch</p>
             <h2 className="section-title max-w-4xl reveal-up">Schedule a Consultation</h2>
