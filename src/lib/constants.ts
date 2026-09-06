@@ -95,7 +95,7 @@ export const TEAM = [
     experience: "Over 8 years of experience",
     courts:
       "Practicing before the Pune District Court and Bombay High Court, with extensive exposure to matters across Pune, Mumbai, Nagpur, Delhi, and Bangalore.",
-    bio: `Her practice covers Civil, Criminal, Consumer, and Matrimonial Disputes; MPID; DRT/DRAT; RERA; Arbitration; and Financial, Corporate, and Commercial Litigation, including matters before High Courts, the Supreme Court, and various tribunals. She has substantial experience in Property Disputes, Injunctions, Recovery, Cheque-bounce matters, Franchisee disputes and Business Litigation. With a strategic and result-oriented approach, Adv. Reetika focuses on strong courtroom advocacy and practical legal solutions. She has represented reputed builders, corporate entities, and business organisations in complex and commercially sensitive disputes.`,
+    bio: `Her practice covers Civil, Criminal, Consumer, and Matrimonial Disputes, MPID, DRT/DRAT, RERA, Arbitration, and Financial, Corporate, and Commercial Litigation, including matters before High Courts, the Supreme Court, and various tribunals. She has substantial experience in Property Disputes, Injunctions, Recovery, Cheque-bounce matters, Franchisee disputes and Business Litigation. With a strategic and result-oriented approach, Adv. Reetika focuses on strong courtroom advocacy and practical legal solutions. She has represented reputed builders, corporate entities, and business organisations in complex and commercially sensitive disputes.`,
     expertise: [
       "Civil & Property Litigation",
       "Criminal Litigation & Trial Advocacy",
