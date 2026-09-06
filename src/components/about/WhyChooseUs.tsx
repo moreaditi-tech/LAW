@@ -5,7 +5,7 @@ import SectionHeading from '@/components/ui/SectionHeading';
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 px-6 md:px-12 bg-[#14233A]">
+    <section className="py-14 sm:py-20 lg:py-24 px-4 sm:px-6 md:px-12 bg-[#14233A]">
       <div className="max-w-7xl mx-auto">
         <SectionHeading title="Why Clients Choose Prime Law Bharat" center />
         
@@ -13,7 +13,7 @@ export default function WhyChooseUs() {
           {WHY_CHOOSE_US.map((item, index) => (
             <div 
               key={index} 
-              className="p-8 md:p-10 border border-white/10 rounded-sm bg-white/5 hover:border-[#0B2A52]/50 transition-all duration-300 flex flex-col justify-start"
+              className="p-5 sm:p-8 md:p-10 border border-white/10 rounded-sm bg-white/5 hover:border-[#0B2A52]/50 transition-all duration-300 flex flex-col justify-start"
             >
               <div className="flex items-center gap-4 mb-4">
                 <span className="font-heading text-3xl font-bold text-[#C9A45C]">
@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
                 </span>
                 <h3 className="font-heading text-xl sm:text-2xl text-white">{item.title}</h3>
               </div>
-              <p className="font-body text-white/70 text-sm sm:text-base leading-relaxed text-justify">
+              <p className="font-body text-white/70 text-sm sm:text-base leading-relaxed text-left">
                 {item.description}
               </p>
             </div>

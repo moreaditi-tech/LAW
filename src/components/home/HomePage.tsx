@@ -256,7 +256,7 @@ export default function HomePage() {
             <h1 className="hero-title section-title overflow-hidden">
               <span className="text-[#FF9933]">Your</span> <span className="text-white">Case,</span> <span className="text-white">Our</span> <span className="text-[#128807]">Commitment</span>
             </h1>
-            <p className="hero-sub section-desc">{FIRM.tagline}</p>
+            <p className="hero-sub section-desc !text-center">{FIRM.tagline}</p>
             <div className="hero-sub w-20 h-[2px] bg-[#C9A45C] mb-10" />
             <div className="hero-cta flex flex-wrap gap-4 items-center">
               <Link href="/contact" className="btn-khaitan-accent group" data-cursor="view">
@@ -291,7 +291,7 @@ export default function HomePage() {
             <p className="section-label reveal-up">Why Choose Us</p>
             <h2 className="section-title reveal-up mb-6">Why Clients Choose Prime Law Bharat</h2>
             <div className="w-16 h-[2px] bg-[#C9A45C] reveal-up mb-8" />
-            <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-10 reveal-up text-justify">
+            <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-10 reveal-up text-center">
               Strategic legal representation, honest case assessment, meticulous preparation, and consistent representation across courts, tribunals, and jurisdictions.
             </p>
             <div className="reveal-up">
@@ -505,7 +505,7 @@ export default function HomePage() {
             <div className="lg:col-span-5 flex flex-col justify-center">
               <p className="section-label reveal-up">Our Presence</p>
               <h2 className="section-title reveal-up mb-4 sm:mb-6 !text-[1.8rem] min-[400px]:!text-[2.25rem] sm:!text-5xl lg:!text-[3rem] xl:!text-[3.5rem] tracking-tight">
-                <span className="whitespace-nowrap">Strategic Multistate</span><br />
+                <span className="sm:whitespace-nowrap">Strategic Multistate</span><br />
                 Operations
               </h2>
               <p className="font-body text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed reveal-up mb-8 sm:mb-10">

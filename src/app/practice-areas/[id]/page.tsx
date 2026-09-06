@@ -70,9 +70,9 @@ export default function PracticeAreaDetailPage({ params }: PracticeAreaDetailPag
       </section>
 
       {/* Content Section */}
-      <section className="py-12 sm:py-16 lg:py-24 px-6 sm:px-12 max-w-4xl mx-auto">
+      <section className="py-12 sm:py-16 lg:py-24 px-4 sm:px-8 lg:px-12 max-w-4xl mx-auto">
         {/* Short Description - highlighted */}
-        <p className="font-body text-lg sm:text-xl text-white/90 leading-relaxed mb-8 border-l-4 border-[#C9A45C] pl-6 text-justify">
+        <p className="font-body text-lg sm:text-xl text-white/90 leading-relaxed mb-8 border-l-4 border-[#C9A45C] pl-6 text-left">
           {area.shortDescription}
         </p>
 

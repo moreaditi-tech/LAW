@@ -46,8 +46,17 @@
   }
   p {
     @apply text-justify leading-relaxed sm:leading-[1.8];
-    hyphens: none;
-    -webkit-hyphens: none;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  @media (min-width: 640px) {
+    p {
+      hyphens: none;
+      -webkit-hyphens: none;
+      word-break: normal;
+    }
   }
   ::selection {
     background: rgba(11, 42, 82, 0.3);
@@ -75,6 +84,7 @@
 
   .snap-container {
     height: 100vh;
+    height: 100dvh;
     overflow-y: auto;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
@@ -86,7 +96,9 @@
     scroll-snap-stop: always;
     position: relative;
     min-height: 100vh;
+    min-height: 100dvh;
     height: 100vh;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -94,6 +106,20 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  @media (max-width: 767px) {
+    .snap-container {
+      scroll-snap-type: none;
+      height: auto;
+      min-height: 100dvh;
+    }
+    .snap-section {
+      height: auto;
+      min-height: 100dvh;
+      overflow: visible;
+      scroll-snap-align: none;
+    }
   }
 
   /* Dark overlay on background images */

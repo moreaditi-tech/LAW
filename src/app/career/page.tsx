@@ -48,7 +48,7 @@ export default function CareerPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 lg:px-16 w-full">
           <div className="max-w-3xl">
             <p className="text-sm uppercase tracking-[0.3em] text-[#C9A45C] font-semibold mb-6">Careers</p>
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl text-white tracking-tight leading-tight mb-8">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-white tracking-tight leading-tight mb-8">
               Build Your Legal Career With Prime Law Bharat
             </h1>
             <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-10 text-justify">
@@ -124,7 +124,7 @@ export default function CareerPage() {
             {WHY_US.map((item, idx) => (
               <div key={idx} className="p-6">
                 <h4 className="font-heading text-xl text-white mb-3">{item.title}</h4>
-                <p className="text-white/60 font-body text-sm leading-relaxed text-justify">{item.desc}</p>
+                <p className="text-white/60 font-body text-sm leading-relaxed text-left">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -144,7 +144,7 @@ export default function CareerPage() {
             </p>
           </div>
 
-          <div className="bg-[#0F1B2D] p-8 md:p-12 border border-white/10 rounded-sm">
+          <div className="bg-[#0F1B2D] p-5 sm:p-8 md:p-12 border border-white/10 rounded-sm">
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">

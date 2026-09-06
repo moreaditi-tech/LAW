@@ -23,7 +23,7 @@ export default function WhyChooseUsPage() {
         {/* Content */}
         <div className="space-y-10 sm:space-y-16">
           {WHY_CHOOSE_US.map((item, index) => (
-            <div key={index} className="relative pl-8 md:pl-12 border-l border-white/10 group">
+            <div key={index} className="relative pl-5 sm:pl-8 md:pl-12 border-l border-white/10 group">
               <div className="absolute top-0 left-0 w-[3px] h-0 bg-[#C9A45C] transition-all duration-500 group-hover:h-full -translate-x-[2px]" />
               <div className="absolute top-0 left-[-6px] w-3 h-3 rounded-full bg-[#C9A45C] border-2 border-[#0F1B2D]" />
               

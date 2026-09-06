@@ -34,7 +34,7 @@ export default function DisclaimerModal() {
           </h2>
         </div>
 
-        <div className="space-y-4 text-white/80 font-body text-xs md:text-sm leading-relaxed mb-8 text-justify">
+        <div className="space-y-4 text-white/80 font-body text-xs md:text-sm leading-relaxed mb-8 text-left">
           <p>
             The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner.
           </p>
@@ -46,13 +46,13 @@ export default function DisclaimerModal() {
           </p>
         </div>
 
-        <div className="flex items-center gap-3 mb-8 cursor-pointer select-none" onClick={() => setAccepted(!accepted)}>
+        <div className="flex items-start gap-3 mb-8 cursor-pointer select-none" onClick={() => setAccepted(!accepted)}>
           <input 
             type="checkbox" 
             id="disclaimer-check" 
             checked={accepted} 
             onChange={(e) => setAccepted(e.target.checked)}
-            className="w-4 h-4 accent-[#C9A45C] rounded cursor-pointer"
+            className="w-4 h-4 accent-[#C9A45C] rounded cursor-pointer mt-0.5"
           />
           <label htmlFor="disclaimer-check" className="text-xs md:text-sm text-white/90 font-medium cursor-pointer">
             I understand and accept the above terms
