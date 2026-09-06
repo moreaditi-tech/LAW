@@ -504,7 +504,7 @@ export default function HomePage() {
             {/* Left Content */}
             <div className="lg:col-span-5 flex flex-col justify-center">
               <p className="section-label reveal-up">Our Presence</p>
-              <h2 className="section-title reveal-up mb-4 sm:mb-6">Strategic Multistate Operations</h2>
+              <h2 className="section-title reveal-up mb-4 sm:mb-6">Strategic Multistate<br />Operations</h2>
               <p className="font-body text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed reveal-up mb-8 sm:mb-10">
                 With a growing presence across India, we are committed to being closer to our clients. Our operations span 9 key markets, enabling us to deliver our expertise and representation seamlessly across diverse regional jurisdictions.
               </p>
