@@ -494,11 +494,11 @@ export default function HomePage() {
                 <span>Contact Us</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </Link>
-              <a href={`tel:+918600012001`} className="btn-khaitan group justify-center text-center" data-cursor="view">
-                <span>Call +91 86000 12001</span>
+              <a href={`tel:+919109101055`} className="btn-khaitan group justify-center text-center" data-cursor="view">
+                <span>Call +91 9109101055</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </a>
-              <a href={`https://wa.me/918600012001?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20with%20Prime%20Law%20Bharat.`} target="_blank" rel="noopener noreferrer" className="btn-khaitan group justify-center text-center" data-cursor="view">
+              <a href={`https://wa.me/919109101055?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20with%20Prime%20Law%20Bharat.`} target="_blank" rel="noopener noreferrer" className="btn-khaitan group justify-center text-center" data-cursor="view">
                 <span>WhatsApp Us</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </a>
