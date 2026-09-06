@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// constants.ts — All website content from PDF
+// constants.ts, All website content from PDF
 // Source of truth: Business Profile PDF
 // ─────────────────────────────────────────────
 
@@ -15,7 +15,7 @@ export const FIRM = {
   address: "801, chamber 63, opp district court metro station, Shivaji Nagar Pune :- 411005.",
   states: ["Maharashtra", "Karnataka", "Gujarat", "Delhi", "Uttar Pradesh", "Andhra Pradesh", "Rajasthan", "Odisha", "Haryana"],
   forums:
-    "Criminal • Civil • Divorce • Property • Corporate • Consumer • RERA • DRT / DRAT • SEBI • MPID • Multi-State Co-operative Societies • ED / PMLA • All Appellate Tribunals • High Court • Supreme Court",
+    "Criminal, Civil, Divorce, Property, Corporate, Consumer, RERA, DRT / DRAT, SEBI, MPID, Multi-State Co-operative Societies, ED / PMLA, All Appellate Tribunals, High Court, Supreme Court",
 };
 
 export const ABOUT = {
@@ -56,31 +56,31 @@ export const KEY_STRENGTHS = [
 export const WHY_CHOOSE_US = [
   {
     title: "One Team, Every Forum",
-    description: `Legal matters rarely stay in one place. A recovery dispute can move from a Tribunal to the Appellate Tribunal and then to the High Court. A property matter can involve a civil suit, a criminal complaint, and a RERA proceeding simultaneously. Most clients end up hiring different lawyers at each stage — losing time, paying repeatedly to bring each new lawyer up to speed, and often losing case strategy in the handoff. At Prime Law Bharat, the same team that starts your case carries it through every forum it touches, so nothing gets lost and no time is wasted re-explaining your matter to someone new.`,
+    description: `Legal matters rarely stay in one place. A recovery dispute can move from a Tribunal to the Appellate Tribunal and then to the High Court. A property matter can involve a civil suit, a criminal complaint, and a RERA proceeding simultaneously. Most clients end up hiring different lawyers at each stage, losing time, paying repeatedly to bring each new lawyer up to speed, and often losing case strategy in the handoff. At Prime Law Bharat, the same team that starts your case carries it through every forum it touches, so nothing gets lost and no time is wasted re-explaining your matter to someone new.`,
   },
   {
     title: "Honest Case Assessment",
-    description: `Too many clients only learn the real strength — or weakness — of their case after they've already spent months and money on it. We believe that's the wrong way to build trust. From the first consultation, we give you a candid picture of your chances, the risks involved, the likely timeline, and the possible outcomes — including scenarios where settlement or an alternative approach may serve you better than prolonged litigation. You make decisions with full information, not false confidence.`,
+    description: `Too many clients only learn the real strength, or weakness, of their case after they've already spent months and money on it. We believe that's the wrong way to build trust. From the first consultation, we give you a candid picture of your chances, the risks involved, the likely timeline, and the possible outcomes, including scenarios where settlement or an alternative approach may serve you better than prolonged litigation. You make decisions with full information, not false confidence.`,
   },
   {
     title: "Meticulous Drafting",
-    description: `In Indian courts and tribunals, cases are frequently won or lost on the strength of the paperwork, not just the oral arguments. A poorly drafted plaint, a missed limitation point, an ambiguous contract clause, or a weak affidavit can undo an otherwise strong case. We treat every plaint, petition, agreement, and affidavit as a document that must hold up under scrutiny — checked, cross-verified, and structured to close loopholes before the other side can exploit them.`,
+    description: `In Indian courts and tribunals, cases are frequently won or lost on the strength of the paperwork, not just the oral arguments. A poorly drafted plaint, a missed limitation point, an ambiguous contract clause, or a weak affidavit can undo an otherwise strong case. We treat every plaint, petition, agreement, and affidavit as a document that must hold up under scrutiny, checked, cross-verified, and structured to close loopholes before the other side can exploit them.`,
   },
   {
     title: "Proactive Communication",
-    description: `Nothing adds to a client's stress more than silence — not knowing what's happening with your case, when the next hearing is, or what a filing actually means. We keep you informed at each stage without you having to call and ask. You'll know your next hearing date, what to expect from it, and what — if anything — is required from you, well before it becomes urgent.`,
+    description: `Nothing adds to a client's stress more than silence, not knowing what's happening with your case, when the next hearing is, or what a filing actually means. We keep you informed at each stage without you having to call and ask. You'll know your next hearing date, what to expect from it, and what, if anything, is required from you, well before it becomes urgent.`,
   },
   {
     title: "Multi-State Presence",
-    description: `Businesses and individuals with property, operations, or disputes across state lines often struggle to find one legal team that can represent them consistently everywhere. With active practice across Maharashtra, Karnataka, Gujarat, Delhi, Uttar Pradesh, Andhra Pradesh, Rajasthan, Odisha, and Haryana, we give clients a single point of contact for matters that would otherwise require coordinating multiple firms in multiple states — saving time, cost, and the risk of inconsistent strategy.`,
+    description: `Businesses and individuals with property, operations, or disputes across state lines often struggle to find one legal team that can represent them consistently everywhere. With active practice across Maharashtra, Karnataka, Gujarat, Delhi, Uttar Pradesh, Andhra Pradesh, Rajasthan, Odisha, and Haryana, we give clients a single point of contact for matters that would otherwise require coordinating multiple firms in multiple states, saving time, cost, and the risk of inconsistent strategy.`,
   },
   {
     title: "Experience Across Specialized Forums",
-    description: `Not every lawyer who practices in civil court is equipped to appear before the DRT, RERA Authority, Securities Appellate Tribunal, the Central Registrar under the Multi-State Co-operative Societies Act, or in an ED/PMLA proceeding — these forums have their own procedures, timelines, and strategic considerations that general litigation experience doesn't cover. Our regular appearances before DRT, DRAT, RERA, SEBI/SAT, Consumer Commissions, and under the MPID Act and Multi-State Co-operative Societies Act mean we bring forum-specific knowledge to your case, not a one-size-fits-all approach borrowed from civil court practice.`,
+    description: `Not every lawyer who practices in civil court is equipped to appear before the DRT, RERA Authority, Securities Appellate Tribunal, the Central Registrar under the Multi-State Co-operative Societies Act, or in an ED/PMLA proceeding, these forums have their own procedures, timelines, and strategic considerations that general litigation experience doesn't cover. Our regular appearances before DRT, DRAT, RERA, SEBI/SAT, Consumer Commissions, and under the MPID Act and Multi-State Co-operative Societies Act mean we bring forum-specific knowledge to your case, not a one-size-fits-all approach borrowed from civil court practice.`,
   },
   {
     title: "Client-First Approach, Not Case-First",
-    description: `For us, a case file is not just a number — it represents a person's property, business, family, or freedom. We take the time to understand what outcome actually matters to you, not just what's legally possible, and we shape our strategy around your real priorities, whether that's a quick resolution, minimizing cost, protecting a relationship, or fighting a matter to its fullest extent.`,
+    description: `For us, a case file is not just a number, it represents a person's property, business, family, or freedom. We take the time to understand what outcome actually matters to you, not just what's legally possible, and we shape our strategy around your real priorities, whether that's a quick resolution, minimizing cost, protecting a relationship, or fighting a matter to its fullest extent.`,
   },
   {
     title: "Our Commitment",
@@ -457,11 +457,11 @@ export const TEAM_MEMBERS = [
     name: "Adv. Reetika Kamthan",
     designation: "Advocate",
     image: "/images/Team/Reetika.jpg",
-    expertise: "Civil & Property Litigation • Criminal Litigation & Trial Advocacy • High Court & Supreme Court Matters • RERA & Real Estate Litigation • Corporate & Commercial Litigation • Consumer Protection • Family Matters • Cheque Bounce & Recovery Matters • Injunction & Interim Relief Proceedings • Franchisee & Business Disputes.",
+    expertise: "Civil & Property Litigation, Criminal Litigation & Trial Advocacy, High Court & Supreme Court Matters, RERA & Real Estate Litigation, Corporate & Commercial Litigation, Consumer Protection, Family Matters, Cheque Bounce & Recovery Matters, Injunction & Interim Relief Proceedings, Franchisee & Business Disputes.",
     shortExpertise: "Civil & Property Litigation, Criminal Litigation, High Court & Supreme Court Matters, RERA, Corporate Litigation, Family Matters.",
-    biography: `With over 8 years of hands-on litigation experience before the Pune District Court and the Bombay High Court, Adv. Reetika Kamthan has built a practice that spans an unusually wide range of matters — and an unusually wide geography, with exposure to cases across Pune, Mumbai, Nagpur, Delhi, and Bangalore.
+    biography: `With over 8 years of hands-on litigation experience before the Pune District Court and the Bombay High Court, Adv. Reetika Kamthan has built a practice that spans an unusually wide range of matters, and an unusually wide geography, with exposure to cases across Pune, Mumbai, Nagpur, Delhi, and Bangalore.
 
-Her work covers Civil, Criminal, Consumer, and Matrimonial Disputes; DRT/DRAT; RERA; Arbitration; and Financial, Corporate, and Commercial Litigation, including appearances before High Courts, the Supreme Court, and a range of specialised tribunals. She brings substantial, practical experience to property disputes, injunctions, recovery matters, cheque-bounce cases, franchisee disputes, and business litigation — the kind of experience that comes only from handling these matters again and again.
+Her work covers Civil, Criminal, Consumer, and Matrimonial Disputes; DRT/DRAT; RERA; Arbitration; and Financial, Corporate, and Commercial Litigation, including appearances before High Courts, the Supreme Court, and a range of specialised tribunals. She brings substantial, practical experience to property disputes, injunctions, recovery matters, cheque-bounce cases, franchisee disputes, and business litigation, the kind of experience that comes only from handling these matters again and again.
 
 Adv. Reetika’s approach is strategic and result-oriented, grounded in strong courtroom advocacy paired with practical, real-world legal solutions. She has represented reputed builders, corporate entities, and business organisations in some of their most complex and commercially sensitive disputes.`
   },
@@ -470,11 +470,11 @@ Adv. Reetika’s approach is strategic and result-oriented, grounded in strong c
     name: "Adv. Abhishek Motewar",
     designation: "Advocate",
     image: "/images/Team/Abhishek.jpg",
-    expertise: "Financial & Economic Offences • SEBI & Regulatory Matters • ED & PMLA Proceedings • CBI & Criminal Litigation • MPID & Investor Disputes • DRT, DRAT & Financial Disputes • High Court & Supreme Court Litigation",
+    expertise: "Financial & Economic Offences, SEBI & Regulatory Matters, ED & PMLA Proceedings, CBI & Criminal Litigation, MPID & Investor Disputes, DRT, DRAT & Financial Disputes, High Court & Supreme Court Litigation",
     shortExpertise: "Financial & Economic Offences, SEBI & Regulatory Matters, ED & PMLA Proceedings, CBI & Criminal Litigation, MPID.",
     biography: `Adv. Abhishek Motewar has built his practice around some of the highest-stakes work in Indian litigation: financial fraud, regulatory enforcement, and criminal proceedings, handled before SEBI, the Enforcement Directorate, the CBI, MPID courts, the DRT, and the higher judiciary.
 
-His focus is on high-stakes financial disputes, regulatory proceedings, and criminal litigation — areas where a single misstep can carry lasting consequences for a client. He works to protect clients’ rights at every stage while developing legal strategies that are practical, precise, and built for the specific forum in front of him.
+His focus is on high-stakes financial disputes, regulatory proceedings, and criminal litigation, areas where a single misstep can carry lasting consequences for a client. He works to protect clients’ rights at every stage while developing legal strategies that are practical, precise, and built for the specific forum in front of him.
 
 Handling complex and sensitive matters is Abhishek’s specialty, and his approach stays consistent throughout: strategic, result-oriented, and always focused on implementation, not just argument.`
   }
