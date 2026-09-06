@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// constants.ts — All website content from PDF
+// constants.ts, All website content from PDF
 // Source of truth: Business Profile PDF
 // ─────────────────────────────────────────────
 
@@ -12,17 +12,17 @@ export const FIRM = {
   phone1: "+91 9109101055",
   phone2: "+91 8600012001",
   website: "www.primelawbharat.com",
-  address: "801, Chamber 63, Opp District Court Metro Station, Shivaji Nagar Pune :- 411005.",
+  address: "801, Chamber 63, Opp District Court Metro Station, Shivaji Nagar, Pune: 411005.",
   states: ["Maharashtra", "Karnataka", "Gujarat", "Delhi", "Uttar Pradesh", "Andhra Pradesh", "Rajasthan", "Odisha", "Haryana"],
   forums:
-    "Criminal • Civil • Divorce • Property • Corporate • Consumer • RERA • DRT / DRAT • SEBI • MPID • Multi State Co-operative Societies • ED / PMLA • All Appellate Tribunals • High Court • Supreme Court",
+    "Criminal, Civil, Divorce, Property, Corporate, Consumer, RERA, DRT / DRAT, SEBI, MPID, Multi State Co-operative Societies, ED / PMLA, All Appellate Tribunals, High Court, Supreme Court",
 };
 
 export const ABOUT = {
   intro: `Legal problems rarely stay simple. A property dispute can turn into a criminal complaint. A business disagreement can end up before a tribunal, then an appellate body, then the High Court. Most clients don't need a lawyer who knows one subject, they need a team that can follow their case wherever it goes, without losing time or context by switching firms midway.`,
   foundation: `That is the foundation Prime Law Bharat is built on. We are a full service legal practice representing clients before Lower and Sessions Courts, specialized Tribunals (DRT, DRAT, RERA, Consumer Commissions, SAT), the High Court, and the Supreme Court of India. Whatever forum your matter needs to go through, we are already positioned to take it there, with the same team, the same case knowledge, and the same commitment from day one to resolution.`,
   whereWePractice: `Prime Law Bharat provides legal services across Maharashtra, Karnataka, Gujarat, Delhi, Uttar Pradesh, Andhra Pradesh, Rajasthan, Odisha, and Haryana. Clients with multistate operations, property matters, or disputes can work with a single legal team that represents them consistently across jurisdictions. Whether your matter is before a local court, a state level tribunal, or the High Court, our team is equipped to handle it across these states.`,
-   Address: `Address: 801, Chamber 63, Opp District Court Metro Station, Shivaji Nagar Pune: 411005.`,
+   Address: `Address: 801, Chamber 63, Opp District Court Metro Station, Shivaji Nagar, Pune: 411005.`,
   experience: `Practicing across nine states means dealing with more than just different courtrooms, it means working within different state specific legislations, registration and stamp duty regimes, land revenue systems, and local procedural rules that a single state practice never has to navigate. This is where our multistate experience becomes a genuine advantage for clients.`,
   experienceDetail: `Our exposure spans central legislations applied with state specific variations, including the Registration Act, the Indian Stamp Act (and its state amendments in Maharashtra, Karnataka, Gujarat, Delhi, Uttar Pradesh, Andhra Pradesh, Rajasthan, Odisha and Haryana), state Rent Control and Tenancy Acts, Land Revenue Codes, Cooperative Societies Acts, and state specific RERA rules, alongside focused experience under special statutes such as the MPID Act (Maharashtra), the Prevention of Money Laundering Act (PMLA) before the ED, the SARFAESI Act and DRT Act in banking recovery, the SEBI Act and allied regulations, and the Companies Act, 2013 in corporate matters.`,
   experienceClosing: `This cross state, cross statute experience means we don't treat your matter as a template case. We factor in the specific state law, local registration practice, and forum specific procedure that actually applies to your matter, rather than a generalized approach that overlooks state level nuance.`,
@@ -56,31 +56,31 @@ export const KEY_STRENGTHS = [
 export const WHY_CHOOSE_US = [
   {
     title: "One Team, Every Forum",
-    description: `Legal matters rarely stay in one place. A recovery dispute can move from a Tribunal to the Appellate Tribunal and then to the High Court. A property matter can involve a civil suit, a criminal complaint, and a RERA proceeding simultaneously. Most clients end up hiring different lawyers at each stage — losing time, paying repeatedly to bring each new lawyer up to speed, and often losing case strategy in the handoff. At Prime Law Bharat, the same team that starts your case carries it through every forum it touches, so nothing gets lost and no time is wasted re-explaining your matter to someone new.`,
+    description: `Legal matters rarely stay in one place. A recovery dispute can move from a Tribunal to the Appellate Tribunal and then to the High Court. A property matter can involve a civil suit, a criminal complaint, and a RERA proceeding simultaneously. Most clients end up hiring different lawyers at each stage, losing time, paying repeatedly to bring each new lawyer up to speed, and often losing case strategy in the handoff. At Prime Law Bharat, the same team that starts your case carries it through every forum it touches, so nothing gets lost and no time is wasted re-explaining your matter to someone new.`,
   },
   {
     title: "Honest Case Assessment",
-    description: `Too many clients only learn the real strength — or weakness — of their case after they've already spent months and money on it. We believe that's the wrong way to build trust. From the first consultation, we give you a candid picture of your chances, the risks involved, the likely timeline, and the possible outcomes — including scenarios where settlement or an alternative approach may serve you better than prolonged litigation. You make decisions with full information, not false confidence.`,
+    description: `Too many clients only learn the real strength, or weakness, of their case after they've already spent months and money on it. We believe that's the wrong way to build trust. From the first consultation, we give you a candid picture of your chances, the risks involved, the likely timeline, and the possible outcomes, including scenarios where settlement or an alternative approach may serve you better than prolonged litigation. You make decisions with full information, not false confidence.`,
   },
   {
     title: "Meticulous Drafting",
-    description: `In Indian courts and tribunals, cases are frequently won or lost on the strength of the paperwork, not just the oral arguments. A poorly drafted plaint, a missed limitation point, an ambiguous contract clause, or a weak affidavit can undo an otherwise strong case. We treat every plaint, petition, agreement, and affidavit as a document that must hold up under scrutiny — checked, cross-verified, and structured to close loopholes before the other side can exploit them.`,
+    description: `In Indian courts and tribunals, cases are frequently won or lost on the strength of the paperwork, not just the oral arguments. A poorly drafted plaint, a missed limitation point, an ambiguous contract clause, or a weak affidavit can undo an otherwise strong case. We treat every plaint, petition, agreement, and affidavit as a document that must hold up under scrutiny, checked, cross-verified, and structured to close loopholes before the other side can exploit them.`,
   },
   {
     title: "Proactive Communication",
-    description: `Nothing adds to a client's stress more than silence — not knowing what's happening with your case, when the next hearing is, or what a filing actually means. We keep you informed at each stage without you having to call and ask. You'll know your next hearing date, what to expect from it, and what — if anything — is required from you, well before it becomes urgent.`,
+    description: `Nothing adds to a client's stress more than silence, not knowing what's happening with your case, when the next hearing is, or what a filing actually means. We keep you informed at each stage without you having to call and ask. You'll know your next hearing date, what to expect from it, and what, if anything, is required from you, well before it becomes urgent.`,
   },
   {
-    title: "Multi State Presence",
-    description: `Businesses and individuals with property, operations, or disputes across state lines often struggle to find one legal team that can represent them consistently everywhere. With active practice across Maharashtra, Karnataka, Gujarat, Delhi, Uttar Pradesh, Andhra Pradesh, Rajasthan, Odisha, and Haryana, we give clients a single point of contact for matters that would otherwise require coordinating multiple firms in multiple states — saving time, cost, and the risk of inconsistent strategy.`,
+    title: "Multistate Presence",
+    description: `Businesses and individuals with property, operations, or disputes across state lines often struggle to find one legal team that can represent them consistently everywhere. With active practice across Maharashtra, Karnataka, Gujarat, Delhi, Uttar Pradesh, Andhra Pradesh, Rajasthan, Odisha, and Haryana, we give clients a single point of contact for matters that would otherwise require coordinating multiple firms in multiple states, saving time, cost, and the risk of inconsistent strategy.`,
   },
   {
     title: "Experience Across Specialized Forums",
-    description: `Not every lawyer who practices in civil court is equipped to appear before the DRT, RERA Authority, Securities Appellate Tribunal, the Central Registrar under the Multi State Co-operative Societies Act, or in an ED/PMLA proceeding — these forums have their own procedures, timelines, and strategic considerations that general litigation experience doesn't cover. Our regular appearances before DRT, DRAT, RERA, SEBI/SAT, Consumer Commissions, and under the MPID Act and Multi State Co-operative Societies Act mean we bring forum-specific knowledge to your case, not a one-size-fits-all approach borrowed from civil court practice.`,
+    description: `Not every lawyer who practices in civil court is equipped to appear before the DRT, RERA Authority, Securities Appellate Tribunal, the Central Registrar under the Multi State Co-operative Societies Act, or in an ED/PMLA proceeding, these forums have their own procedures, timelines, and strategic considerations that general litigation experience doesn't cover. Our regular appearances before DRT, DRAT, RERA, SEBI/SAT, Consumer Commissions, and under the MPID Act and Multi State Co-operative Societies Act mean we bring forum-specific knowledge to your case, not a one-size-fits-all approach borrowed from civil court practice.`,
   },
   {
     title: "Client-First Approach, Not Case-First",
-    description: `For us, a case file is not just a number — it represents a person's property, business, family, or freedom. We take the time to understand what outcome actually matters to you, not just what's legally possible, and we shape our strategy around your real priorities, whether that's a quick resolution, minimizing cost, protecting a relationship, or fighting a matter to its fullest extent.`,
+    description: `For us, a case file is not just a number, it represents a person's property, business, family, or freedom. We take the time to understand what outcome actually matters to you, not just what's legally possible, and we shape our strategy around your real priorities, whether that's a quick resolution, minimizing cost, protecting a relationship, or fighting a matter to its fullest extent.`,
   },
   {
     title: "Our Commitment",
@@ -237,10 +237,10 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     category: "criminal-regulatory",
   },
   {
-    id: "Multi State-co-operative-societies",
+    id: "multi-state-co-operative-societies",
     title: "Multi State Co-operative Societies",
     shortDescription: "Multi State co-operative societies operate under a specialised statutory and regulatory framework and require focused legal assistance in matters relating to governance, administration and stakeholder rights.",
-    fullDescription: "Multi State co-operative societies operate under a specialised statutory and regulatory framework and require focused legal assistance in matters relating to governance, administration and stakeholder rights. We advise and represent Multi State co-operative societies, members, directors, office bearers and other stakeholders in matters involving management, elections, membership, share capital, audit, financial irregularities, expulsion and internal disputes.\n\n\n\nOur practice also includes representation before the Central Registrar of Co-operative Societies and other competent authorities in statutory and regulatory proceedings. We assist societies with registration-related matters, amendments to bye-laws, statutory filings, governance issues and disputes concerning the rights and obligations of members and office bearers, while providing strategic guidance for maintaining effective and compliant institutional functioning",
+    fullDescription: "Multi State co-operative societies operate under a specialised statutory and regulatory framework and require focused legal assistance in matters relating to governance, administration and stakeholder rights. We advise and represent multi state co-operative societies, members, directors, office bearers and other stakeholders in matters involving management, elections, membership, share capital, audit, financial irregularities, expulsion and internal disputes.\n\n\n\nOur practice also includes representation before the Central Registrar of Co-operative Societies and other competent authorities in statutory and regulatory proceedings. We assist societies with registration-related matters, amendments to bye-laws, statutory filings, governance issues and disputes concerning the rights and obligations of members and office bearers, while providing strategic guidance for maintaining effective and compliant institutional functioning",
     image: "/images/areas/Multi_State.jpeg",
     category: "appellate-tribunals",
   },
@@ -403,8 +403,8 @@ export const PRACTICE_AREAS: PracticeArea[] = [
   {
     id: "central-registrar",
     title: "Central Registrar",
-    shortDescription: "Multi State co-operative societies and their stakeholders operate within a specialised statutory framework and may encounter disputes concerning management, elections, membership, governance, audits and financial matters.",
-    fullDescription: "Multi State co-operative societies and their stakeholders operate within a specialised statutory framework and may encounter disputes concerning management, elections, membership, governance, audits and financial matters. We represent societies, office bearers, members and other stakeholders in proceedings before the Central Registrar of Co-operative Societies.\n\nOur services include representation in disputes concerning statutory compliance, membership rights, management decisions, elections, amendments to bye-laws, audit-related issues and other proceedings under the applicable co-operative society laws. We provide both litigation support and advisory assistance to help societies and stakeholders effectively navigate the regulatory framework.",
+    shortDescription: "Multi state co-operative societies and their stakeholders operate within a specialised statutory framework and may encounter disputes concerning management, elections, membership, governance, audits and financial matters.",
+    fullDescription: "Multi state co-operative societies and their stakeholders operate within a specialised statutory framework and may encounter disputes concerning management, elections, membership, governance, audits and financial matters. We represent societies, office bearers, members and other stakeholders in proceedings before the Central Registrar of Co-operative Societies.\n\nOur services include representation in disputes concerning statutory compliance, membership rights, management decisions, elections, amendments to bye-laws, audit-related issues and other proceedings under the applicable co-operative society laws. We provide both litigation support and advisory assistance to help societies and stakeholders effectively navigate the regulatory framework.",
     image: "/images/Practice Areas/Central Registrar.png",
     category: "appellate-tribunals",
   },
@@ -457,11 +457,11 @@ export const TEAM_MEMBERS = [
     name: "Adv. Reetika Kamthan",
     designation: "Advocate",
     image: "/images/Team/Reetika.jpg",
-    expertise: "Civil & Property Litigation • Criminal Litigation & Trial Advocacy • High Court & Supreme Court Matters • RERA & Real Estate Litigation • Corporate & Commercial Litigation • Consumer Protection • Family Matters • Cheque Bounce & Recovery Matters • Injunction & Interim Relief Proceedings • Franchisee & Business Disputes.",
+    expertise: "Civil & Property Litigation, Criminal Litigation & Trial Advocacy, High Court & Supreme Court Matters, RERA & Real Estate Litigation, Corporate & Commercial Litigation, Consumer Protection, Family Matters, Cheque Bounce & Recovery Matters, Injunction & Interim Relief Proceedings, Franchisee & Business Disputes.",
     shortExpertise: "Civil & Property Litigation, Criminal Litigation, High Court & Supreme Court Matters, RERA, Corporate Litigation, Family Matters.",
-    biography: `With over 8 years of hands-on litigation experience before the Pune District Court and the Bombay High Court, Adv. Reetika Kamthan has built a practice that spans an unusually wide range of matters — and an unusually wide geography, with exposure to cases across Pune, Mumbai, Nagpur, Delhi, and Bangalore.
+    biography: `With over 8 years of hands-on litigation experience before the Pune District Court and the Bombay High Court, Adv. Reetika Kamthan has built a practice that spans an unusually wide range of matters, and an unusually wide geography, with exposure to cases across Pune, Mumbai, Nagpur, Delhi, and Bangalore.
 
-Her work covers Civil, Criminal, Consumer, and Matrimonial Disputes; DRT/DRAT; RERA; Arbitration; and Financial, Corporate, and Commercial Litigation, including appearances before High Courts, the Supreme Court, and a range of specialised tribunals. She brings substantial, practical experience to property disputes, injunctions, recovery matters, cheque-bounce cases, franchisee disputes, and business litigation — the kind of experience that comes only from handling these matters again and again.
+Her work covers Civil, Criminal, Consumer, and Matrimonial Disputes; DRT/DRAT; RERA; Arbitration; and Financial, Corporate, and Commercial Litigation, including appearances before High Courts, the Supreme Court, and a range of specialised tribunals. She brings substantial, practical experience to property disputes, injunctions, recovery matters, cheque-bounce cases, franchisee disputes, and business litigation, the kind of experience that comes only from handling these matters again and again.
 
 Adv. Reetika’s approach is strategic and result-oriented, grounded in strong courtroom advocacy paired with practical, real-world legal solutions. She has represented reputed builders, corporate entities, and business organisations in some of their most complex and commercially sensitive disputes.`
   },
@@ -470,11 +470,11 @@ Adv. Reetika’s approach is strategic and result-oriented, grounded in strong c
     name: "Adv. Abhishek Motewar",
     designation: "Advocate",
     image: "/images/Team/Abhishek.jpg",
-    expertise: "Financial & Economic Offences • SEBI & Regulatory Matters • ED & PMLA Proceedings • CBI & Criminal Litigation • MPID & Investor Disputes • DRT, DRAT & Financial Disputes • High Court & Supreme Court Litigation",
+    expertise: "Financial & Economic Offences, SEBI & Regulatory Matters, ED & PMLA Proceedings, CBI & Criminal Litigation, MPID & Investor Disputes, DRT, DRAT & Financial Disputes, High Court & Supreme Court Litigation",
     shortExpertise: "Financial & Economic Offences, SEBI & Regulatory Matters, ED & PMLA Proceedings, CBI & Criminal Litigation, MPID.",
     biography: `Adv. Abhishek Motewar has built his practice around some of the highest-stakes work in Indian litigation: financial fraud, regulatory enforcement, and criminal proceedings, handled before SEBI, the Enforcement Directorate, the CBI, MPID courts, the DRT, and the higher judiciary.
 
-His focus is on high-stakes financial disputes, regulatory proceedings, and criminal litigation — areas where a single misstep can carry lasting consequences for a client. He works to protect clients’ rights at every stage while developing legal strategies that are practical, precise, and built for the specific forum in front of him.
+His focus is on high-stakes financial disputes, regulatory proceedings, and criminal litigation, areas where a single misstep can carry lasting consequences for a client. He works to protect clients’ rights at every stage while developing legal strategies that are practical, precise, and built for the specific forum in front of him.
 
 Handling complex and sensitive matters is Abhishek’s specialty, and his approach stays consistent throughout: strategic, result-oriented, and always focused on implementation, not just argument.`
   }

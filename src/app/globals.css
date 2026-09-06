@@ -44,6 +44,11 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
   }
+  p {
+    @apply text-justify leading-relaxed sm:leading-[1.8];
+    hyphens: none;
+    -webkit-hyphens: none;
+  }
   ::selection {
     background: rgba(11, 42, 82, 0.3);
     color: #fff;

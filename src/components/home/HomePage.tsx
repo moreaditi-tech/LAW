@@ -504,8 +504,11 @@ export default function HomePage() {
             {/* Left Content */}
             <div className="lg:col-span-5 flex flex-col justify-center">
               <p className="section-label reveal-up">Our Presence</p>
-              <h2 className="section-title reveal-up mb-4 sm:mb-6">Strategic Multi State Operations</h2>
-              <p className="font-body text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed reveal-up mb-8 sm:mb-10 text-justify">
+              <h2 className="section-title reveal-up mb-4 sm:mb-6 !text-[1.8rem] min-[400px]:!text-[2.25rem] sm:!text-5xl lg:!text-[3rem] xl:!text-[3.5rem] tracking-tight">
+                <span className="whitespace-nowrap">Strategic Multistate</span><br />
+                Operations
+              </h2>
+              <p className="font-body text-white/70 text-sm sm:text-base lg:text-lg leading-relaxed reveal-up mb-8 sm:mb-10">
                 With a growing presence across India, we are committed to being closer to our clients. Our operations span 9 key markets, enabling us to deliver our expertise and representation seamlessly across diverse regional jurisdictions.
               </p>
               
@@ -513,8 +516,8 @@ export default function HomePage() {
             </div>
 
             {/* Right Map Graphic */}
-            <div className="lg:col-span-7 relative flex justify-center items-center reveal-up">
-              <div className="relative w-full max-w-[550px] aspect-square drop-shadow-[0_0_35px_rgba(201,164,92,0.12)] flex items-center justify-center">
+            <div className="lg:col-span-7 relative flex justify-center lg:justify-end reveal-up">
+              <div className="relative w-full max-w-[500px] sm:max-w-[550px] aspect-[4/3] sm:aspect-square drop-shadow-[0_0_35px_rgba(201,164,92,0.12)] transform translate-y-12 lg:translate-y-20">
                 <Image 
                   src="/images/areas/india-map.png"
                   alt="Prime Law Bharat - India Presence Map"
@@ -548,11 +551,11 @@ export default function HomePage() {
                 <span>Contact Us</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </Link>
-              <a href={`tel:${FIRM.phone1.replace(/\s+/g, '')}`} className="btn-khaitan group justify-center text-center" data-cursor="view">
-                <span>Call {FIRM.phone1}</span>
+              <a href={`tel:+918600012001`} className="btn-khaitan group justify-center text-center" data-cursor="view">
+                <span>Call +91 86000 12001</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </a>
-              <a href={`https://wa.me/919109101055?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20with%20Prime%20Law%20Bharat.`} target="_blank" rel="noopener noreferrer" className="btn-khaitan group justify-center text-center" data-cursor="view">
+              <a href={`https://wa.me/918600012001?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20with%20Prime%20Law%20Bharat.`} target="_blank" rel="noopener noreferrer" className="btn-khaitan group justify-center text-center" data-cursor="view">
                 <span>WhatsApp Us</span>
                 <ArrowRight className="btn-arrow w-4 h-4" />
               </a>
