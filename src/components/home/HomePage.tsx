@@ -513,8 +513,8 @@ export default function HomePage() {
             </div>
 
             {/* Right Map Graphic */}
-            <div className="lg:col-span-7 relative flex justify-center lg:justify-end reveal-up mt-8 lg:mt-16">
-              <div className="relative w-full max-w-[650px] aspect-[4/3] sm:aspect-square drop-shadow-[0_0_35px_rgba(201,164,92,0.12)]">
+            <div className="lg:col-span-7 relative flex justify-center lg:justify-end reveal-up">
+              <div className="relative w-full max-w-[500px] sm:max-w-[550px] aspect-[4/3] sm:aspect-square drop-shadow-[0_0_35px_rgba(201,164,92,0.12)] transform translate-y-12 lg:translate-y-20">
                 <Image 
                   src="/images/areas/india-map.png"
                   alt="Prime Law Bharat - India Presence Map"
