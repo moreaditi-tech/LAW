@@ -51,7 +51,7 @@ export default function CareerPage() {
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl text-white tracking-tight leading-tight mb-8">
               Build Your Legal Career With Prime Law Bharat
             </h1>
-            <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-10">
+            <p className="text-lg md:text-xl text-white/80 font-body leading-relaxed mb-10 text-justify">
               Prime Law Bharat welcomes lawyers, law students, interns, and legal professionals who are looking to develop their practice through meaningful exposure to litigation, legal research, drafting, and courtroom work.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
@@ -77,7 +77,7 @@ export default function CareerPage() {
             <div className="border border-white/10 p-8 md:p-10 bg-white/[0.02]">
               <p className="text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-4">For Law Students & Interns</p>
               <h3 className="font-heading text-3xl sm:text-4xl text-white mb-6">Learn Through Real Legal Work</h3>
-              <p className="text-white/70 font-body mb-8 leading-relaxed">
+              <p className="text-white/70 font-body mb-8 leading-relaxed text-justify">
                 Interns and trainees gain exposure to practical legal work, bridging the gap between academic theory and courtroom reality:
               </p>
               <ul className="space-y-4">
@@ -94,7 +94,7 @@ export default function CareerPage() {
             <div className="border border-white/10 p-8 md:p-10 bg-[#0F1B2D]">
               <p className="text-xs uppercase tracking-widest text-[#C9A45C] font-semibold mb-4">For Lawyers & Associates</p>
               <h3 className="font-heading text-3xl sm:text-4xl text-white mb-6">Grow Your Practice With Us</h3>
-              <p className="text-white/70 font-body mb-8 leading-relaxed">
+              <p className="text-white/70 font-body mb-8 leading-relaxed text-justify">
                 Lawyers and associates work across a broad litigation practice and gain exposure to matters involving:
               </p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -124,7 +124,7 @@ export default function CareerPage() {
             {WHY_US.map((item, idx) => (
               <div key={idx} className="p-6">
                 <h4 className="font-heading text-xl text-white mb-3">{item.title}</h4>
-                <p className="text-white/60 font-body text-sm leading-relaxed">{item.desc}</p>
+                <p className="text-white/60 font-body text-sm leading-relaxed text-justify">{item.desc}</p>
               </div>
             ))}
           </div>

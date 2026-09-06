@@ -21,7 +21,7 @@ export default function WhyChooseUs() {
                 </span>
                 <h3 className="font-heading text-xl sm:text-2xl text-white">{item.title}</h3>
               </div>
-              <p className="font-body text-white/70 text-sm sm:text-base leading-relaxed">
+              <p className="font-body text-white/70 text-sm sm:text-base leading-relaxed text-justify">
                 {item.description}
               </p>
             </div>

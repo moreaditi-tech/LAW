@@ -2,7 +2,6 @@
 
 import { useState, Suspense } from 'react';
 import Image from 'next/image';
-import { useSearchParams } from 'next/navigation';
 import { PRACTICE_AREAS, FIRM, type PracticeArea } from '@/lib/constants';
 import PracticeAreaCard from '@/components/practice/PracticeAreaCard';
 import SectionHeading from '@/components/ui/SectionHeading';
@@ -16,8 +15,6 @@ const CATEGORIES = [
 ];
 
 function PracticeAreasContent() {
-  const searchParams = useSearchParams();
-  const activeId = searchParams.get('id');
   const [selectedCat, setSelectedCat] = useState('all');
 
   const filteredAreas = PRACTICE_AREAS.filter((area) => {
@@ -48,7 +45,7 @@ function PracticeAreasContent() {
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tight">
             Our Practice Areas
           </h1>
-          <p className="font-body text-lg sm:text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="font-body text-lg sm:text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed text-justify">
             {FIRM.tagline}
           </p>
         </div>
@@ -83,7 +80,7 @@ function PracticeAreasContent() {
         {/* Practice Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
           {filteredAreas.map((area) => (
-            <PracticeAreaCard key={area.id} area={area} defaultExpanded={activeId === area.id} />
+            <PracticeAreaCard key={area.id} area={area} />
           ))}
         </div>
       </section>

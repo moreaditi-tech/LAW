@@ -1,7 +1,8 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import type { PracticeArea } from '@/lib/constants';
 
 interface PracticeAreaCardProps {
@@ -9,29 +10,14 @@ interface PracticeAreaCardProps {
   defaultExpanded?: boolean;
 }
 
-export default function PracticeAreaCard({ area, defaultExpanded = false }: PracticeAreaCardProps) {
-  const [expanded, setExpanded] = useState(defaultExpanded);
+export default function PracticeAreaCard({ area }: PracticeAreaCardProps) {
   const [isLoaded, setIsLoaded] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (defaultExpanded) {
-      setExpanded(true);
-      const timer = setTimeout(() => {
-        if (cardRef.current) {
-          cardRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }, 500);
-      return () => clearTimeout(timer);
-    }
-  }, [defaultExpanded]);
 
   return (
-    <div 
+    <Link
+      href={`/practice-areas/${area.id}`}
       id={area.id}
-      ref={cardRef}
       className="relative bg-white/5 border border-white/10 rounded-sm overflow-hidden flex flex-col group hover:border-[#0B2A52]/60 hover:bg-white/[0.08] transition-all duration-500 cursor-pointer shadow-subtle hover:shadow-elevated hover:-translate-y-1"
-      onClick={() => setExpanded(!expanded)}
     >
       <div className="relative h-52 w-full overflow-hidden">
         {area.image ? (
@@ -58,33 +44,23 @@ export default function PracticeAreaCard({ area, defaultExpanded = false }: Prac
             {area.title}
           </h3>
           
-          <p className="font-body text-white/70 text-sm leading-relaxed mb-4">
+          <p className="font-body text-white/70 text-sm leading-relaxed mb-4 text-justify">
             {area.shortDescription}
           </p>
-          
-          <div 
-            className={`grid transition-all duration-300 ease-in-out ${expanded ? 'grid-rows-[1fr] opacity-100 mb-4' : 'grid-rows-[0fr] opacity-0'}`}
-          >
-            <div className="overflow-hidden">
-              <p className="font-body text-white/60 text-xs sm:text-sm leading-relaxed whitespace-pre-line pt-3 border-t border-white/10">
-                {area.fullDescription}
-              </p>
-            </div>
-          </div>
         </div>
 
         <div className="pt-2 flex items-center justify-between text-xs uppercase tracking-widest text-[#C9A45C] font-body font-semibold">
-          <span>{expanded ? 'Show Less' : 'Read Full Scope'}</span>
+          <span>View Details</span>
           <svg 
-            className={`w-5 h-5 transform transition-transform duration-300 ${expanded ? 'rotate-180' : ''}`}
+            className="w-5 h-5 transform transition-transform duration-300 group-hover:translate-x-1"
             fill="none" 
             viewBox="0 0 24 24" 
             stroke="currentColor"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

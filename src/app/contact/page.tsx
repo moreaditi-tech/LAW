@@ -36,7 +36,7 @@ export default function ContactPage() {
           <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tight">
             Contact Us
           </h1>
-          <p className="font-body text-lg sm:text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="font-body text-lg sm:text-xl text-white/80 max-w-2xl mx-auto font-light leading-relaxed text-justify">
             Schedule a confidential consultation with our advocates and legal strategists.
           </p>
         </div>
@@ -57,7 +57,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-heading text-xl text-white mb-2">Office Chamber</h3>
                 <div className="w-8 h-[2px] bg-[#0B2A52] mb-3" />
-                <p className="font-body text-white/80 text-base sm:text-lg leading-relaxed">
+                <p className="font-body text-white/80 text-base sm:text-lg leading-relaxed text-justify">
                   {FIRM.address}
                 </p>
               </div>
@@ -67,11 +67,13 @@ export default function ContactPage() {
                 <div className="w-8 h-[2px] bg-[#0B2A52] mb-3" />
                 <div className="space-y-2 font-body text-white/80 text-base sm:text-lg">
                   <p>
+                    Adv. Reetika Kamthan:{' '}
                     <a href={`tel:${FIRM.phone1.replace(/\s+/g, '')}`} className="hover:text-[#C9A45C] transition-colors">
                       {FIRM.phone1}
                     </a>
                   </p>
                   <p>
+                    Adv. Abhishek Motewar:{' '}
                     <a href={`tel:${FIRM.phone2.replace(/\s+/g, '')}`} className="hover:text-[#C9A45C] transition-colors">
                       {FIRM.phone2}
                     </a>
