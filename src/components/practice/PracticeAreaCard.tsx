@@ -44,7 +44,7 @@ export default function PracticeAreaCard({ area }: PracticeAreaCardProps) {
             {area.title}
           </h3>
           
-          <p className="font-body text-white/70 text-sm leading-relaxed mb-3">
+          <p className="font-body text-white/70 text-sm leading-relaxed mb-3 text-left">
             {area.shortDescription}
           </p>
           

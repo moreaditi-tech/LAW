@@ -130,7 +130,7 @@ export default function Navbar() {
             transition={{ duration: 0.4 }}
             className="fixed inset-0 bg-[#0F1B2D]/98 backdrop-blur-xl z-[60] flex flex-col justify-between py-20 sm:py-24 px-4 sm:px-6 md:px-16 lg:px-24 overflow-y-auto"
           >
-            <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center my-auto">
+            <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center my-0 py-8 sm:my-auto">
               {/* Primary Navigation Links */}
               <div className="lg:col-span-6 flex flex-col space-y-6">
                 <p className="text-xs uppercase tracking-[0.35em] text-[#C9A45C] font-semibold font-body">

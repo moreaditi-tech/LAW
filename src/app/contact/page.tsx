@@ -57,7 +57,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-heading text-xl text-white mb-2">Office Chamber</h3>
                 <div className="w-8 h-[2px] bg-[#0B2A52] mb-3" />
-                <p className="font-body text-white/80 text-base sm:text-lg leading-relaxed text-justify">
+                <p className="font-body text-white/80 text-base sm:text-lg leading-relaxed text-left">
                   {FIRM.address}
                 </p>
               </div>
@@ -84,7 +84,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-7 bg-white/5 border border-white/10 p-8 sm:p-12 rounded-sm">
+          <div className="lg:col-span-7 bg-white/5 border border-white/10 p-5 sm:p-8 md:p-12 rounded-sm">
             <h3 className="font-heading text-2xl sm:text-3xl text-white mb-2">Schedule A Consultation</h3>
             <p className="font-body text-white/60 text-sm mb-8">
               Please share details regarding your matter for a preliminary assessment.
@@ -228,7 +228,7 @@ export default function ContactPage() {
         href={`https://wa.me/919109101055?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20with%20Prime%20Law%20Bharat.`} 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="fixed bottom-6 right-6 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:scale-110 hover:shadow-[0_6px_20px_rgba(37,211,102,0.6)] transition-all duration-300 group flex items-center justify-center"
+        className="fixed bottom-20 right-6 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_14px_rgba(37,211,102,0.4)] hover:scale-110 hover:shadow-[0_6px_20px_rgba(37,211,102,0.6)] transition-all duration-300 group flex items-center justify-center"
         aria-label="Chat on WhatsApp"
       >
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

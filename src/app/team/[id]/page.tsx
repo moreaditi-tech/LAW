@@ -76,7 +76,7 @@ export default function TeamProfilePage({ params }: TeamProfileProps) {
             {/* Header */}
             <div className="mb-10 pb-10 border-b border-white/10">
               <p className="text-sm uppercase tracking-[0.3em] text-[#C9A45C] font-semibold mb-3">{member.designation}</p>
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight mb-6">
+              <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight mb-6">
                 {member.name}
               </h1>
             </div>
@@ -92,7 +92,7 @@ export default function TeamProfilePage({ params }: TeamProfileProps) {
             </div>
 
             {/* Expertise (Mobile/Tablet) */}
-            <div className="mt-12 p-8 border border-white/10 bg-white/[0.02] lg:hidden rounded-sm">
+            <div className="mt-12 p-5 sm:p-8 border border-white/10 bg-white/[0.02] lg:hidden rounded-sm">
               <h4 className="text-xs uppercase tracking-[0.2em] text-[#C9A45C] font-semibold mb-6">Areas of Expertise</h4>
               <ul className="space-y-4">
                 {member.expertise.split(' • ').map((item, idx) => (
