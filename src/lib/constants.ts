@@ -145,7 +145,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "Criminal",
     shortDescription: "Facing a criminal investigation or prosecution can be one of the most challenging experiences for an individual, family or business.",
     fullDescription: "Facing a criminal investigation or prosecution can be one of the most challenging experiences for an individual, family or business. The decisions made during the initial stages of a criminal matter often have a significant impact on the eventual outcome. At Prime Law Bharat, we represent clients from the earliest stage of a case, including registration of FIRs, police investigations, anticipatory bail applications, regular bail proceedings, quashing petitions, discharge applications and criminal trials before Magistrate and Sessions Courts.\n\nOur team also represents clients in criminal appeals, revisions and proceedings before the High Courts and the Supreme Court of India. We focus on protecting the constitutional rights of our clients, developing strong defence strategies and ensuring effective courtroom representation. Every matter is handled with thorough preparation, attention to detail and a commitment to securing the best possible legal outcome.",
-    image: "/images/areas/Criminal Law.jpeg",
+    image: "/images/Criminal.png",
     category: "criminal-regulatory",
   },
   {
@@ -282,7 +282,7 @@ export const PRACTICE_AREAS: PracticeArea[] = [
     title: "NCLT/ NCLAT & Corporate Insolvency",
     shortDescription: "Corporate disputes and insolvency proceedings require a combination of legal, financial and commercial understanding.",
     fullDescription: "Corporate disputes and insolvency proceedings require a combination of legal, financial and commercial understanding. We represent companies, promoters, directors, creditors, shareholders and other stakeholders before the National Company Law Tribunal (NCLT) in matters involving corporate insolvency, oppression and mismanagement, shareholder disputes, corporate restructuring, liquidation and other company law proceedings. We assist clients in understanding their legal position, evaluating available remedies and developing an appropriate litigation or resolution strategy.\n\nOur representation extends across different stages of NCLT proceedings, including preparation and filing of applications, responses, interim applications, hearings and appeals. We focus on protecting the interests of stakeholders while addressing the underlying commercial and corporate issues that may affect the continuity, control or financial position of a business.",
-    image: "/images/Practice Areas/NCLT NCLAT & Corporate Insolvency.png",
+    image: "/images/NCLAT.png",
     imagePosition: "center 20%",
     category: "appellate-tribunals",
   },
